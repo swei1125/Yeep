@@ -37,10 +37,19 @@
       display: flex;
       justify-content: space-between;
 
+      .welcome-msg {
+        color: #d32323;
+        font-weight: 700;
+        padding: 9px 12px 10px;
+      }
+
       .login {
         margin-right: 15px;
       }
       .login:hover {
+        border-bottom: 2px solid #fff;
+      }
+      .demo:hover {
         border-bottom: 2px solid #fff;
       }
 
@@ -92,6 +101,16 @@
         border-bottom-left-radius: 4px;
       }
 
+      .search-inp {
+        padding: 5px 0;
+      }
+
+      .search-find {
+        .search-inp {
+          border-right: 1px solid lightgray;
+        }
+      }
+
       .search-find::after {
         content: "ada";
         position: absolute;
@@ -107,11 +126,8 @@
         font-weight: 700;
         margin-right: 15px;
         font-size: 20px;
-      }
 
-      // .search-title:last-child {
-      //   border-left:
-      // }
+      }
 
       .search-btn {
         background-color: #d32323;

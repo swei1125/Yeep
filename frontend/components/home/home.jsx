@@ -5,6 +5,8 @@ import SearchBar from '../search/search_bar';
 
 class Home extends React.Component {
 
+
+
   render() {
     return(
 
