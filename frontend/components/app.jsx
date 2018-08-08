@@ -6,12 +6,12 @@ import NavbarContainer from './navbar/nav_bar_container';
 import {AuthRoute, ProtectedRoute} from '../utils/route_util';
 
 const App = () => (
-  <div>
-    <h1>Hello my yelp!</h1>
-    <NavbarContainer />
+  <div className='main-wrapper'>
+    
     <Switch>
       <AuthRoute path='/signup' component={SignupFormContainer} />
       <AuthRoute path='/login' component={LoginFormContainer} />
+      <NavbarContainer />
       <Route path='/' />
     </Switch>
 

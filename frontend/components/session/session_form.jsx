@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class SessionForm extends React.Component {
   constructor(props) {
@@ -63,23 +65,43 @@ class SessionForm extends React.Component {
     }else {
       return(
         <div className='session'>
-          <h2>{props.formType}</h2>
-          <form className="session-form" onSubmit={handleSubmit}>
-            <input className="email-inp"
-              value={props.email}
-              onChange={update("email")}
-              placeholder='Email'
-              type='text'
-              required/>
-            <input className="password-inp"
-              value={props.password}
-              onChange={update("password")}
-              placeholder='Password'
-              type='password'
-              required/>
-            <button type='submit'>{props.formType}</button>
-            {props.errors.map((err, i) => <li key={i}>{err}</li>)}
-          </form>
+          <div className='empty-nav'>
+            <Link to='/'>Yeep</Link>
+          </div>
+          <div className='session-outermost-wrapper'>
+
+            <div className='session-outer-wrapper'>
+              <div className='session-inner-wrapper'>
+                <div className='session-innermost-wrapper'>
+                  <div className='form-wrapper'>
+                    <h2>Log In to Yeep</h2>
+                    <p>New to Yeep? <Link to='/signup'>Sign up</Link></p>
+                    <form className="session-form" onSubmit={handleSubmit}>
+                      <input className="email-inp"
+                        value={props.email}
+                        onChange={update("email")}
+                        placeholder='Email'
+                        type='text'
+                        required/>
+                      <input className="password-inp"
+                        value={props.password}
+                        onChange={update("password")}
+                        placeholder='Password'
+                        type='password'
+                        required/>
+                      <div className='forgot-pw'><Link to='/'>Forgot password?</Link></div>
+                      <button type='submit'>{props.formType}</button>
+                      {props.errors.map((err, i) => <li key={i}>{err}</li>)}
+                    </form>
+                  </div>
+                </div>
+              </div>
+              <div className='session-img-wrapper'>
+                
+              </div>
+            </div>
+          </div>
+
         </div>
       );
     }

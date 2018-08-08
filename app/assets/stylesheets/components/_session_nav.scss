@@ -1,0 +1,17 @@
+.empty-nav {
+  background-color: #d32323;
+  height: 40px;
+  padding: 12px 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+
+  a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    padding: 6px 0 0 0;
+    font-family: Verdana;
+    font-weight: 700;
+    color: white
+  }
+}
