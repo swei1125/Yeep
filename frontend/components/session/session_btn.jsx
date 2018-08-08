@@ -1,19 +1,19 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Navbar = ({currentUser, logout}) => {
+const SessionBtn = ({currentUser, logout}) => {
   const upper = (word) => word.charAt(0).toUpperCase() + word.substr(1);
   const display = currentUser ? (
-    <div>
+    <div className='nav-session'>
       <span>Hello
         {" " + upper(currentUser.firstName) + " "}
         {currentUser.lastName[0].toUpperCase()}.</span>
       <button onClick={logout}>Log out</button>
     </div>
   ) : (
-    <div>
-      <Link to='/signup'><button>Sign Up</button></Link>
-      <Link to='/login'>Log In</Link>
+    <div className='nav-session'>
+      <Link to='/login'><button className='login'>Log In</button></Link>
+      <Link to='/signup'><button className='signup'>Sign Up</button></Link>
     </div>
   );
 
@@ -22,4 +22,4 @@ const Navbar = ({currentUser, logout}) => {
   );
 };
 
-export default Navbar;
+export default SessionBtn;

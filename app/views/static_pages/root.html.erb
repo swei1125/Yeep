@@ -8,3 +8,11 @@ window.currentUser = <%= render(
 ).html_safe %>
 </script>
 <% end %>
+
+<script type="text/javascript">
+  window.images = {
+    session: "<%= asset_path('session_img.jpg') %>",
+    home: "<%= asset_path('home.jpg') %>",
+    search: "<%= asset_path('search_icon.png') %>"
+  }
+</script>

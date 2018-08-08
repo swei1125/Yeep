@@ -1,0 +1,137 @@
+.home-root {
+  min-width: 1020px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.top {
+  padding-top: 30px;
+  height: 570px;
+  background-size: cover;
+  background-position: 0 50%;
+  background-image: url("home.jpg");
+  background-color: #333;
+
+  .super-nav {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 16px;
+
+
+    button {
+      color: #fff;
+      display: block;
+      padding: 9px 12px 10px;
+      font-size: 15px;
+      // line-height: 1.28571em;
+      font-weight: 700;
+      background: none;
+      vertical-align: baseline;
+      border-radius: 0;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 8px;
+    }
+
+    .nav-session {
+      display: flex;
+      justify-content: space-between;
+
+      .login {
+        margin-right: 15px;
+      }
+      .login:hover {
+        border-bottom: 2px solid #fff;
+      }
+
+      .signup {
+        padding: 7px 24px 8px;
+        border: 2px solid #fff;
+        border-radius: 4px;
+      }
+    }
+
+    .left-nav {
+      border-bottom: 2px solid transparent;
+      padding-bottom: 8px;
+
+    }
+    .left-nav button:hover {
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  .home-logo {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    margin-top: 50px;
+  }
+
+  .search-bar-wrapper {
+    margin: 50px auto 0;
+    width: 100%;
+
+
+    .search-bar {
+      min-width: 100%;
+
+      display: flex;
+      justify-content: center;
+
+      label {
+        background-color: white;
+        padding: 5px 8px;
+        display: flex;
+        align-items: center;
+      }
+
+      label:first-child {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+      }
+
+      .search-find::after {
+        content: "ada";
+        position: absolute;
+        top: 8px;
+        right: 0;
+        bottom: 8px;
+        width: 1px;
+        background-color: #ccc;
+      }
+
+      .search-title {
+        color: #666;
+        font-weight: 700;
+        margin-right: 15px;
+        font-size: 20px;
+      }
+
+      // .search-title:last-child {
+      //   border-left:
+      // }
+
+      .search-btn {
+        background-color: #d32323;
+        padding: 10px 20px 10px;
+        box-shadow: none;
+        border-radius: 0 4px 4px 0;
+
+        img {
+          color: white;
+          width: 20px;
+          height: 20px;
+
+        }
+      }
+
+      input {
+        width: 400px;
+        font-size: 18px;
+      }
+    }
+  }
+
+}

@@ -8,7 +8,7 @@
   justify-content: space-around;
   width: 800px;
   margin: 0 auto;
-  padding: 80px 0 0 0;
+  padding: 40px 0 0 0;
 }
 
 .session-innermost-wrapper {
@@ -17,32 +17,47 @@
   width: 350px;
   height: 500px;
   font-family: 'Roboto', sans-serif;
-
+  margin-left: 150px;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
 
   .form-wrapper {
-    margin: 100px auto ;
-    position: relative;
-    left: 50px;
+    margin-top: 150px;
+    // position: relative;
+
+    .errors {
+      list-style: circle;
+      font-size: 14px;
+      color: #d32323;
+    }
 
     h2 {
       text-align: center;
-      box-sizing: content-box;
       font-weight: 700;
       color: #d32323;
-      width: 80%;
+      width: 85%;
       font-size: 22px;
       line-height: 1.3em;
     }
     p {
-      margin: 6px 0 20px;;
+      margin: 6px 0 15px;;
       text-align: center;
-      width: 80%;
+      width: 85%;
       font-size: 14px;
       font-weight: 700;
 
       a {
         color: #0073bb;
       }
+    }
+
+    p.login-note {
+      font-weight: 400;
+      font-size: 12px;
+      color: gray;
+      width: 85%;
+      padding-bottom: 0x;
     }
 
     .session-form {
@@ -67,33 +82,55 @@
         font-size: 14px;
       }
 
-      button {
-        margin-top: 25px;
-        border: 1px solid #8d0005;
-        padding: 13px 7px;
-        text-align: center;
-        background-color: #d32323;
-        width: 80%;
-        color: white;
-        font-weight: 700;
-        border-radius: 3px;
-        box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+      .fl-name {
+        width: 296px;
+        display: grid;
+        grid-template-columns: 7fr 7fr;
+        padding-top: 20px;
 
+        input {
+          width: 89%;
+
+
+        }
       }
-      button:hover {
-        cursor: pointer;
-        background-color: #e82626;
-      }
+
 
     }
+  }
+  button {
+    margin-top: 25px;
+    border: 1px solid #8d0005;
+    padding: 13px 7px;
+    text-align: center;
+    background-color: #d32323;
+    width: 80%;
+    color: white;
+    font-weight: 700;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: #e82626;
   }
 
 
 }
 
 .session-img-wrapper {
-  border: 1px solid black;
-  // height: 100px;
-  // width: 100px;
-  padding: 50px;
+  // border: 1px solid black;
+  padding: 0 50px;
+  // margin-left: 100px;
+  // position: relative;
+  // left: 200px;
+  // margin-left: 200px;
+
+  img {
+    margin-top: 100px;
+    border-radius: 50%;
+    height: 400px;
+    width: 400px;
+  }
 }

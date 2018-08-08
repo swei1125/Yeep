@@ -31,35 +31,73 @@ class SessionForm extends React.Component {
     if(this.props.formType === 'Sign Up') {
       return(
         <div className='session'>
-          <h2>{props.formType}</h2>
-          <form className="session-form" onSubmit={handleSubmit}>
-            <input className="f-name-inp"
-              value={props.first_name}
-              onChange={update("first_name")}
-              placeholder='First Name'
-              type='text'
-              required/>
-            <input className="l-name-inp"
-                value={props.last_name}
-                onChange={update("last_name")}
-                placeholder='Last Name'
-                type='text'
-                required/>
-            <input className="email-inp"
-              value={props.email}
-              onChange={update("email")}
-              placeholder='Email'
-              type='text'
-              required/>
-            <input className="password-inp"
-              value={props.password}
-              onChange={update("password")}
-              placeholder='Password'
-              type='password'
-              required/>
-            <button type='submit'>{props.formType}</button>
-            {props.errors.map((err, i) => <li key={i}>{err}</li>)}
-          </form>
+          <div className='empty-nav'>
+            <Link to='/'>Yeep</Link>
+          </div>
+
+          <div className='session-outermost-wrapper'>
+            <div className='session-outer-wrapper'>
+              <div className='session-inner-wrapper'>
+                <div className='session-innermost-wrapper'>
+                  <div className='form-wrapper'>
+                    <h2>Sign Up for Yeep</h2>
+                    <p>Connect with great local businesses</p>
+                    <p className='login-note'>By Signing up, you agree to Yeep’s
+                      &nbsp;
+                      <Link to='/'>Terms of Service</Link>
+                      &nbsp;
+                      and
+                      &nbsp;
+                      <Link to='/'>Privacy Policy</Link>
+                      .</p>
+                    <form className="session-form" onSubmit={handleSubmit}>
+                      <div className='fl-name'>
+
+                        <input className="f-name-inp"
+                          value={props.first_name}
+                          onChange={update("first_name")}
+                          placeholder='First Name'
+                          type='text'
+                          required/>
+
+
+                        <input className="l-name-inp"
+                          value={props.last_name}
+                          onChange={update("last_name")}
+                          placeholder='Last Name'
+                          type='text'
+                          required/>
+
+                      </div>
+                      <input className="email-inp"
+                        value={props.email}
+                        onChange={update("email")}
+                        placeholder='Email'
+                        type='text'
+                        required/>
+                      <input className="password-inp"
+                        value={props.password}
+                        onChange={update("password")}
+                        placeholder='Password'
+                        type='password'
+                        required/>
+                      <button type='submit'>{props.formType}</button>
+                      <p className='login-note'>Already on Yeep? <Link to='/login'>Log in</Link> </p>
+
+                      <ul className='errors'>
+                        {props.errors.map((err, i) => <li key={i}>{err}</li>)}
+                      </ul>
+                    </form>
+
+                  </div>
+                </div>
+              </div>
+
+              <div className='session-img-wrapper'>
+                <img src={window.images.session} />
+              </div>
+            </div>
+          </div>
         </div>
       );
     }else {
@@ -69,13 +107,20 @@ class SessionForm extends React.Component {
             <Link to='/'>Yeep</Link>
           </div>
           <div className='session-outermost-wrapper'>
-
             <div className='session-outer-wrapper'>
               <div className='session-inner-wrapper'>
                 <div className='session-innermost-wrapper'>
                   <div className='form-wrapper'>
                     <h2>Log In to Yeep</h2>
                     <p>New to Yeep? <Link to='/signup'>Sign up</Link></p>
+                    <p className='login-note'>By logging in, you agree to Yeep’s
+                      &nbsp;
+                      <Link to='/'>Terms of Service</Link>
+                      &nbsp;
+                      and
+                      &nbsp;
+                      <Link to='/'>Privacy Policy</Link>
+                      .</p>
                     <form className="session-form" onSubmit={handleSubmit}>
                       <input className="email-inp"
                         value={props.email}
@@ -91,13 +136,16 @@ class SessionForm extends React.Component {
                         required/>
                       <div className='forgot-pw'><Link to='/'>Forgot password?</Link></div>
                       <button type='submit'>{props.formType}</button>
-                      {props.errors.map((err, i) => <li key={i}>{err}</li>)}
+                      <ul className='errors'>
+                        {props.errors.map((err, i) => <li key={i}>{err}</li>)}
+                      </ul>
                     </form>
                   </div>
                 </div>
               </div>
+
               <div className='session-img-wrapper'>
-                
+                <img src={window.images.session} />
               </div>
             </div>
           </div>
