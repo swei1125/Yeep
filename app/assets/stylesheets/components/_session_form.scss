@@ -18,13 +18,9 @@
   height: 500px;
   font-family: 'Roboto', sans-serif;
   margin-left: 150px;
-  // display: flex;
-  // flex-direction: column;
-  // justify-content: center;
 
   .form-wrapper {
     margin-top: 100px;
-    // position: relative;
 
     .errors {
       list-style: circle;
@@ -90,12 +86,8 @@
 
         input {
           width: 89%;
-
-
         }
       }
-
-
     }
   }
   button {
@@ -115,22 +107,14 @@
     cursor: pointer;
     background-color: #e82626;
   }
-
-
 }
 
 .session-img-wrapper {
-  // border: 1px solid black;
   padding: 0 50px;
-  // margin-left: 100px;
-  // position: relative;
-  // left: 200px;
-  // margin-left: 200px;
 
   img {
     margin-top: 100px;
-    border-radius: 50%;
-    height: 400px;
-    width: 400px;
+    height: 351px;
+    width: 392px;
   }
 }
