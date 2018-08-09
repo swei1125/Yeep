@@ -13,7 +13,9 @@ class Home extends React.Component {
       <div className='home-root'>
         <div className='top'>
           <nav className='super-nav'>
-            <div className='left-nav'><button className='write-review'>Write a Review</button></div>
+            <div className='left-nav'>
+              <button className='write-review'>Write a Review</button>
+            </div>
             <SessionBtnContainer />
           </nav>
 
