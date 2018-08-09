@@ -23,7 +23,7 @@
     margin-top: 100px;
 
     .errors {
-      list-style: circle;
+      list-style: none;
       font-size: 14px;
       color: #d32323;
     }
@@ -80,12 +80,13 @@
 
       .fl-name {
         width: 296px;
-        display: grid;
-        grid-template-columns: 7fr 7fr;
+        display: flex;
+        justify-content: space-between;
         padding-top: 20px;
 
         input {
-          width: 89%;
+          width: 44%;
+
         }
       }
     }
