@@ -14,7 +14,7 @@
   .super-nav {
     display: flex;
     justify-content: space-between;
-    width: 70%;
+    max-width: 1010px;
     margin: 0 auto;
     font-size: 16px;
 
@@ -71,15 +71,18 @@
   }
 
   .home-logo {
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    margin-top: 50px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+    .logo {
+      width: 224px;
+      height: 150px;
+    }
   }
 
   .search-bar-wrapper {
-    margin: 50px auto 0;
+    margin: 20px auto 0;
     width: 100%;
 
 
@@ -91,7 +94,7 @@
 
       label {
         background-color: white;
-        padding: 5px 8px;
+        padding: 8px;
         display: flex;
         align-items: center;
       }
@@ -152,5 +155,7 @@
       }
     }
   }
+
+
 
 }

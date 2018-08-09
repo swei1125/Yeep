@@ -20,7 +20,7 @@ class Home extends React.Component {
           </nav>
 
           <div className='home-logo'>
-            <h1>Yeep</h1>
+            <img className='logo' src={window.images.logo} />
           </div>
 
           <SearchBar />
