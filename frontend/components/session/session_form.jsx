@@ -32,7 +32,7 @@ class SessionForm extends React.Component {
       return(
         <div className='session'>
           <div className='empty-nav'>
-            <Link to='/'>Yeep</Link>
+            <Link to='/'><img className='logo' src={window.images.logo} /></Link>
           </div>
 
           <div className='session-outermost-wrapper'>
@@ -104,7 +104,7 @@ class SessionForm extends React.Component {
       return(
         <div className='session'>
           <div className='empty-nav'>
-            <Link to='/'>Yeep</Link>
+            <Link to='/'><img className='logo' src={window.images.logo}/></Link>
           </div>
           <div className='session-outermost-wrapper'>
             <div className='session-outer-wrapper'>

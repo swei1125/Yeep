@@ -2,16 +2,17 @@
   background-color: #d32323;
   height: 40px;
   padding: 12px 0;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
 
   a {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    padding: 6px 0 0 0;
-    font-family: Verdana;
-    font-weight: 700;
-    color: white
+    display: flex;
+    justify-content: center;
+    height: 100%;
+
+    .logo {
+      position: relative;
+      bottom: 15px;
+      width: 100px;
+      height: 68px;
+    }
   }
 }
