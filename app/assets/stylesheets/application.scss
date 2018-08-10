@@ -13,11 +13,12 @@
  *= require_tree .
  *= require_self
  */
-@import "base/reset.scss";
-@import "base/colors.scss";
+
+@import "base/*";
 
 @import "components/session_nav.scss";
 @import "components/session_form.scss";
 
 @import "components/home.scss";
+@import "components/biz_show.scss";
 @import "components/footer.scss";

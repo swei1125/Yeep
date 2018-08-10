@@ -1,0 +1,48 @@
+.bizshow-main {
+  min-width: 1020px;
+}
+.header {
+  background-color: red;
+  height: 91px;
+}
+
+.biz-wrapper {
+  width: 960px;
+  margin: 0 auto;
+  min-width: 990px;
+}
+.bizshow{
+  padding: 15px 15px 24px;
+  height: 497px;
+}
+
+
+.biz-info {
+  background-color: green;
+  height: 112px;
+  margin-bottom: 13px;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1.3125em;
+}
+
+.map-pic {
+  background-color: pink;
+  height: 372px;
+}
+
+.bizshow-bottom {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 66% 32%;
+  grid-auto-rows: minmax(200px, auto);
+  grid-column-gap: 1.228em;
+}
+
+.biz-review {
+  background-color: yellow;
+}
+
+.more-info {
+  background-color: lightblue;
+}

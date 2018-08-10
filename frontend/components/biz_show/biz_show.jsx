@@ -11,27 +11,17 @@ class BizShow extends React.Component {
     const { name, address, city, tags, price, phoneNumber } = this.props.biz;
     const { reviews, users } = this.props;
     return(
-      <div>
-        <div className='biz-header'>
-          <h1>{name}</h1>
-          <span>{price}</span>
-          &nbsp;
-          .
-          &nbsp;
-          <span>{tags}</span>
-        </div>
-
-        <div className='image'>
-          {this.props.photos.map((p, i) => <img src={p.url} key={i}/>)}
-        </div>
-
-        <div>
-          {this.props.reviews.map(review => (
-            <ReviewDetail
-              key={review.id}
-              review={review}
-              user={users[review.userId]}/>
-          ))}
+      <div className='bizshow-main'>
+        <div className='header'>Nav Bar</div>
+        <div className='biz-wrapper'>
+          <div className='bizshow'>
+            <div className='biz-info'>BizInfo</div>
+            <div className='map-pic'>Map&Pic</div>
+          </div>
+          <div className='bizshow-bottom'>
+            <div className='biz-review'>Reviews</div>
+            <div className='more-info'>MoreInfo</div>
+          </div>
         </div>
       </div>
     );
