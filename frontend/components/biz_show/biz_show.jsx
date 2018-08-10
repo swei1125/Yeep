@@ -18,7 +18,7 @@ class BizShow extends React.Component {
           &nbsp;
           .
           &nbsp;
-          <span>{tags} tags</span>
+          <span>{tags}</span>
         </div>
 
         <div className='image'>
