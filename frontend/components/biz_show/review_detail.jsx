@@ -10,7 +10,7 @@ const ReviewDetail = ({review, user}) => {
       </div>
 
       <div>
-        <h3>rating:&nbps; {review.rating}</h3>
+        <h3>rating:&nbsp; {review.rating}</h3>
         <p>{review.body}</p>
       </div>
 

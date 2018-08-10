@@ -1,1 +1,11 @@
-json.extract! biz, :id, :name, :price, :address, :city, :phone_number, :latitude, :longitude
+json.extract! biz,
+:id,
+:name,
+:rating,
+:price,
+:review_count,
+:address,
+:city,
+:phone_number,
+:latitude,
+:longitude

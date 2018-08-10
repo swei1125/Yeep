@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_09_183948) do
+ActiveRecord::Schema.define(version: 2018_08_10_055429) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -47,6 +47,24 @@ ActiveRecord::Schema.define(version: 2018_08_09_183948) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "credit_card?"
+    t.string "apple_pay?"
+    t.string "google_pay?"
+    t.string "parking?"
+    t.string "bike_parking?"
+    t.string "take_out?"
+    t.string "delivery?"
+    t.string "outdoor_seat?"
+    t.string "wifi?"
+    t.string "has_tv?"
+    t.string "dog_allowed?"
+    t.string "reservation?"
+    t.string "good_for?"
+    t.string "waiter_service?"
+    t.string "caters?"
+    t.string "for_group?"
+    t.string "for_kids?"
+    t.string "attier?"
     t.index ["name"], name: "index_bizs_on_name"
     t.index ["user_id"], name: "index_bizs_on_user_id"
   end
@@ -93,7 +111,6 @@ ActiveRecord::Schema.define(version: 2018_08_09_183948) do
     t.string "last_name", null: false
     t.string "session_token", null: false
     t.string "password_digest", null: false
-    t.string "profile_img"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true

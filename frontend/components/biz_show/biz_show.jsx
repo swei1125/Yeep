@@ -18,16 +18,17 @@ class BizShow extends React.Component {
           &nbsp;
           .
           &nbsp;
-          <span>{tags.join(', ')}</span>
+          <span>{tags} tags</span>
         </div>
 
         <div className='image'>
-          {this.props.photos.map(p => <img src={p.url}/>)}
+          {this.props.photos.map((p, i) => <img src={p.url} key={i}/>)}
         </div>
 
         <div>
           {this.props.reviews.map(review => (
             <ReviewDetail
+              key={review.id}
               review={review}
               user={users[review.userId]}/>
           ))}
