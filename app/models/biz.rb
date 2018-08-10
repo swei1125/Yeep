@@ -20,7 +20,7 @@ class Biz < ApplicationRecord
   validates :price, inclusion: { in: %w($ $$ $$$ $$$$ $$$$$)}
 
   belongs_to :user
-  
+
   has_many :reviews
   has_many :viewers,
   through: :reviews,
@@ -33,6 +33,6 @@ class Biz < ApplicationRecord
 
   has_many :uploads
   has_many :photos,
-    through: :uploads,
-    source: :photo
+  through: :uploads,
+  source: :photo
 end

@@ -5,9 +5,14 @@ json.biz do
       tag.name
     end
   end
-  json.photoUrls do
-    json.array! @biz.photos do |photo|
-      url_for(photo)
+end
+
+json.photos do
+  @biz.uploads.each do |up|
+    json.set! up.id do
+      json.url url_for(up.photo)
+      json.user_id up.user_id
+      json.biz_id up.biz_id
     end
   end
 end
@@ -24,9 +29,9 @@ json.users do
   @biz.viewers.each do |user|
     json.set! user.id do
       json.extract! user, :id, :email, :first_name, :last_name
-      json.profile_img url_for(user.profile_pic)
+      # json.profile_img url_for(user.profile_img)
       json.reviewsCount user.reviews.length
-      json.photoCount user.photos.length
+      json.photoCount user.uploads.length
     end
   end
 end

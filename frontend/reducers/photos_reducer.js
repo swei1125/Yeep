@@ -1,15 +1,14 @@
-import { RECEIVE_CURRENT_USER } from '../actions/session_actions';
 import { RECEIVE_SINGLE_BIZ } from '../actions/biz_actions';
 
-const usersReducer = (state = {}, action) => {
+const photosReducer = (state = {}, action) => {
   Object.freeze(state);
   switch (action.type) {
     case RECEIVE_SINGLE_BIZ:
-      return action.users;
+      return action.photos;
 
     default:
       return state;
   }
 };
 
-export default usersReducer;
+export default photosReducer;

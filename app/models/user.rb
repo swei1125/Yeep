@@ -23,9 +23,6 @@ class User < ApplicationRecord
   has_many :bizs
   has_many :reviews
   has_many :uploads
-  has_many :photos,
-    through: :uploads,
-    source: :photo
 
   attr_reader :password
   after_initialize :ensure_session_token
