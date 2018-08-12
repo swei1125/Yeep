@@ -2,12 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const SessionBtn = ({currentUser, logout, login, guest}) => {
-  const upper = (word) => word.charAt(0).toUpperCase() + word.substr(1);
   const display = currentUser ? (
     <div className='nav-session'>
       <span className='welcome-msg'>Hello
         &nbsp;
-        {upper(currentUser.firstName)}</span>
+        {currentUser.firstName}</span>
       <button onClick={logout}>Log out</button>
     </div>
   ) : (

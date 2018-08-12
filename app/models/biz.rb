@@ -31,10 +31,12 @@
 #  for_group?      :string
 #  for_kids?       :string
 #  attier?         :string
+#  state           :string
+#  zip             :integer
 #
 
 class Biz < ApplicationRecord
-  validates :name, :address, :city, :latitude, :longitude, :phone_number, :user_id, presence: true
+  validates :name, :address, :city, :state, :zip, :latitude, :longitude, :phone_number, :user_id, presence: true
   validates :price, inclusion: { in: %w($ $$ $$$ $$$$ $$$$$)}
 
   belongs_to :user
@@ -63,6 +65,10 @@ class Biz < ApplicationRecord
 
   def review_count
     self.reviews.length
+  end
+
+  def tag_names
+    self.tags.map{|t| t.name}
   end
 
 end

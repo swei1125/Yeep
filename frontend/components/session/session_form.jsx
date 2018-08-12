@@ -12,8 +12,12 @@ class SessionForm extends React.Component {
   }
 
   update(type) {
-
-    return (e) => this.setState({[type]: e.target.value});
+    const upper = (word) => word.charAt(0).toUpperCase() + word.substr(1);
+    if (type === 'first_name' || type === 'last_name') {
+      return (e) => this.setState({[type]: upper(e.target.value)});
+    } else {
+      return (e) => this.setState({[type]: e.target.value});
+    }
   }
 
   handleSubmit(e) {
@@ -26,6 +30,7 @@ class SessionForm extends React.Component {
   }
 
   render() {
+
     const {props, update, handleSubmit} = this;
     let display;
     if(this.props.formType === 'Sign Up') {

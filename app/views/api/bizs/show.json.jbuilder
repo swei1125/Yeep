@@ -1,10 +1,5 @@
 json.biz do
   json.partial! "api/bizs/biz", biz: @biz
-  json.tags do
-    json.array! @biz.tags do |tag|
-      tag.name
-    end
-  end
 end
 
 json.photos do

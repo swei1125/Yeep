@@ -1,6 +1,6 @@
 import React from 'react';
 import SessionBtnContainer from '../session/session_btn_container';
-import SearchBar from '../search/search_bar';
+import SearchBarContainer from '../search/search_bar_container';
 import {Link} from 'react-router-dom';
 
 
@@ -23,7 +23,7 @@ class Home extends React.Component {
             <img className='logo' src={window.images.logo} />
           </div>
 
-          <SearchBar />
+          <SearchBarContainer />
 
 
         </div>

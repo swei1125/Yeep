@@ -1,9 +1,33 @@
 .bizshow-main {
   min-width: 1020px;
+  font-family: $Arimo;
+
+  a{
+    color: $blue;
+  }
+
+  a:hover {
+    text-decoration: underline;
+    color: $blue;
+  }
 }
-.header {
+.nav-wrapper {
   background-color: red;
   height: 91px;
+  width: 100%;
+
+  .nav-top {
+    width: 100%;
+
+    .logo {
+      img{
+
+        width: 100px;
+        height: 68px;
+      }
+    }
+  }
+
 }
 
 .biz-wrapper {
@@ -12,23 +36,214 @@
   min-width: 990px;
 }
 .bizshow{
-  padding: 15px 15px 24px;
+  padding: 30px 15px 24px;
   height: 497px;
 }
 
-
 .biz-info {
-  background-color: green;
+  display: flex;
   height: 112px;
-  margin-bottom: 13px;
+
   align-items: center;
-  font-size: 16px;
   line-height: 1.3125em;
+
+  .info-left {
+    width: 525px;
+    height: 112px;
+    padding-right: 30px;
+
+    h1 {
+      height: 30px;
+      font-size: 38px;
+
+      font-weight: 700;
+      padding-top: 6px;
+
+    }
+    .review {
+      margin-top: 10px;
+      display: flex;
+      line-height: 24px;
+      font-size: 16px;
+      margin-bottom: 10px;
+
+      .star {
+        height: 24px;
+        width: 132px;
+        background-image: image_url("stars.png");
+        margin-right: 7px;
+      }
+
+      .review-count {
+        color: #666;
+        display: block;
+        text-align: justify;
+      }
+    }
+    .price-tag {
+      font-size: 16px;
+    }
+  }
+
+  .info-right {
+    width: 405px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .review-btn {
+      height: 100%;
+      width: 156px;
+      border: 1px solid $dark-red;
+      background-color: $red;
+      color: white;
+      font-family: $main-font;
+      font-weight: 700;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+      display: flex;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+      margin-right: 20px;
+
+      span {
+        margin-left: 14px;
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+
+
+        .material-icons .review {
+          font-size: 24px;
+          margin-right: 4px;
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+
+    }
+    .review-btn:hover {
+      background-color: $bright-red;
+    }
+
+    .photo-btn {
+      border-radius: 3px;
+      border: 1px #ccc solid;
+      padding: 3px 9px;
+      background-color: #f7f7f7;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+
+      span {
+        display: flex;
+        align-items: center;
+        color: #666;
+        font-size: 12px;
+        font-weight: 700;
+
+        .camera{
+          font-size: 18px;
+          margin-right: 3px;
+        }
+      }
+    }
+    .photo-btn:hover {
+      background-color: #fcfcfc;
+    }
+  }
 }
 
 .map-pic {
   background-color: pink;
-  height: 372px;
+  height: 315px;
+  display: flex;
+
+
+  .pic-wrapper {
+    width: 71%;
+    display: flex;
+    align-items: center;
+
+    button {
+      z-index: 100;
+    }
+
+    .pic-box {
+      width: 660px;
+      height: 220px;
+      background-color: orange;
+      position: absolute;
+      display: flex;
+
+      .img {
+        width: 100%;
+        border: 1px solid black;
+        transition: transform .2s;
+        overflow: hidden;
+        img {
+          object-fit: fill; /* Do not scale the image */
+          object-position: center;
+          height: 100%;
+          width: auto;
+          clip: rect(0px,60px,200px,0px);
+        }
+      }
+      .center {
+        transform: scale(1.15);
+        z-index: 100;
+      }
+
+      .img:hover {
+        transform: scale(1.15);
+        z-index: 100;
+      }
+    }
+  }
+
+  .map-box-wrapper {
+    width: 32%;
+    border: 1px solid #ccc;
+    background-color: white;
+
+    .outer-box {
+      padding: 5px;
+
+      .map {
+        height: 135px;
+        border: 1px solid #ccc
+      }
+
+      .address {
+        min-height: 150px;
+
+        .info {
+          margin: 10px 5px 5px;
+
+          li {
+            font-size: 15px;
+            display: flex;
+            margin-bottom: 5px;
+
+            span {
+              display: block;
+            }
+
+            .icon {
+              margin-right: 8px;
+            }
+            .add-info {
+              font-weight: bold;
+            }
+          }
+
+          .material-icons{
+            color: #666;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+  }
+
+
 }
 
 .bizshow-bottom {

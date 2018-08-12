@@ -22,14 +22,33 @@ user6 = User.create(email:'126email', password:'123456', first_name:'user6', las
 user7 = User.create(email:'127email', password:'123456', first_name:'user7', last_name:'wei')
 
 biz1 = Biz.create!(
-  name:'boba',
-  price:'$',
-  address:'7757 ridgeline dr',
-  city: 'dublin',
-  latitude: 37.779760,
-  longitude: -122.413820,
-  phone_number: 123456,
-  user_id: 1
+  name:'Cocobang',
+  price:'$$',
+  address:'550 Taylor St',
+  city: 'San Francisco',
+  state: 'CA',
+  zip: 94102,
+  latitude: 37.787649,
+  longitude: -122.411500,
+  phone_number: "(415) 292-5144",
+  user_id: 1,
+  reservation?: 'No',
+  delivery?: 'No',
+  take_out?: 'Yes',
+  credit_card?: 'Yes',
+  apple_pay?: 'No',
+  google_pay?: 'No',
+  good_for?: 'Lata Night',
+  parking?: 'Street',
+  bike_parking?: 'No',
+  for_kids?: 'No',
+  for_group?: 'Yes',
+  attier?: 'Casual',
+  outdoor_seat?: 'No',
+  wifi?: 'No',
+  has_tv?: 'Yes',
+  waiter_service?: 'Yes',
+  caters?: 'No'
 )
 
 review1 = Review.create!(user_id: user1.id, biz_id: 1, body: 'Nice Place!', rating: 5)
@@ -38,5 +57,23 @@ review3 = Review.create!(user_id: user3.id, biz_id: 1, body: 'Nice Place!', rati
 review4 = Review.create!(user_id: user4.id, biz_id: 1, body: 'Nice Place!', rating: 2)
 review5 = Review.create!(user_id: user5.id, biz_id: 1, body: 'Nice Place!', rating: 1)
 
-up = Upload.create(user_id: user1.id, biz_id: biz1.id)
-up.photo.attach(io: File.open("/Users/amon/Desktop/test.jpg"), filename:"test.jpg")
+tag1 = Tag.create!(name: 'Korean')
+taggings1 = Tagging.create!(tag_id: tag1.id, biz_id: biz1.id)
+
+up1 = Upload.create(user_id: user1.id, biz_id: biz1.id)
+up1.photo.attach(io: File.open("/Users/amon/Desktop/yeep_img/biz1_img1.jpg"), filename:"biz1_img1.jpg")
+
+up2 = Upload.create(user_id: user2.id, biz_id: biz1.id)
+up2.photo.attach(io: File.open("/Users/amon/Desktop/yeep_img/biz1_img2.jpg"), filename:"biz1_img2.jpg")
+
+up3 = Upload.create(user_id: user3.id, biz_id: biz1.id)
+up3.photo.attach(io: File.open("/Users/amon/Desktop/yeep_img/biz1_img3.jpg"), filename:"biz1_img3.jpg")
+
+up4 = Upload.create(user_id: user4.id, biz_id: biz1.id)
+up4.photo.attach(io: File.open("/Users/amon/Desktop/yeep_img/biz1_img4.jpg"), filename:"biz1_img4.jpg")
+
+up5 = Upload.create(user_id: user5.id, biz_id: biz1.id)
+up5.photo.attach(io: File.open("/Users/amon/Desktop/yeep_img/biz1_img5.jpg"), filename:"biz1_img5.jpg")
+
+up6 = Upload.create(user_id: user6.id, biz_id: biz1.id)
+up6.photo.attach(io: File.open("/Users/amon/Desktop/yeep_img/biz1_img6.jpg"), filename:"biz1_img6.jpg")

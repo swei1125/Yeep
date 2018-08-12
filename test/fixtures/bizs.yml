@@ -31,6 +31,8 @@
 #  for_group?      :string
 #  for_kids?       :string
 #  attier?         :string
+#  state           :string
+#  zip             :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
