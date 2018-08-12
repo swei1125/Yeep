@@ -1,0 +1,15 @@
+.bizshow-bottom {
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 66% 32%;
+  grid-auto-rows: minmax(200px, auto);
+  grid-column-gap: 1.228em;
+}
+
+.biz-review {
+  background-color: yellow;
+}
+
+.side-bar {
+  background-color: lightblue;
+}

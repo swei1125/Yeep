@@ -14,16 +14,16 @@ class NavBar extends React.Component {
       </div>
     ) : (
       <div className='nav-session'>
-        <button><Link to='/signup'>Sign Up</Link></button>
+        <Link to='/signup'><button>Sign Up</button></Link>
       </div>
     );
 
     const login = !this.props.currentUser ? (
-      <div>
+      <div className='bottom-btn'>
         <button><Link to='/login'>Log In</Link></button>
       </div>
     ) : (
-      <div>
+      <div className='bottom-btn'>
         <button onClick={this.props.logout}>Log out</button>
       </div>
     );
@@ -37,27 +37,29 @@ class NavBar extends React.Component {
           </div>
         </div>
         <div className='nav-bottom'>
-          <div className='tags'>
-            <button>
-              <span>
-                <i className="material-icons">restaurant</i>
-                Restaurants
-              </span>
-            </button>
-            <button>
-              <span>
-                <i className="material-icons">local_bar</i>
-                Nightlife
-              </span>
-            </button>
-            <button>
-              <span>
-                <i className="material-icons">build</i>
-                Home Services
-              </span>
-            </button>
+          <div className='bottom-inner-wrapper'>
+            <div className='tags'>
+              <button>
+                <span>
+                  <i className="material-icons">restaurant</i>
+                  Restaurants
+                </span>
+              </button>
+              <button>
+                <span>
+                  <i className="material-icons">local_bar</i>
+                  Nightlife
+                </span>
+              </button>
+              <button>
+                <span>
+                  <i className="material-icons">build</i>
+                  Home Services
+                </span>
+              </button>
+            </div>
+            {login}
           </div>
-          {login}
         </div>
       </div>
     );
