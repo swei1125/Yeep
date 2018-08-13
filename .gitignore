@@ -21,3 +21,6 @@ bundle.js.map
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 credentials.yml.enc
+
+# Ignore application configuration
+/config/application.yml
