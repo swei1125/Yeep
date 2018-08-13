@@ -118,7 +118,10 @@
             display: flex;
             align-items: center;
           }
-
+          label:first-child {
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
           .search-inp {
             padding: 5px 0;
           }
@@ -130,7 +133,7 @@
           }
 
           .search-title {
-            color: #666;
+            color: black;
             font-weight: 700;
             margin-right: 15px;
             font-size: 14px;

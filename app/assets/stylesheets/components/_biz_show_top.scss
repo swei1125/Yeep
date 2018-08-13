@@ -5,9 +5,15 @@
 }
 
 .biz-wrapper {
-  width: 960px;
   margin: 0 auto;
   min-width: 990px;
+
+  .gray-shelf {
+    height: 410px;
+    background-color: #f5f5f5;
+    margin-bottom: 80px;
+    border-bottom: 1px solid #e6e6e6;
+  }
 
   a{
     color: $blue;
@@ -22,6 +28,8 @@
 .bizshow{
   padding: 30px 15px 24px;
   height: 440px;
+  width: 960px;
+  margin: 0 auto;
 }
 .biz-info {
   display: flex;
@@ -115,6 +123,10 @@
       background-color: #f7f7f7;
       box-shadow: 0 1px 1px rgba(0,0,0,0.1);
 
+      a:hover {
+        text-decoration: none;
+      }
+
       span {
         display: flex;
         align-items: center;
@@ -169,7 +181,8 @@
         width: 100%;
         transition: transform .2s;
         overflow: hidden;
-        box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+        box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
+        
         img {
           object-fit: cover;
           object-position: center;

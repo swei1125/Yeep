@@ -9,7 +9,6 @@ import SideBar from './side_bar';
 
 class BizShow extends React.Component {
   componentWillMount() {
-    console.log("abcasfdjkabsfkjbajksfkjbkajsbfkjabs");
     this.props.fetchBiz(this.props.match.params.bizId);
   }
 
@@ -35,35 +34,37 @@ class BizShow extends React.Component {
     return(
       <div className='bizshow-main'>
         <NavBarContainer />
-
         <div className='biz-wrapper'>
-          <div className='bizshow'>
-            <BizInfo
-              id={id}
-              name={name}
-              rating={rating}
-              reviewCount={reviewCount}
-              price={price}
-              tagNames={tagNames}
-            />
-            <div className='map-pic'>
-              <MapBox
-                address={address}
-                city={city}
-                state={state}
-                zip={zip}
-                phoneNumber={phoneNumber}
-              />
+          <div className='gray-shelf'>
 
-              <PicBox photos={this.props.photos} />
-            </div>
-            <div className='all-pic'>
-              <span>
-                <i className="material-icons all-pic-icon">photo_library</i>
-                <a>
-                  See all &nbsp;{this.props.photos.length}
-                </a>
-              </span>
+            <div className='bizshow'>
+              <BizInfo
+                id={id}
+                name={name}
+                rating={rating}
+                reviewCount={reviewCount}
+                price={price}
+                tagNames={tagNames}
+              />
+              <div className='map-pic'>
+                <MapBox
+                  address={address}
+                  city={city}
+                  state={state}
+                  zip={zip}
+                  phoneNumber={phoneNumber}
+                />
+
+                <PicBox photos={this.props.photos} />
+              </div>
+              <div className='all-pic'>
+                <span>
+                  <i className="material-icons all-pic-icon">photo_library</i>
+                  <a>
+                    See all &nbsp;{this.props.photos.length}
+                  </a>
+                </span>
+              </div>
             </div>
           </div>
           <div className='bizshow-bottom'>
