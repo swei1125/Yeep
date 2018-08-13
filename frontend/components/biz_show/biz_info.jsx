@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class BizInfo extends React.Component {
 
@@ -39,10 +40,12 @@ class BizInfo extends React.Component {
             </span>
           </button>
           <button className='photo-btn'>
-            <span>
-              <i className="material-icons camera">camera_enhance</i>
-              Add Photo
-            </span>
+            <Link to={`/bizs/${this.props.id}/add_photo`}>
+              <span>
+                <i className="material-icons camera">camera_enhance</i>
+                Add Photo
+              </span>
+            </Link>
           </button>
         </div>
       </div>

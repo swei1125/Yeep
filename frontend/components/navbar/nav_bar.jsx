@@ -31,7 +31,9 @@ class NavBar extends React.Component {
       <div className='nav-wrapper'>
         <div className='nav-top'>
           <div className='top-inner-wrapper'>
-            <span className='logo'><img src={window.images.logo}/></span>
+            <Link to='/'>
+              <span className='logo'><img src={window.images.logo}/></span>
+            </Link>
             <SearchBarContainer />
             {session}
           </div>

@@ -1,0 +1,66 @@
+.upload-wrapper {
+  min-width: 1020px;
+  font-family: $Arimo;
+  padding-bottom: 36px;
+
+  .heading {
+    font-size: 22px;
+    font-weight: 700;
+    width: 960px;
+    margin: 10px auto 50px;
+    padding-top: 10px;
+
+    a{
+      color: $blue;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    span {
+      color: $red;
+    }
+  }
+
+  .upload-form {
+    width: 960px;
+    height: 500px;
+    margin: 20px auto;
+
+    form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      input {
+        margin-bottom: 50px;
+      }
+
+      .preview {
+        margin-bottom: 30px;
+        overflow: hidden;
+
+        img {
+          height: 300px;
+          width: auto;
+          object-fit: fill;
+        }
+      }
+
+      button {
+        background-color: $red;
+        width: 100px;
+        height: 24px;
+        padding: 5px 0px;
+        text-align: center;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 700;
+        color: white;
+      }
+      button:hover {
+        background-color: $bright-red;
+        text-decoration: none;
+      }
+    }
+  }
+}

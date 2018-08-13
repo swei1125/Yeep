@@ -6,6 +6,7 @@ import HomeContainer from './home/home_container';
 import {AuthRoute, ProtectedRoute} from '../utils/route_util';
 import Footer from './footer/footer';
 import BizShowContainer from './biz_show/biz_show_container';
+import UploadPhotoContainer from './upload_photo/upload_photo_container';
 
 const App = () => (
   <div className='main-wrapper'>
@@ -14,7 +15,8 @@ const App = () => (
       <Route exact path='/' component={HomeContainer}/>
       <AuthRoute exact path='/signup' component={SignupFormContainer} />
       <AuthRoute exact path='/login' component={LoginFormContainer} />
-      <Route path='/bizs/:bizId' component={BizShowContainer} />
+      <Route exact path='/bizs/:bizId' component={BizShowContainer} />
+      <ProtectedRoute exact path='/bizs/:bizId/add_photo' component={UploadPhotoContainer} />
       <Redirect to="/"/>
 
     </Switch>

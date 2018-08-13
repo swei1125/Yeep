@@ -8,7 +8,8 @@ import PicBox from './pic_box';
 import SideBar from './side_bar';
 
 class BizShow extends React.Component {
-  componentDidMount() {
+  componentWillMount() {
+    console.log("abcasfdjkabsfkjbajksfkjbkajsbfkjabs");
     this.props.fetchBiz(this.props.match.params.bizId);
   }
 
@@ -17,6 +18,7 @@ class BizShow extends React.Component {
       return null;
     }
     const {
+      id,
       name,
       address,
       city,
@@ -37,6 +39,7 @@ class BizShow extends React.Component {
         <div className='biz-wrapper'>
           <div className='bizshow'>
             <BizInfo
+              id={id}
               name={name}
               rating={rating}
               reviewCount={reviewCount}
@@ -57,9 +60,9 @@ class BizShow extends React.Component {
             <div className='all-pic'>
               <span>
                 <i className="material-icons all-pic-icon">photo_library</i>
-                <Link to='/'>
+                <a>
                   See all &nbsp;{this.props.photos.length}
-                </Link>
+                </a>
               </span>
             </div>
           </div>

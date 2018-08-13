@@ -6,9 +6,10 @@
 .top {
   padding-top: 30px;
   height: 600px;
+  background: linear-gradient( rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15) ), url('home.jpg');
   background-size: cover;
   background-position: 0 70%;
-  background-image: image-url("home.jpg");
+  // background-image: image-url("home.jpg");
   background-color: #333;
 
   .super-nav {
@@ -112,16 +113,6 @@
         .search-inp {
           border-right: 1px solid lightgray;
         }
-      }
-
-      .search-find::after {
-        content: "ada";
-        position: absolute;
-        top: 8px;
-        right: 0;
-        bottom: 8px;
-        width: 1px;
-        background-color: #ccc;
       }
 
       .search-title {
