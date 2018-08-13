@@ -95,12 +95,13 @@
 
       label {
         background-color: white;
-        padding: 8px;
+        padding: 7px;
         display: flex;
         align-items: center;
       }
 
       label:first-child {
+        padding-left: 12px;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
       }
@@ -141,7 +142,7 @@
       }
 
       input {
-        width: 400px;
+        width: 380px;
         font-size: 18px;
       }
     }

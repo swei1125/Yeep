@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_12_234413) do
+ActiveRecord::Schema.define(version: 2018_08_13_184105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2018_08_12_234413) do
     t.string "dog_allowed"
     t.string "hours", array: true
     t.string "price_range"
+    t.string "category", null: false
     t.index ["name"], name: "index_bizs_on_name"
     t.index ["user_id"], name: "index_bizs_on_user_id"
   end

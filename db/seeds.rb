@@ -5,6 +5,12 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.destroy_all
+Biz.destroy_all
+Review.destroy_all
+Tag.destroy_all
+Tagging.destroy_all
+Upload.destroy_all
 
 User.create(
   email: 'guest@email.com',
@@ -23,6 +29,7 @@ user7 = User.create(email:'127email', password:'123456', first_name:'user7', las
 
 biz1 = Biz.create!(
   name:'Cocobang',
+  category: 'restaurant',
   price:'$$',
   address:'550 Taylor St',
   city: 'San Francisco',
@@ -64,6 +71,7 @@ biz1 = Biz.create!(
 
 biz2 = Biz.create!(
   name:'Homeroom',
+  category: 'restaurant',
   price:'$$',
   address:'440 40th St',
   city: 'Oakland',
@@ -107,7 +115,7 @@ review1 = Review.create!(user_id: user1.id, biz_id: 1, body: 'Nice Place!', rati
 review2 = Review.create!(user_id: user2.id, biz_id: 1, body: 'Nice Place!', rating: 2)
 review3 = Review.create!(user_id: user3.id, biz_id: 1, body: 'Nice Place!', rating: 3)
 review4 = Review.create!(user_id: user4.id, biz_id: 1, body: 'Nice Place!', rating: 2)
-review5 = Review.create!(user_id: user5.id, biz_id: 1, body: 'Nice Place!', rating: 1)
+review5 = Review.create!(user_id: user5.id, biz_id: 1, body: 'Nice Place!', rating: 2)
 
 review6 = Review.create!(user_id: user1.id, biz_id: 2, body: 'Nice Place!', rating: 5)
 review7 = Review.create!(user_id: user2.id, biz_id: 2, body: 'Nice Place!', rating: 5)

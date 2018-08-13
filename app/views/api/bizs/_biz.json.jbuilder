@@ -12,5 +12,6 @@ json.extract! biz,
 :zip,
 :phone_number,
 :tag_names,
+:top_review,
 :latitude,
 :longitude

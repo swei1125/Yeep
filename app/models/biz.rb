@@ -13,27 +13,6 @@
 #  user_id         :integer          not null
 #  created_at      :datetime         not null
 #  updated_at      :datetime         not null
-#  credit_card?    :string
-#  apple_pay?      :string
-#  google_pay?     :string
-#  parking?        :string
-#  bike_parking?   :string
-#  take_out?       :string
-#  delivery?       :string
-#  outdoor_seat?   :string
-#  wifi?           :string
-#  has_tv?         :string
-#  dog_allowed?    :string
-#  reservation?    :string
-#  good_for?       :string
-#  waiter_service? :string
-#  caters?         :string
-#  for_group?      :string
-#  for_kids?       :string
-#  attier?         :string
-#  state           :string
-#  zip             :integer
-#
 
 class Biz < ApplicationRecord
   validates :name, :address, :city, :state, :zip, :latitude, :longitude, :phone_number, :user_id, presence: true
@@ -56,6 +35,17 @@ class Biz < ApplicationRecord
   through: :uploads,
   source: :photo
 
+  def self.in_location(location)
+    self.where("city = ?", location)
+  end
+
+  def self.in_term(bizs, search_term)
+    arr1 = bizs.where("name = ?", search_term)
+    arr2 = bizs.select {|biz| biz.tag_names.include?(search_term)}
+    result = arr1 + arr2
+    result.uniq
+  end
+
   def rating
     arr = self.reviews.map{|r| r.rating}
     rate = arr.reduce(:+) / arr.length
@@ -69,6 +59,14 @@ class Biz < ApplicationRecord
 
   def tag_names
     self.tags.map{|t| t.name}
+  end
+
+  def top_review
+    self.reviews[0].body
+  end
+
+  def top_photo
+    self.uploads[0].photo
   end
 
 end
