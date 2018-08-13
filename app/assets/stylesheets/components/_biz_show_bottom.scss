@@ -11,5 +11,94 @@
 }
 
 .side-bar {
-  background-color: lightblue;
+  font-family: inherit;
+
+  .little-summary {
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 18px;
+
+    ul{
+      li {
+        display: flex;
+        align-items: center;
+        height: 36px;
+
+        .icon {
+          color: #999;
+          padding-right: 10px;
+          margin-left: 8px;
+
+          .icon-wrapper {
+            min-width: 34px;
+            display: flex;
+            justify-content: center;
+            font-weight: 700;
+
+            .price {
+              color: #41a700;
+            }
+          }
+        }
+        .content-wrapper {
+          border-bottom: 1px solid #e6e6e6;
+          height: inherit;
+          width: 76%;
+          display: flex;
+          align-items: center;
+
+          .key {
+            margin-right: 12px;
+          }
+          .value {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  .hours-info {
+    margin-left: 30px;
+    font-size: 14px;
+    margin-bottom: 24px;
+
+    table {
+      border-spacing: 0;
+    }
+
+    h3 {
+      color: $red;
+      margin: 0 0 12px 0;
+      font-weight: 700;
+    }
+    th {
+      text-align: left;
+      padding-right: 20px;
+    }
+  }
+
+  .more-info {
+    margin-left: 30px;
+    font-size: 14px;
+
+    h3 {
+      color: $red;
+      margin: 0 0 15px 0;
+    }
+
+    dl {
+      display: flex;
+      padding-bottom: 10px;
+      margin: 0;
+
+      dd {
+        margin-left: 10px;
+        font-weight: 700;
+      }
+    }
+  }
 }

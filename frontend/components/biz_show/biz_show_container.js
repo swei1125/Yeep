@@ -5,6 +5,7 @@ import { fetchBiz } from '../../actions/biz_actions';
 
 const mapStateToProps = ({entities}) => ({
   biz: entities.bizs,
+  moreInfo: entities.bizMoreInfo,
   photos: Object.values(entities.photos),
   reviews: Object.values(entities.reviews),
   users: entities.users

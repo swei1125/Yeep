@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_10_191148) do
+ActiveRecord::Schema.define(version: 2018_08_12_234413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,27 +46,29 @@ ActiveRecord::Schema.define(version: 2018_08_10_191148) do
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "credit_card?"
-    t.string "apple_pay?"
-    t.string "google_pay?"
-    t.string "parking?"
-    t.string "bike_parking?"
-    t.string "take_out?"
-    t.string "delivery?"
-    t.string "outdoor_seat?"
-    t.string "wifi?"
-    t.string "has_tv?"
-    t.string "dog_allowed?"
-    t.string "reservation?"
-    t.string "good_for?"
-    t.string "waiter_service?"
-    t.string "caters?"
-    t.string "for_group?"
-    t.string "for_kids?"
-    t.string "attier?"
     t.string "state"
     t.integer "zip"
     t.string "phone_number", null: false
+    t.string "reservation"
+    t.string "delivery"
+    t.string "take_out"
+    t.string "credit_card"
+    t.string "apple_pay"
+    t.string "google_pay"
+    t.string "good_for"
+    t.string "parking"
+    t.string "bike_parking"
+    t.string "for_kids"
+    t.string "for_group"
+    t.string "attier"
+    t.string "outdoor_seat"
+    t.string "wifi"
+    t.string "has_tv"
+    t.string "waiter_service"
+    t.string "caters"
+    t.string "dog_allowed"
+    t.string "hours", array: true
+    t.string "price_range"
     t.index ["name"], name: "index_bizs_on_name"
     t.index ["user_id"], name: "index_bizs_on_user_id"
   end

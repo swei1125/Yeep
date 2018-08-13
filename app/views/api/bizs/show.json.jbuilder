@@ -2,6 +2,29 @@ json.biz do
   json.partial! "api/bizs/biz", biz: @biz
 end
 
+json.moreInfo do
+  json.extract! @biz,
+  :apple_pay,
+  :credit_card,
+  :google_pay,
+  :parking,
+  :bike_parking,
+  :take_out,
+  :delivery,
+  :outdoor_seat,
+  :wifi,
+  :has_tv,
+  :dog_allowed,
+  :reservation,
+  :good_for,
+  :waiter_service,
+  :caters,
+  :for_group,
+  :for_kids,
+  :attier,
+  :hours
+end
+
 json.photos do
   @biz.uploads.each do |up|
     json.set! up.id do
