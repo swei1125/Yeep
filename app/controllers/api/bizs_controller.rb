@@ -8,7 +8,7 @@ class Api::BizsController < ApplicationController
     end
 
     if params[:price]
-      bizs = bizs.where(price: params[:price])
+      bizs = bizs.select {|biz| biz.price == params[:price]}
     end
 
     @bizs = bizs
