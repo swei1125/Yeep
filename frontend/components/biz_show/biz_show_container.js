@@ -8,7 +8,8 @@ const mapStateToProps = ({entities}) => ({
   moreInfo: entities.bizMoreInfo,
   photos: Object.values(entities.photos),
   reviews: Object.values(entities.reviews),
-  users: entities.users
+  users: entities.users,
+  singleBiz: true
 });
 
 const mapDispatchToProps = dispatch => ({

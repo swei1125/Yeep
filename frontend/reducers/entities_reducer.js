@@ -4,7 +4,6 @@ import bizsReducer from './bizs_reducer';
 import reviewsReducer from './reviews_reducer';
 import photosReducer from './photos_reducer';
 import moreInfoReducer from './more_info_reducer';
-import searchReducer from './search_reducer';
 
 const entitiesReducer = combineReducers({
   users: usersReducer,
@@ -12,7 +11,6 @@ const entitiesReducer = combineReducers({
   reviews: reviewsReducer,
   photos: photosReducer,
   bizMoreInfo: moreInfoReducer,
-  search: searchReducer
 });
 
 export default entitiesReducer;

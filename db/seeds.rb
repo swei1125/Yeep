@@ -111,7 +111,9 @@ biz2 = Biz.create!(
   ]
 )
 
-review1 = Review.create!(user_id: user1.id, biz_id: 1, body: 'Nice Place!', rating: 5)
+review1 = Review.create!(user_id: user1.id, biz_id: 1,
+  body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec maximus nisi lorem, at consectetur augue malesuada eu. Mauris vulputate ante magna, iaculis viverra lacus ultrices ut. Proin sed elit erat. Quisque malesuada aliquam mollis. Integer luctus semper orci sed iaculis. Morbi pulvinar nibh a mi lacinia sodales. Morbi varius in dolor nec congue. Fusce egestas eros et ex tempor maximus. Praesent ac nulla mattis, rutrum ex id, consectetur mauris. Cras tellus dolor, placerat at feugiat gravida, mattis vitae odio. Etiam malesuada, arcu ac molestie ullamcorper, neque orci blandit dui, et pellentesque felis ante non justo. Nunc nec quam dui. Phasellus egestas vestibulum congue. Nullam congue lectus id mauris pretium, consequat porttitor turpis pellentesque. Phasellus fermentum, eros quis consectetur ultrices, quam arcu interdum purus, sollicitudin maximus nisl dolor id augue. Proin eu elit sagittis, congue orci eget, aliquet velit.',
+  rating: 5)
 review2 = Review.create!(user_id: user2.id, biz_id: 1, body: 'Nice Place!', rating: 2)
 review3 = Review.create!(user_id: user3.id, biz_id: 1, body: 'Nice Place!', rating: 3)
 review4 = Review.create!(user_id: user4.id, biz_id: 1, body: 'Nice Place!', rating: 2)

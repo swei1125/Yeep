@@ -4,23 +4,22 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 class HomeSearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {search_term: "", location: "", price: ""};
+    this.state = {search_term: "default", location: "default", price: "default"};
+    console.log(this.state);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.changeSearch(this.state);
-
     this.props.fetchBizs(this.state)
     .then(() => {
+
       this.props.history.push(
-        `/search/search_term?${this.state.search_term}/location?${this.state.location}`
+        `/search/${this.state.search_term}&${this.state.location}&${this.state.price}`
       );
     });
 
-    this.setState({search_term: "", location: "", price: ""});
   }
 
   handleUpdate(filed) {
@@ -38,7 +37,7 @@ class HomeSearchBar extends React.Component {
             <span className='search-inp'>
 
               <input
-                value={this.state.search_term}
+
                 placeholder='burgers, barbers, spas, handymen...'
                 onChange={this.handleUpdate('search_term')}
               />
@@ -51,7 +50,7 @@ class HomeSearchBar extends React.Component {
             <span className='search-inp'>
 
               <input
-                value={this.state.location}
+
                 placeholder='Chinatown SF, San Francisco,CA'
                 onChange={this.handleUpdate('location')}
               />

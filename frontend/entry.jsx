@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import configureStore from './store/store';
 import Root from './components/root';
 import {signup, login} from './actions/session_actions';
-import {fetchBiz} from './actions/biz_actions';
+import {fetchBiz, fetchBizs} from './actions/biz_actions';
+
 
 
 
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.getState = store.getState;
   window.dispatch = store.dispatch;
   window.fetchBiz = fetchBiz;
+  window.fetchBizs = fetchBizs;
 
 
   ReactDOM.render(<Root store={store} />, root);

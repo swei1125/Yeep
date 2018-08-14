@@ -30,10 +30,11 @@ class BizShow extends React.Component {
       reviewCount,
       priceRange
     } = this.props.biz;
+    console.log(this.props);
 
     return(
       <div className='bizshow-main'>
-        <NavBarContainer />
+        <NavBarContainer singleBiz={this.props.singleBiz}/>
         <div className='biz-wrapper'>
           <div className='gray-shelf'>
 

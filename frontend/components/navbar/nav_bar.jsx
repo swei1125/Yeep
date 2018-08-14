@@ -34,7 +34,7 @@ class NavBar extends React.Component {
             <Link to='/'>
               <span className='logo'><img src={window.images.logo}/></span>
             </Link>
-            <SearchBarContainer />
+            <SearchBarContainer singleBiz={this.props.singleBiz}/>
             {session}
           </div>
         </div>
