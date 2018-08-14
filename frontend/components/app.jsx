@@ -7,6 +7,7 @@ import {AuthRoute, ProtectedRoute} from '../utils/route_util';
 import Footer from './footer/footer';
 import BizShowContainer from './biz_show/biz_show_container';
 import UploadPhotoContainer from './upload_photo/upload_photo_container';
+import BizsIndexContainer from './search/biz_index_container';
 
 const App = () => (
   <div className='main-wrapper'>
@@ -17,6 +18,7 @@ const App = () => (
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <Route exact path='/bizs/:bizId' component={BizShowContainer} />
       <ProtectedRoute exact path='/bizs/:bizId/add_photo' component={UploadPhotoContainer} />
+      <Route path='/search' component={BizsIndexContainer} />
       <Redirect to="/"/>
 
     </Switch>

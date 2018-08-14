@@ -11,3 +11,7 @@ const rootReducer = combineReducers({
 });
 
 export default rootReducer;
+
+// export default  {
+//   sessionReducer, entitiesReducer, errorsReducer
+// };

@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
-import { updateSearch } from '../../actions/search_actions';
+import { withRouter } from 'react-router-dom';
+import { updateSearch, changeSearch } from '../../actions/search_actions';
+import { fetchBizs } from '../../actions/biz_actions';
 import SearchBar from './search_bar';
 
 
-const mapStateToProps = ({ entities: { search } }) => ({
-  search_term: search.search_term,
-  location: search.location
+const mapStateToProps = ({ entities }) => ({
+  search: entities.search,
 });
 
 const mapDispatchToProps = dispatch => ({
-  updateSearch: (searchKey, searchValue) => dispatch(updateSearch(searchKey,searchValue))
+  fetchBizs: (data) => dispatch(fetchBizs(data)),
+  changeSearch: (search) => dispatch(changeSearch(search))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(SearchBar);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(SearchBar));

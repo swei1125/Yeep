@@ -61,6 +61,7 @@ class UploadPhoto extends React.Component {
           </h2>
         </div>
         <div className='upload-form'>
+
           <form onSubmit={this.upload.bind(this)}>
             <input type='file' onChange={this.handleFile.bind(this)}/>
             <div className='preview'>
@@ -68,6 +69,7 @@ class UploadPhoto extends React.Component {
             </div>
             <button type='submit'>Add Photo</button>
           </form>
+          
         </div>
       </div>
     );

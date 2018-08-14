@@ -42,7 +42,8 @@ class Biz < ApplicationRecord
   def self.in_term(bizs, search_term)
     arr1 = bizs.where("name = ?", search_term)
     arr2 = bizs.select {|biz| biz.tag_names.include?(search_term)}
-    result = arr1 + arr2
+    arr3 = bizs.select {|biz| biz.category == search_term.downcase}
+    result = arr1 + arr2 + arr3
     result.uniq
   end
 

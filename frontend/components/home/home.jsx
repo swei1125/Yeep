@@ -1,11 +1,10 @@
 import React from 'react';
 import SessionBtnContainer from '../session/session_btn_container';
-import SearchBarContainer from '../search/search_bar_container';
+import HomeSearchBar from './home_search_bar';
 import {Link} from 'react-router-dom';
 
 
 class Home extends React.Component {
-
 
 
   render() {
@@ -23,7 +22,10 @@ class Home extends React.Component {
             <img className='logo' src={window.images.logo} />
           </div>
 
-          <SearchBarContainer />
+          <HomeSearchBar
+            fetchBizs={this.props.fetchBizs}
+            changeSearch={this.props.changeSearch}
+          />
 
 
         </div>

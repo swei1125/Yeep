@@ -1,13 +1,13 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import BizsIndex from './biz_index';
+import { Route, Redirect, withRouter } from 'react-router-dom';
 
-class SearchBar extends React.Component {
+class HomeSearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = this.props.search;
+    this.state = {search_term: "", location: "", price: ""};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
 
   handleSubmit(e) {
     e.preventDefault();
@@ -19,6 +19,8 @@ class SearchBar extends React.Component {
         `/search/search_term?${this.state.search_term}/location?${this.state.location}`
       );
     });
+
+    this.setState({search_term: "", location: "", price: ""});
   }
 
   handleUpdate(filed) {
@@ -66,4 +68,4 @@ class SearchBar extends React.Component {
   }
 }
 
-export default SearchBar;
+export default withRouter(HomeSearchBar);
