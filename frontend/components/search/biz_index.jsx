@@ -4,24 +4,28 @@ import NavBarContainer from '../navbar/nav_bar_container';
 
 class BizsIndex extends React.Component {
 
-  componentWillReceiveProps(newProps) {
-    if (this.props.match.params.path !== newProps.match.params.path) {
+  componentDidMount() {
 
       const data = {
-        search_term: newProps.match.params.search_term,
-        location: newProps.match.params.location,
-        price: newProps.match.params.price
+        search_term: this.props.match.params.search_term,
+        location: this.props.match.params.location,
+        price: this.props.match.params.price
       };
       this.props.fetchBizs(data);
-    }
-
 
   }
 
   render() {
+    console.log(this.props);
+    if (!this.props.bizs) {
+      return;
+    }
     const heading = this.props.bizs.length ? (
       <h1>
-        {`Best ${this.props.match.params.search_term}`}&nbsp;
+        {this.props.match.params.search_term === 'default' ? (
+          `Best Places in Yeep`
+        ) : (`Best ${this.props.match.params.search_term}`)}
+        &nbsp;
         <span>
           {this.props.match.params.location === 'default' ? (
             "in Yeep"
@@ -33,9 +37,15 @@ class BizsIndex extends React.Component {
     ) : (
       <h1>{`No Result for ${this.props.match.params.search_term}`}</h1>
     );
-    if (!this.props.bizs) {
-      return null;
-    }
+    const priceTags = ['$', '$$', '$$$', '$$$$'];
+    // <div className='price-btns'>
+    //   {priceTags.map((tag, idx) => (
+    //     <li className='price-tag' key={idx}>
+    //       <input type='checkbox'/>
+    //       <span>{tag}</span>
+    //     </li>
+    //   ))}
+    // </div>
 
     return(
       <div className='bizs-wrapper'>
@@ -45,7 +55,6 @@ class BizsIndex extends React.Component {
 
             {heading}
           </div>
-          <div className='price-btns'></div>
         </div>
 
         <div className='main-content'>

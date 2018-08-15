@@ -8,6 +8,7 @@ import PicBox from './pic_box';
 import SideBar from './side_bar';
 
 class BizShow extends React.Component {
+  
   componentWillMount() {
     this.props.fetchBiz(this.props.match.params.bizId);
   }

@@ -13,7 +13,7 @@ class SearchBar extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  componentWillMount() {
+  componentDidMount() {
     if (!this.props.singleBiz) {
       const data = {
         search_term: this.props.match.params.search_term,
@@ -31,19 +31,24 @@ class SearchBar extends React.Component {
   }
   componentWillReceiveProps(newProps) {
     console.log(newProps);
-    if (newProps.match.params.path !== this.props.match.params.path) {
-      if (!this.props.singleBiz) {
+    const term = this.state.search_term;
+    const loca = this.state.location;
+    const price = this.state.price;
+    if (newProps.match.url !== this.props.match.url) {
+      if (!newProps.singleBiz) {
         const data = {
           search_term: newProps.match.params.search_term,
           location: newProps.match.params.location,
           price: newProps.match.params.price
         };
-        this.props.fetchBizs(data);
-      }else{
+        newProps.fetchBizs(data);
+        this.setState(data);
+      }
+      else{
         this.setState({
-          search_term: 'default',
-          location: 'default',
-          price: 'default'
+          search_term: term,
+          location: loca,
+          price: price
         });
       }
     }
