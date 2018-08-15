@@ -8,6 +8,8 @@ import Footer from './footer/footer';
 import BizShowContainer from './biz_show/biz_show_container';
 import UploadPhotoContainer from './upload_photo/upload_photo_container';
 import BizsIndexContainer from './search/biz_index_container';
+import WriteReviewContainer from './review/writeReview_form_container';
+import EditReviewContainer from './review/editReview_form_container';
 
 const App = () => (
   <div className='main-wrapper'>
@@ -18,8 +20,10 @@ const App = () => (
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <Route exact path='/bizs/:bizId' component={BizShowContainer} />
       <ProtectedRoute exact path='/bizs/:bizId/add_photo' component={UploadPhotoContainer} />
-      <Route path='/search/:search_term&:location' component={BizsIndexContainer} />
-
+      <Route exact path='/search/:search_term&:location' component={BizsIndexContainer} />
+      <Route exact path='/writereview/:bizId&:bizName' component={WriteReviewContainer} />
+      <Route exact path='/editreview/:bizId&:bizName' component={EditReviewContainer} />
+      <Redirect to="/"/>
     </Switch>
 
 
@@ -28,6 +32,5 @@ const App = () => (
 
   </div>
 );
-// <Redirect to="/"/>
 
 export default App;

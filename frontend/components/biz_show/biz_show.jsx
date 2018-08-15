@@ -1,5 +1,5 @@
 import React from 'react';
-import ReviewDetail from './review_detail';
+// import ReviewDetail from './review_detail';
 import { Link } from 'react-router-dom';
 import NavBarContainer from '../navbar/nav_bar_container';
 import BizInfo from './biz_info';
@@ -8,7 +8,7 @@ import PicBox from './pic_box';
 import SideBar from './side_bar';
 
 class BizShow extends React.Component {
-  
+
   componentWillMount() {
     this.props.fetchBiz(this.props.match.params.bizId);
   }

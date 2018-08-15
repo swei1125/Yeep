@@ -1,4 +1,4 @@
-export const createReview = (bizId, review) => (
+export const createReview = (review, bizId) => (
   $.ajax({
     method: 'post',
     url: `api/bizs/${bizId}/reviews`,

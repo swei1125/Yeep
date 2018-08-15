@@ -1,0 +1,145 @@
+.review-main-wrapper {
+  // min-width: 1020px;
+  font-family: $Arimo;
+  padding-bottom: 36px;
+
+
+  .heading {
+    background-color: $red;
+    height: 64px;
+    margin-bottom: 30px;
+
+    .heading-wrapper {
+      max-width: 960px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 15px;
+      display: flex;
+      align-items: center;
+
+      .header {
+        h1 {
+          color: #fff;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 23px;
+          // -webkit-font-smoothing: antialiased;
+        }
+      }
+
+      .logo {
+        align-self: center;
+        margin-right: 5px;
+        img {
+          width: 100px;
+          height: 68px;
+        }
+      }
+    }
+  }
+
+  .content-wrapper {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 0 15px;
+
+
+    .bizName {
+      padding-bottom: 14px;
+      a {
+        color: $blue;
+        font-weight: 700;
+        font-size: 40px;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    }
+    .form-wrapper {
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      cursor: text;
+      padding: 18px;
+      max-width: 630px;
+      margin-bottom: 20px;
+
+      .rating {
+        height: 30px;
+        width: 100%;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+
+        span {
+          margin-left: 10px;
+          font-size: 14px;
+        }
+
+        .stars {
+          width: 162px;
+          height: 100%;
+          background-image: image_url('review_star.png');
+          list-style: none;
+          display: flex;
+
+          .star {
+            padding-left: 3px;
+            float: left;
+            height: 30px;
+            width: 30px;
+
+            input {
+              border: none;
+              margin: 0;
+              padding: 0;
+              width: 30px;
+              height: 30px;
+              cursor: pointer;
+            }
+            label {
+              display: none;
+            }
+          }
+          .star:first-child {
+            padding-left: 0;
+          }
+
+        }
+      }
+
+      textarea {
+        height: 100px;
+        width: 100%;
+        font-size: 18px;
+        border: 0;
+        outline: none;
+        padding: 0;
+        resize: none;
+        min-height: 258px;
+      }
+      textarea::placeholder {
+        color: #a3a3a3;
+        font-size: 18px;
+        line-height: 25px;
+      }
+    }
+
+    button {
+      font-weight: 700;
+      text-align: center;
+      min-width: 240px;
+      height: 48px;
+      color: white;
+      border-color: $dark-red;
+      box-shadow: 0 1px 1px rgba(0,0,0,.3);
+      background-color: #d90007;
+      background: linear-gradient(#d90007,#c91400);
+      border-radius: 3px;
+    }
+    button:hover {
+      background-color: $bright-red;
+      cursor: pointer;
+      background: linear-gradient(#f30008,#d90007)
+    }
+  }
+}
