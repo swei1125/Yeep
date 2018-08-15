@@ -29,7 +29,7 @@ user7 = User.create(email:'127email', password:'123456', first_name:'user7', las
 
 biz1 = Biz.create!(
   name:'Cocobang',
-  category: 'restaurant',
+  category: 'Restaurants',
   price:'$$',
   address:'550 Taylor St',
   city: 'San Francisco',
@@ -71,7 +71,7 @@ biz1 = Biz.create!(
 
 biz2 = Biz.create!(
   name:'Homeroom',
-  category: 'restaurant',
+  category: 'Restaurants',
   price:'$$',
   address:'440 40th St',
   city: 'Oakland',

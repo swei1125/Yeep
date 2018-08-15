@@ -18,7 +18,7 @@ const App = () => (
       <AuthRoute exact path='/login' component={LoginFormContainer} />
       <Route exact path='/bizs/:bizId' component={BizShowContainer} />
       <ProtectedRoute exact path='/bizs/:bizId/add_photo' component={UploadPhotoContainer} />
-      <Route path='/search/:search_term&:location&:price' component={BizsIndexContainer} />
+      <Route path='/search/:search_term&:location' component={BizsIndexContainer} />
 
     </Switch>
 

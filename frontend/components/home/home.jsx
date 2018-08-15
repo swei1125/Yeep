@@ -27,6 +27,28 @@ class Home extends React.Component {
             changeSearch={this.props.changeSearch}
           />
 
+          <div className='bottom-wrapper'>
+            <div className='tags'>
+              <Link to='/search/Restaurants&default'>
+                <span>
+                  <i className="material-icons">restaurant</i>
+                  <p>Restaurants</p>
+                </span>
+              </Link>
+              <Link to='/search/Nightlife&default'>
+                <span>
+                  <i className="material-icons">local_bar</i>
+                  <p>Nightlife</p>
+                </span>
+              </Link>
+              <Link to='/search/Home%20Service&default'>
+                <span>
+                  <i className="material-icons">build</i>
+                  <p>Home Services</p>
+                </span>
+              </Link>
+            </div>
+          </div>
 
         </div>
       </div>

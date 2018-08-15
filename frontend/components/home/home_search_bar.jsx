@@ -4,8 +4,7 @@ import { Route, Redirect, withRouter } from 'react-router-dom';
 class HomeSearchBar extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {search_term: "default", location: "default", price: "default"};
-    console.log(this.state);
+    this.state = {search_term: "default", location: "default"};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -16,7 +15,7 @@ class HomeSearchBar extends React.Component {
     .then(() => {
 
       this.props.history.push(
-        `/search/${this.state.search_term}&${this.state.location}&${this.state.price}`
+        `/search/${this.state.search_term}&${this.state.location}`
       );
     });
 

@@ -36,13 +36,17 @@ class Biz < ApplicationRecord
   source: :photo
 
   def self.in_location(location)
-    self.where("city = ?", location)
+    Biz.all.select {|biz| biz.city.downcase == location.downcase}
   end
 
   def self.in_term(bizs, search_term)
     arr1 = bizs.where("name = ?", search_term)
-    arr2 = bizs.select {|biz| biz.tag_names.include?(search_term)}
-    arr3 = bizs.select {|biz| biz.category == search_term.downcase}
+    arr2 = bizs.select do |biz|
+      biz.tag_names.any? do |tag|
+        tag.downcase == search_term.downcase
+      end
+    end
+    arr3 = bizs.select {|biz| biz.category.downcase == search_term.downcase}
     result = arr1 + arr2 + arr3
     result.uniq
   end

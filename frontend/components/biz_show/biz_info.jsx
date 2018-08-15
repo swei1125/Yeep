@@ -29,7 +29,10 @@ class BizInfo extends React.Component {
           <section className='price-tag'>
             <span>{price}</span>
             &nbsp;·&nbsp;
-            <span>{tagNames.map((tag, i) => <a key={i}>{tag}</a>)}</span>
+            <span>
+              {tagNames.map((tag, i) => (
+                <Link to={`/search/${tag}&default`} key={i}>{tag}</Link>))}
+            </span>
           </section>
         </div>
         <div className='info-right'>

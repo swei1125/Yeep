@@ -41,24 +41,24 @@ class NavBar extends React.Component {
         <div className='nav-bottom'>
           <div className='bottom-inner-wrapper'>
             <div className='tags'>
-              <button>
+              <Link to='/search/Restaurants&default' >
                 <span>
                   <i className="material-icons">restaurant</i>
                   Restaurants
                 </span>
-              </button>
-              <button>
+              </Link>
+              <Link to='/search/Nightlife&default'>
                 <span>
                   <i className="material-icons">local_bar</i>
                   Nightlife
                 </span>
-              </button>
-              <button>
+              </Link>
+              <Link to='/search/Home%20Service&default'>
                 <span>
                   <i className="material-icons">build</i>
                   Home Services
                 </span>
-              </button>
+              </Link>
             </div>
             {login}
           </div>

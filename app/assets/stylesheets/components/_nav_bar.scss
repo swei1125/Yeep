@@ -31,9 +31,6 @@
       button {
         padding: 4px 20px;
       }
-      button:hover {
-        background-color: #a71c1c;
-      }
 
       .tags {
         width: 730px;
@@ -42,7 +39,8 @@
         justify-content: center;
         margin-left: 90px;
 
-        button {
+        a {
+          padding: 4px 20px;
           margin: 0 40px;
           color: white;
           font-weight: 700;
@@ -56,6 +54,9 @@
             font-size: 18px;
             margin-right: 7px;
           }
+        }
+        a:hover {
+          background-color: #a71c1c;
         }
       }
     }

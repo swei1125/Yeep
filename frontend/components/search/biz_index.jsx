@@ -4,22 +4,9 @@ import NavBarContainer from '../navbar/nav_bar_container';
 
 class BizsIndex extends React.Component {
 
-  componentDidMount() {
-
-      const data = {
-        search_term: this.props.match.params.search_term,
-        location: this.props.match.params.location,
-        price: this.props.match.params.price
-      };
-      this.props.fetchBizs(data);
-
-  }
-
   render() {
     console.log(this.props);
-    if (!this.props.bizs) {
-      return;
-    }
+
     const heading = this.props.bizs.length ? (
       <h1>
         {this.props.match.params.search_term === 'default' ? (
@@ -37,15 +24,6 @@ class BizsIndex extends React.Component {
     ) : (
       <h1>{`No Result for ${this.props.match.params.search_term}`}</h1>
     );
-    const priceTags = ['$', '$$', '$$$', '$$$$'];
-    // <div className='price-btns'>
-    //   {priceTags.map((tag, idx) => (
-    //     <li className='price-tag' key={idx}>
-    //       <input type='checkbox'/>
-    //       <span>{tag}</span>
-    //     </li>
-    //   ))}
-    // </div>
 
     return(
       <div className='bizs-wrapper'>
@@ -61,6 +39,7 @@ class BizsIndex extends React.Component {
           <div className='bizs-column'>
             <ul className='bizs-list'>
               {this.props.bizs.map((biz, idx) => {
+                if (!biz.tagNames) return null;
                 const {
                   id,
                   address,
@@ -110,7 +89,7 @@ class BizsIndex extends React.Component {
 
                             <span>
                               {tagNames.map((tag, i) => (
-                                <Link to={`/search/${tag}&default&default`} key={i}>{tag}</Link>
+                                <Link to={`/search/${tag}&default`} key={i}>{tag}</Link>
                               ))}
                             </span>
                           </section>

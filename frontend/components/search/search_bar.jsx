@@ -7,20 +7,14 @@ class SearchBar extends React.Component {
     super(props);
     this.state = {
       search_term: this.props.match.params.search_term,
-      location: this.props.match.params.location,
-      price: this.props.match.params.price
+      location: this.props.match.params.location
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   componentDidMount() {
     if (!this.props.singleBiz) {
-      const data = {
-        search_term: this.props.match.params.search_term,
-        location: this.props.match.params.location,
-        price: this.props.match.params.price
-      };
-      this.props.fetchBizs(data);
+      this.props.fetchBizs(this.state);
     }else{
       this.setState({
         search_term: 'default',
@@ -30,26 +24,14 @@ class SearchBar extends React.Component {
     }
   }
   componentWillReceiveProps(newProps) {
-    console.log(newProps);
-    const term = this.state.search_term;
-    const loca = this.state.location;
-    const price = this.state.price;
     if (newProps.match.url !== this.props.match.url) {
       if (!newProps.singleBiz) {
         const data = {
           search_term: newProps.match.params.search_term,
-          location: newProps.match.params.location,
-          price: newProps.match.params.price
+          location: newProps.match.params.location
         };
         newProps.fetchBizs(data);
         this.setState(data);
-      }
-      else{
-        this.setState({
-          search_term: term,
-          location: loca,
-          price: price
-        });
       }
     }
   }
@@ -60,7 +42,7 @@ class SearchBar extends React.Component {
     this.props.fetchBizs(this.state)
     .then(() => {
       this.props.history.push(
-        `/search/${this.state.search_term}&${this.state.location}&${this.state.price}`
+        `/search/${this.state.search_term}&${this.state.location}`
       );
     });
   }
