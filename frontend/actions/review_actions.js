@@ -8,7 +8,7 @@ export const removeReview = () => ({
 });
 
 export const createReview = (review, bizId) => dispatch => (
-  ReviewAPI.createReview(bizId, review)
+  ReviewAPI.createReview(review, bizId)
   .then( newBizInfo => dispatch(receiveSingleBiz(newBizInfo)) )
 );
 

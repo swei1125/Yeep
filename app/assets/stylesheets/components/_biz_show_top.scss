@@ -85,7 +85,7 @@
 
     .review-btn {
       height: 100%;
-      width: 156px;
+      width: 172px;
       border: 1px solid $dark-red;
       background-color: $red;
       color: white;
@@ -97,17 +97,29 @@
       box-shadow: 0 1px 1px rgba(0,0,0,0.3);
       margin-right: 20px;
 
+      a {
+        text-decoration: none;
+        color: inherit;
+        margin: 0 auto;
+        width: auto;
+      }
+
       span {
-        margin-left: 14px;
+        // margin-left: 14px;
         display: flex;
         align-items: center;
         font-size: 14px;
+        padding-right: 4px;
 
-
-        .material-icons .review {
+        i {
+          margin-right: 5px;
           font-size: 24px;
-          margin-right: 4px;
           color: rgba(255, 255, 255, 1);
+        }
+
+
+        .material-icons .star {
+          margin-right: 4px;
         }
       }
 
@@ -182,7 +194,7 @@
         transition: transform .2s;
         overflow: hidden;
         box-shadow: 0px 5px 10px rgba(0,0,0,0.15);
-        
+
         img {
           object-fit: cover;
           object-position: center;

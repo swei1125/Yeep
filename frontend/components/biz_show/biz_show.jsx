@@ -9,7 +9,7 @@ import SideBar from './side_bar';
 
 class BizShow extends React.Component {
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchBiz(this.props.match.params.bizId);
   }
 
@@ -29,7 +29,8 @@ class BizShow extends React.Component {
       tagNames,
       rating,
       reviewCount,
-      priceRange
+      priceRange,
+      viewerIds,
     } = this.props.biz;
     console.log(this.props);
 
@@ -47,6 +48,8 @@ class BizShow extends React.Component {
                 reviewCount={reviewCount}
                 price={price}
                 tagNames={tagNames}
+                userIds={Object.keys(this.props.users)}
+                currentUserId={this.props.currentUserId}
               />
               <div className='map-pic'>
                 <MapBox

@@ -8,12 +8,28 @@ class ReviewForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentDidMount() {
+    if (this.props.formType === 'edit') {
+      this.props.fetchBiz(this.props.match.params.bizId)
+      .then(() => {
+        this.setState(this.props.reviewState);
+        const stars = document.querySelector('div.stars');
+        stars.style.backgroundPosition = this.state.starPos;
+      });
+    }
+    console.log(this.state);
+  }
+
   update() {
     return (e) => this.setState({body: e.target.value});
   }
   handleSubmit(e) {
     e.preventDefault();
-    const review = {body: this.state.body, rating: +this.state.rating};
+    const review = {
+      body: this.state.body,
+      rating: +this.state.rating,
+      id: +this.state.id
+    };
     this.props.action(review, this.props.match.params.bizId)
     .then(this.props.history.push(`/bizs/${this.props.match.params.bizId}`));
   }
@@ -122,6 +138,7 @@ class ReviewForm extends React.Component {
             </div>
             <textarea
               className='body'
+              value={this.state.body}
               placeholder={placeholder}
               maxLength='5000'
               onChange={this.update('body')}>

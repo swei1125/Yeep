@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class BizInfo extends React.Component {
 
   render() {
-    const { name, reviewCount, price, tagNames, rating } = this.props;
+    const { id, name, reviewCount, price, tagNames, rating, userIds, currentUserId } = this.props;
     const starPos = {
       0: "0 0px",
       1: "0 -24px",
@@ -18,6 +18,10 @@ class BizInfo extends React.Component {
       5: "0 -216px"
     };
     const starPx = starPos[rating];
+    const reviewBtn = userIds.includes(`${currentUserId}`) ? 'Update your Review' : 'Write a Review';
+    const url = reviewBtn === 'Write a Review' ? (
+      `/writereview/${id}&${name}`
+    ) : (`/editreview/${id}&${name}`);
     return(
       <div className='biz-info'>
         <div className='info-left'>
@@ -37,13 +41,15 @@ class BizInfo extends React.Component {
         </div>
         <div className='info-right'>
           <button className='review-btn'>
-            <span>
-              <i className="material-icons star">star</i>
-              Write a Review
-            </span>
+            <Link to={url}>
+              <span>
+                <i className="material-icons star">star</i>
+                {reviewBtn}
+              </span>
+            </Link>
           </button>
           <button className='photo-btn'>
-            <Link to={`/bizs/${this.props.id}/add_photo`}>
+            <Link to={`/bizs/${id}/add_photo`}>
               <span>
                 <i className="material-icons camera">camera_enhance</i>
                 Add Photo
