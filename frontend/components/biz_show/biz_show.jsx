@@ -19,14 +19,6 @@ class BizShow extends React.Component {
     if (date[0][0] === '0') date[0] = date[0][1];
     return date.join('/');
   }
-  // 
-  // componentWillReciveProps(newProps) {
-  //   const newId = newProps.reviews[0].id;
-  //   const oldId = this.props.reviews[0].id;
-  //   if ( newId !== oldId ) {
-  //     newProps.fetchBiz(newProps.match.params.bizId);
-  //   }
-  // }
 
   removeReview(id) {
     return ((e) => {
@@ -53,6 +45,8 @@ class BizShow extends React.Component {
       reviewCount,
       priceRange,
       viewerIds,
+      latitude,
+      longitude
     } = this.props.biz;
     return(
       <div className='bizshow-main'>
@@ -78,6 +72,8 @@ class BizShow extends React.Component {
                   state={state}
                   zip={zip}
                   phoneNumber={phoneNumber}
+                  lat={latitude}
+                  lng={longitude}
                 />
 
                 <PicBox photos={this.props.photos} />

@@ -1,14 +1,17 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SingleBizMap from '../map/single_biz_map';
 
 class MapBox extends React.Component {
 
   render() {
-    const { address, city, state, zip, phoneNumber } = this.props;
+    const { address, city, state, zip, phoneNumber, lat, lng } = this.props;
     return(
       <div className='map-box-wrapper'>
         <div className='outer-box'>
-          <section className='map'></section>
+          <section className='map'>
+            <SingleBizMap lat={lat} lng={lng}/>
+          </section>
           <section className='address'>
             <ul className='info'>
               <li>
