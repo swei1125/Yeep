@@ -14,6 +14,7 @@
 class Review < ApplicationRecord
   validates :user_id, :biz_id, :body, :rating, presence: true
   validates :rating, inclusion: { in: [1, 2, 3, 4, 5] }
+  validates :body, length: {minimum: 15}
 
   belongs_to :user
   belongs_to :biz

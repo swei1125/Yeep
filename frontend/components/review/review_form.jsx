@@ -17,12 +17,15 @@ class ReviewForm extends React.Component {
         stars.style.backgroundPosition = this.state.starPos;
       });
     }
-    console.log(this.state);
+  }
+  componentWillUnMount() {
+    this.props.clearReviewErrors();
   }
 
   update() {
     return (e) => this.setState({body: e.target.value});
   }
+
   handleSubmit(e) {
     e.preventDefault();
     const review = {
@@ -31,12 +34,17 @@ class ReviewForm extends React.Component {
       id: +this.state.id
     };
     this.props.action(review, this.props.match.params.bizId)
-    .then(this.props.history.push(`/bizs/${this.props.match.params.bizId}`));
+    .then(() => {
+      if (this.props.errors.length === 0){
+        this.props.history.push(`/bizs/${this.props.match.params.bizId}`);
+      }else {
+        return;
+      }
+    });
   }
 
   updateMsg(tag, pos) {
     return (e) => {
-
       e.preventDefault();
       const label = document.querySelector(tag);
       const el = document.getElementById('rating-msg');
@@ -67,6 +75,8 @@ class ReviewForm extends React.Component {
   }
 
   render() {
+    console.log(this.state);
+    if (!this.props.errors) return null;
     const header = this.props.formType === 'create' ? (
       <h1>Write a Review</h1>) : (<h1>Update Your Review</h1>);
     const btn = this.props.formType === 'create' ? ('Post Review') : ('Update Review');
@@ -143,7 +153,9 @@ class ReviewForm extends React.Component {
               maxLength='5000'
               onChange={this.update('body')}>
             </textarea>
-            <div className='errors'></div>
+            <div className='errors'>
+              <span>{this.props.errors[0]}</span>
+            </div>
           </div>
           <button onClick={this.handleSubmit}>{btn}</button>
         </div>

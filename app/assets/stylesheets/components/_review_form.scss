@@ -63,6 +63,7 @@
       max-width: 630px;
       margin-bottom: 20px;
 
+
       .rating {
         height: 30px;
         width: 100%;
@@ -122,6 +123,17 @@
         color: #a3a3a3;
         font-size: 18px;
         line-height: 25px;
+      }
+
+      .errors {
+        min-height: 18px;
+        margin-top: 18px;
+
+        span {
+          color: $red;
+          font-size: 14px;
+        }
+
       }
     }
 

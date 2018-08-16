@@ -21,8 +21,8 @@ const App = () => (
       <Route exact path='/bizs/:bizId' component={BizShowContainer} />
       <ProtectedRoute exact path='/bizs/:bizId/add_photo' component={UploadPhotoContainer} />
       <Route exact path='/search/:search_term&:location' component={BizsIndexContainer} />
-      <Route exact path='/writereview/:bizId&:bizName' component={WriteReviewContainer} />
-      <Route exact path='/editreview/:bizId&:bizName' component={EditReviewContainer} />
+      <ProtectedRoute exact path='/writereview/:bizId&:bizName' component={WriteReviewContainer} />
+      <ProtectedRoute exact path='/editreview/:bizId&:bizName' component={EditReviewContainer} />
       <Redirect to="/"/>
     </Switch>
 

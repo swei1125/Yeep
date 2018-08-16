@@ -1,8 +1,10 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { createReview, updateReview } from '../../actions/review_actions';
+import { createReview, updateReview, clearReviewErrors } from '../../actions/review_actions';
 import ReviewForm from './review_form';
 import { fetchBiz } from '../../actions/biz_actions';
+import { getSingleReview } from '../../reducers/selector';
+
 
 const msg = {
   1: "Eek! Methinks not.",
@@ -20,16 +22,22 @@ const starPos = {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  let review = state.entities.reviews[ownProps.match.params.bizId];
+  const review = getSingleReview(
+    Object.values(state.entities.reviews), state.session.currentUser.id
+  );
   if (!review) return {formType: 'edit', reviewState: {}};
   return{
     formType: 'edit',
-    reviewState: Object.assign({}, review, { msg: msg[review.rating], starPos: starPos[review.rating]})  
+    errors: state.errors.review,
+    reviewState: Object.assign(
+      {}, review, { msg: msg[review.rating], starPos: starPos[review.rating]}
+    )
   };
 };
 
 const mapDispatchToProps = dispatch => ({
   action: (review) => dispatch(updateReview(review)),
+  clearReviewErrors: () => dispatch(clearReviewErrors),
   fetchBiz: (id) => dispatch(fetchBiz(id))
 });
 
