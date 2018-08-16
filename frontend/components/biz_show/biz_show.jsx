@@ -73,7 +73,9 @@ class BizShow extends React.Component {
             </div>
           </div>
           <div className='bizshow-bottom'>
-            <div className='biz-review'>Reviews</div>
+            <div className='biz-review'>
+              Reviews
+            </div>
             <SideBar moreInfo={this.props.moreInfo} price={price} priceRange={priceRange}/>
 
           </div>

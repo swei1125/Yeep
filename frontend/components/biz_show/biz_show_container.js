@@ -2,6 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router';
 import BizShow from './biz_show';
 import { fetchBiz } from '../../actions/biz_actions';
+import { sortedReviews } from '../../reducers/selector';
 
 const mapStateToProps = (state) => {
   const currentUser = state.session.currentUser;
@@ -9,7 +10,7 @@ const mapStateToProps = (state) => {
     biz: state.entities.bizs,
     moreInfo: state.entities.bizMoreInfo,
     photos: Object.values(state.entities.photos),
-    reviews: Object.values(state.entities.reviews),
+    reviews: sortedReviews(state),
     users: state.entities.users,
     currentUserId: currentUser ? currentUser.id : null,
     singleBiz: true

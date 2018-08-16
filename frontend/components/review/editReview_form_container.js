@@ -22,9 +22,7 @@ const starPos = {
 };
 
 const mapStateToProps = (state, ownProps) => {
-  const review = getSingleReview(
-    Object.values(state.entities.reviews), state.session.currentUser.id
-  );
+  const review = getSingleReview(state);
   if (!review) return {formType: 'edit', reviewState: {}};
   return{
     formType: 'edit',
