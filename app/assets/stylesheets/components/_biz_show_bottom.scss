@@ -8,8 +8,70 @@
   margin: 0 auto;
 }
 
-.biz-review {
+.biz-reviews {
   background-color: yellow;
+
+  h2 {
+    font-weight: 700;
+    color: $red;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    font-size: 22px;
+    border-bottom: 1px solid #e6e6e6;
+
+    span {
+      font-weight: 400;
+      color: black
+    }
+  }
+
+  .review-list {
+    list-style: none;
+
+
+    .review {
+      margin: 0;
+      padding: 18px 0;
+      border-bottom: 1px solid #e6e6e6;
+      padding-bottom: 17px;
+
+
+      .review-wrapper {
+        display: flex;
+        .user-info {
+          height: 100px;
+          padding: 0 15px 0 0;
+          min-height: 1px;
+          box-sizing: border-box;
+          width: 37.5%;
+          background-color: pink;
+          display: flex;
+
+          .profile-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 4px;
+            border: 1px solid black;
+          }
+          .info {
+            margin-left: 10px;
+
+            .name {
+              font-weight: 700;
+            }
+          }
+        }
+        .review-info {
+          height: 100px;
+          padding: 0 15px;
+          min-height: 1px;
+          box-sizing: border-box;
+          width: 62.5%;
+          background-color: green;
+        }
+      }
+    }
+  }
 }
 
 .side-bar {

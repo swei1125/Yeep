@@ -1,5 +1,4 @@
 import React from 'react';
-// import ReviewDetail from './review_detail';
 import { Link } from 'react-router-dom';
 import NavBarContainer from '../navbar/nav_bar_container';
 import BizInfo from './biz_info';
@@ -33,7 +32,6 @@ class BizShow extends React.Component {
       viewerIds,
     } = this.props.biz;
     console.log(this.props);
-
     return(
       <div className='bizshow-main'>
         <NavBarContainer singleBiz={this.props.singleBiz}/>
@@ -73,8 +71,32 @@ class BizShow extends React.Component {
             </div>
           </div>
           <div className='bizshow-bottom'>
-            <div className='biz-review'>
-              Reviews
+            <div className='biz-reviews'>
+              <h2>
+                Recommended Reviews
+                <span>{` for ${name}`}</span>
+              </h2>
+              <ul className='review-list'>
+                {this.props.reviews.map(review =>  {
+                  const user = this.props.users[review.userId];
+                  return (
+                    <li className='review' key={review.id}>
+                      <div className='review-wrapper'>
+                        <div className='user-info'>
+                          <div className='profile-img'></div>
+                          <div className='info'>
+                            <li className='name'>
+                              <a>{`${user.firstName} ${user.lastName[0]}.`}</a>
+                            </li>
+                          </div>
+                        </div>
+                        <div className='review-info'></div>
+                      </div>
+                    </li>
+
+                  );}
+                )}
+              </ul>
             </div>
             <SideBar moreInfo={this.props.moreInfo} price={price} priceRange={priceRange}/>
 
