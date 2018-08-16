@@ -9,8 +9,6 @@
 }
 
 .biz-reviews {
-  background-color: yellow;
-
   h2 {
     font-weight: 700;
     color: $red;
@@ -34,7 +32,9 @@
       padding: 18px 0;
       border-bottom: 1px solid #e6e6e6;
       padding-bottom: 17px;
-
+      .review-content {
+        min-height: 135px;
+      }
 
       .review-wrapper {
         display: flex;
@@ -44,7 +44,6 @@
           min-height: 1px;
           box-sizing: border-box;
           width: 37.5%;
-          background-color: pink;
           display: flex;
 
           .profile-img {
@@ -110,13 +109,64 @@
           }
         }
         .review-info {
-          height: 100px;
+          height: auto;
           padding: 0 15px;
-          min-height: 1px;
           box-sizing: border-box;
           width: 62.5%;
-          background-color: green;
+
+          .rate {
+            display: flex;
+            align-items: center;
+            width: auto;
+            margin: 6px 0;
+
+            .stars {
+              height: 18px;
+              width: 102px;
+              margin-right: 7px;;
+              background-image: image_url('stars.png')
+            }
+            .create-date {
+              color: #666;
+              font-size: 14px;
+            }
+          }
+          p {
+            margin-bottom: 12px;
+          }
+          .review-footer {
+            float: right;
+            vertical-align: bottom;
+            .btn-wrap {
+              margin-top: 23px;
+
+              button {
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                color: #999;
+                background: transparent;
+
+                i {
+                  width: 18px;
+                  height: 19px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+                i::before {
+                  font-size: 14px;
+                }
+              }
+              button:hover {
+                i {
+                  color: black;
+                }
+              }
+            }
+          }
         }
+
       }
     }
   }

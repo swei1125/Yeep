@@ -82,16 +82,12 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-
-    // errorSpan.classList.add('trans');
-    // console.log(this.state);
     if (!this.props.errors) return null;
     const header = this.props.formType === 'create' ? (
       <h1>Write a Review</h1>) : (<h1>Update Your Review</h1>);
     const btn = this.props.formType === 'create' ? ('Post Review') : ('Update Review');
     const { bizId, bizName } = this.props.match.params;
     const placeholder = "Your review helps others learn about great local businesses.\n\nPlease don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees.";
-    console.log(this.props.errors);
     return (
       <div className='review-main-wrapper'>
         <div className='heading'>

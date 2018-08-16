@@ -10,7 +10,6 @@ class BizShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchBiz(this.props.match.params.bizId);
-    console.log(this.props);
   }
 
   translateDate(str) {
@@ -19,6 +18,21 @@ class BizShow extends React.Component {
     date = [date[1]].concat([date[2]]).concat([date[0]]);
     if (date[0][0] === '0') date[0] = date[0][1];
     return date.join('/');
+  }
+  // 
+  // componentWillReciveProps(newProps) {
+  //   const newId = newProps.reviews[0].id;
+  //   const oldId = this.props.reviews[0].id;
+  //   if ( newId !== oldId ) {
+  //     newProps.fetchBiz(newProps.match.params.bizId);
+  //   }
+  // }
+
+  removeReview(id) {
+    return ((e) => {
+      this.props.deleteReview(id)
+      .then(() => this.props.fetchBiz(this.props.match.params.bizId));
+    });
   }
 
   render() {
@@ -40,7 +54,6 @@ class BizShow extends React.Component {
       priceRange,
       viewerIds,
     } = this.props.biz;
-    console.log(this.props);
     return(
       <div className='bizshow-main'>
         <NavBarContainer singleBiz={this.props.singleBiz}/>
@@ -86,7 +99,14 @@ class BizShow extends React.Component {
                 <span>{` for ${name}`}</span>
               </h2>
               <ul className='review-list'>
-                {this.props.reviews.map(review =>  {
+                {this.props.reviews.map((review, idx) =>  {
+                  const starPx = {
+                    1: '0 -258px',
+                    2: '0 -294px',
+                    3: '0 -330px',
+                    4: '0 -366px',
+                    5: '0 -402px'
+                  };
                   const user = this.props.users[review.userId];
                   const reviews = user.reviewsCount > 1 ? 'reviews' : 'review';
                   const photos = user.photoCount ? (
@@ -100,8 +120,9 @@ class BizShow extends React.Component {
                       </span>
                     </section>
                   ) : ("");
+                  const btnDsiplay = (idx !== 0 || this.props.currentUserId !== review.userId) ? ("none") : ('inline-block');
                   return (
-                    <li className='review' key={review.id}>
+                    <li className='review' key={idx}>
                       <div className='review-wrapper'>
                         <div className='user-info'>
                           <div className='profile-img'></div>
@@ -120,13 +141,27 @@ class BizShow extends React.Component {
                           </div>
                         </div>
                         <div className='review-info'>
-                          <div className='rate'>
-                            <div className='stars'></div>
-                            <span className='create-date'>
-                              {this.translateDate(review.createdAt)}
-                            </span>
+                          <div className='review-content'>
+                            <div className='rate'>
+                              <div className='stars'
+                                style={{backgroundPosition: `${starPx[review.rating]}`}}
+                                ></div>
+                              <span className='create-date'>
+                                {this.translateDate(review.createdAt)}
+                              </span>
+                            </div>
+                            <p className='body'>{review.body}</p>
                           </div>
-                          <div className='body'></div>
+                          <div className='review-footer clearfix'>
+                            <div className='btn-wrap'>
+                              <button
+                                style={{display: `${btnDsiplay}`}}
+                                onClick={this.removeReview(review.id)}
+                              >
+                                <i className="fas fa-trash-alt"></i>
+                              </button>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </li>
