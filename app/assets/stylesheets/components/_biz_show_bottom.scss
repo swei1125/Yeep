@@ -56,6 +56,54 @@
           .info {
             margin-left: 10px;
 
+            section {
+              margin-bottom: 5px;
+              .icon {
+                background-color: #f15c00;
+                width: 13px;
+                height: 13px;
+                border-radius: 3px;
+                margin-right: 6px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                i {
+                  font-size: 10px;
+                  color: white;
+                  position: relative;
+                  bottom: 0.1px;
+                }
+              }
+              .light-weight {
+                font-weight: 400;
+                margin-left: 3px;
+                font-size: 12px;
+              }
+
+              span {
+                font-size: 12px;
+                font-weight: 700;
+                color: #666;
+              }
+            }
+            .review-count {
+              display: flex;
+              align-items: center;
+
+            }
+
+            .photo-count {
+              display: flex;
+              align-items: center;
+              i {
+                position: relative;
+                right: 2px;
+                margin-right: 1px;
+                font-size: 18px;
+                color: #f15c00;
+              }
+            }
+
             .name {
               font-weight: 700;
             }

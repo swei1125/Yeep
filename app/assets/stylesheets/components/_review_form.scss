@@ -130,10 +130,16 @@
         margin-top: 18px;
 
         span {
+          opacity: 0;
+          transition: opacity .3s ease-in-out,transform .3s ease-in-out;
           color: $red;
           font-size: 14px;
         }
 
+        .trans {
+          opacity: 1;
+
+        }
       }
     }
 

@@ -10,6 +10,15 @@ class BizShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchBiz(this.props.match.params.bizId);
+    console.log(this.props);
+  }
+
+  translateDate(str) {
+    let date = str.split("T")[0];
+    date = date.split("-");
+    date = [date[1]].concat([date[2]]).concat([date[0]]);
+    if (date[0][0] === '0') date[0] = date[0][1];
+    return date.join('/');
   }
 
   render() {
@@ -79,18 +88,46 @@ class BizShow extends React.Component {
               <ul className='review-list'>
                 {this.props.reviews.map(review =>  {
                   const user = this.props.users[review.userId];
+                  const reviews = user.reviewsCount > 1 ? 'reviews' : 'review';
+                  const photos = user.photoCount ? (
+                    <section className='photo-count'>
+
+                      <i className="material-icons camera">camera_alt</i>
+
+                      <span>{user.photoCount}</span>
+                      <span className='light-weight'>
+                        {user.photoCount > 1 ? 'photos' : 'photo'}
+                      </span>
+                    </section>
+                  ) : ("");
                   return (
                     <li className='review' key={review.id}>
                       <div className='review-wrapper'>
                         <div className='user-info'>
                           <div className='profile-img'></div>
                           <div className='info'>
-                            <li className='name'>
+                            <section className='name'>
                               <a>{`${user.firstName} ${user.lastName[0]}.`}</a>
-                            </li>
+                            </section>
+                            <section className='review-count'>
+                              <div className='icon'>
+                                <i className="material-icons">star</i>
+                              </div>
+                              <span>{user.reviewsCount}</span>
+                              <span className='light-weight'>{`${reviews}`}</span>
+                            </section>
+                            {photos}
                           </div>
                         </div>
-                        <div className='review-info'></div>
+                        <div className='review-info'>
+                          <div className='rate'>
+                            <div className='stars'></div>
+                            <span className='create-date'>
+                              {this.translateDate(review.createdAt)}
+                            </span>
+                          </div>
+                          <div className='body'></div>
+                        </div>
                       </div>
                     </li>
 

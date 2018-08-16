@@ -18,6 +18,18 @@ class ReviewForm extends React.Component {
       });
     }
   }
+  componentWillReceiveProps(newProps) {
+    if (newProps.errors.length) {
+      const errorsDiv = document.getElementsByClassName('errors')[0];
+      const child = document.querySelector('.trans');
+      if (child) errorsDiv.removeChild(child);
+      const errorSpan = document.createElement('span');
+      errorSpan.innerText = newProps.errors[0];
+      errorsDiv.appendChild(errorSpan);
+      setTimeout(() => errorSpan.classList.add('trans'), 50);
+    }
+  }
+
   componentWillUnMount() {
     this.props.clearReviewErrors();
   }
@@ -34,13 +46,8 @@ class ReviewForm extends React.Component {
       id: +this.state.id
     };
     this.props.action(review, this.props.match.params.bizId)
-    .then(() => {
-      if (this.props.errors.length === 0){
-        this.props.history.push(`/bizs/${this.props.match.params.bizId}`);
-      }else {
-        return;
-      }
-    });
+    .then(() => this.props.history.push(`/bizs/${this.props.match.params.bizId}`))
+    ;
   }
 
   updateMsg(tag, pos) {
@@ -75,13 +82,16 @@ class ReviewForm extends React.Component {
   }
 
   render() {
-    console.log(this.state);
+
+    // errorSpan.classList.add('trans');
+    // console.log(this.state);
     if (!this.props.errors) return null;
     const header = this.props.formType === 'create' ? (
       <h1>Write a Review</h1>) : (<h1>Update Your Review</h1>);
     const btn = this.props.formType === 'create' ? ('Post Review') : ('Update Review');
     const { bizId, bizName } = this.props.match.params;
     const placeholder = "Your review helps others learn about great local businesses.\n\nPlease don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees.";
+    console.log(this.props.errors);
     return (
       <div className='review-main-wrapper'>
         <div className='heading'>
@@ -154,7 +164,7 @@ class ReviewForm extends React.Component {
               onChange={this.update('body')}>
             </textarea>
             <div className='errors'>
-              <span>{this.props.errors[0]}</span>
+
             </div>
           </div>
           <button onClick={this.handleSubmit}>{btn}</button>

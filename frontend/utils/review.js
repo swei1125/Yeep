@@ -11,6 +11,7 @@ export const updateReview = (review) => (
     method: 'patch',
     url: `api/reviews/${review.id}`,
     data: {review}
+
   })
 );
 
