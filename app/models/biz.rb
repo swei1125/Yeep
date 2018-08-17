@@ -40,7 +40,7 @@ class Biz < ApplicationRecord
   end
 
   def self.in_term(bizs, search_term)
-    arr1 = bizs.where("name = ?", search_term)
+    arr1 = bizs.select {|biz| biz.name.downcase == search_term.downcase}
     arr2 = bizs.select do |biz|
       biz.tag_names.any? do |tag|
         tag.downcase == search_term.downcase

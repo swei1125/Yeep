@@ -1,12 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NavBarContainer from '../navbar/nav_bar_container';
+import BizsMapContainer from '../map/bizs_map_container';
 
 class BizsIndex extends React.Component {
+  componentWillUnmount() {
+
+  }
 
   render() {
-    console.log(this.props);
-
     const heading = this.props.bizs.length ? (
       <h1>
         {this.props.match.params.search_term === 'default' ? (
@@ -115,7 +117,9 @@ class BizsIndex extends React.Component {
             </ul>
           </div>
           <div className='map-column'>
-            <div className='map-box'></div>
+            <div className='map-box'>
+              <BizsMapContainer />
+            </div>
           </div>
         </div>
       </div>

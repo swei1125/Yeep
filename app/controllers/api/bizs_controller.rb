@@ -1,7 +1,6 @@
 class Api::BizsController < ApplicationController
 
   def index
-
     bizs = params[:location] != "default" ? Biz.in_location(params[:location]) : Biz.all
 
     if params[:search_term] != "default"
