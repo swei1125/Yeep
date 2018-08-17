@@ -53,7 +53,7 @@ class UploadPhoto extends React.Component {
         <div className='heading'>
           <h2>
             <Link to={`/bizs/${this.props.match.params.bizId}`}>
-              {this.props.name}:
+              {this.props.match.params.bizName}:
             </Link>
             <span>
               {` Add Photos`}
@@ -69,7 +69,7 @@ class UploadPhoto extends React.Component {
             </div>
             <button type='submit'>Add Photo</button>
           </form>
-          
+
         </div>
       </div>
     );

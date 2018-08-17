@@ -49,7 +49,7 @@ class BizInfo extends React.Component {
             </button>
         </Link>
           <button className='photo-btn'>
-            <Link to={`/bizs/${id}/add_photo`}>
+            <Link to={`/bizs/${id}&${name}/add_photo`}>
               <span>
                 <i className="material-icons camera">camera_enhance</i>
                 Add Photo
