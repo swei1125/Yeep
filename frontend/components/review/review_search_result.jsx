@@ -1,9 +1,10 @@
 import React from 'react';
 import NavBarContainer from '../navbar/nav_bar_container';
 import ReviewSearchBarContainer from './review_searchbar_container';
+import BizsMapContainer from '../map/bizs_map_container';
+import BizIndexContainer from './bizs_index_container';
 
-
-class ReviewSearch extends React.Component {
+class ReviewSearchResult extends React.Component {
 
   render() {
     return(
@@ -17,14 +18,22 @@ class ReviewSearch extends React.Component {
               <ReviewSearchBarContainer />
             </div>
             <div className='top-img'>
-              <img src={window.images.review_search} />
+              <img src={window.images.review_results} />
             </div>
           </div>
         </div>
-        <div className='white-space'></div>
+        <div className='heading'><h2>See the business you’d like to review?</h2></div>
+        <div className='main-content'>
+          <BizIndexContainer />
+          <div className='map-column'>
+            <div className='map-box'>
+              <BizsMapContainer />
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-export default ReviewSearch;
+export default ReviewSearchResult;

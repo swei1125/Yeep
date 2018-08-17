@@ -40,14 +40,14 @@ class BizInfo extends React.Component {
           </section>
         </div>
         <div className='info-right'>
-          <button className='review-btn'>
-            <Link to={url}>
-              <span>
-                <i className="material-icons star">star</i>
-                {reviewBtn}
-              </span>
-            </Link>
-          </button>
+          <Link to={url}>
+            <button className='review-btn'>
+                <span>
+                  <i className="material-icons star">star</i>
+                  {reviewBtn}
+                </span>
+            </button>
+        </Link>
           <button className='photo-btn'>
             <Link to={`/bizs/${id}/add_photo`}>
               <span>

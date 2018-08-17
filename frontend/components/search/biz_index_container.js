@@ -8,8 +8,4 @@ const mapStateToProps = state => ({
   singleBiz: false
 });
 
-const mapDispatchToProps = dispatch => ({
-  fetchBizs: (data) => dispatch(fetchBizs(data))
-});
-
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BizsIndex));
+export default withRouter(connect(mapStateToProps)(BizsIndex));

@@ -4,9 +4,6 @@ import NavBarContainer from '../navbar/nav_bar_container';
 import BizsMapContainer from '../map/bizs_map_container';
 
 class BizsIndex extends React.Component {
-  componentWillUnmount() {
-
-  }
 
   render() {
     const heading = this.props.bizs.length ? (

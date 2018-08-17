@@ -10,6 +10,8 @@ import UploadPhotoContainer from './upload_photo/upload_photo_container';
 import BizsIndexContainer from './search/biz_index_container';
 import WriteReviewContainer from './review/writeReview_form_container';
 import EditReviewContainer from './review/editReview_form_container';
+import ReviewSearch from './review/review_search';
+import ReviewSearchResult from './review/review_search_result';
 
 const App = () => (
   <div className='main-wrapper'>
@@ -23,7 +25,9 @@ const App = () => (
       <Route exact path='/search/:search_term&:location' component={BizsIndexContainer} />
       <ProtectedRoute exact path='/writereview/:bizId&:bizName' component={WriteReviewContainer} />
       <ProtectedRoute exact path='/editreview/:bizId&:bizName' component={EditReviewContainer} />
-      <Redirect to="/"/>
+      <Route exact path='/reviewsearch/' component={ReviewSearch} />
+      <Route exact path="/reviewsearch/:search_term&:location" component={ReviewSearchResult}/>
+      <Redirect to='/' />
     </Switch>
 
 

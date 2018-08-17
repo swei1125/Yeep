@@ -5,9 +5,10 @@ import BizsIndex from './biz_index';
 class SearchBar extends React.Component {
   constructor(props) {
     super(props);
+    const params = this.props.match.params;
     this.state = {
-      search_term: this.props.match.params.search_term,
-      location: this.props.match.params.location
+      search_term: params.search_term ? params.search_term : 'default',
+      location: params.location ? params.location : 'default'
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }

@@ -14,4 +14,5 @@ json.extract! biz,
 :tag_names,
 :top_review,
 :latitude,
-:longitude
+:longitude,
+:viewer_ids

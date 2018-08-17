@@ -13,7 +13,7 @@ class Home extends React.Component {
         <div className='top'>
           <nav className='super-nav'>
             <div className='left-nav'>
-              <button className='write-review'>Write a Review</button>
+              <Link to='/reviewsearch'><button className='write-review'>Write a Review</button></Link>
             </div>
             <SessionBtnContainer />
           </nav>
