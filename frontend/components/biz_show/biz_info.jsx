@@ -35,7 +35,7 @@ class BizInfo extends React.Component {
             &nbsp;·&nbsp;
             <span>
               {tagNames.map((tag, i) => (
-                <Link to={`/search/${tag}&default`} key={i}>{tag}</Link>))}
+                <Link className='tag' to={`/search/${tag}&default`} key={i}>{tag}</Link>))}
             </span>
           </section>
         </div>

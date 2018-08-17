@@ -94,6 +94,7 @@ class BizShow extends React.Component {
                 Recommended Reviews
                 <span>{` for ${name}`}</span>
               </h2>
+
               <ul className='review-list'>
                 {this.props.reviews.map((review, idx) =>  {
                   const starPx = {
@@ -117,11 +118,14 @@ class BizShow extends React.Component {
                     </section>
                   ) : ("");
                   const btnDsiplay = (idx !== 0 || this.props.currentUserId !== review.userId) ? ("none") : ('inline-block');
+                  console.log(this.props.users[review.userId].profile_img);
                   return (
                     <li className='review' key={idx}>
                       <div className='review-wrapper'>
                         <div className='user-info'>
-                          <div className='profile-img'></div>
+                          <div className='profile-img'>
+                            <img src={this.props.users[review.userId].profileImg}/>
+                          </div>
                           <div className='info'>
                             <section className='name'>
                               <a>{`${user.firstName} ${user.lastName[0]}.`}</a>

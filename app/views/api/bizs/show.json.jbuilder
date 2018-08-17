@@ -47,7 +47,7 @@ json.users do
   @biz.viewers.each do |user|
     json.set! user.id do
       json.extract! user, :id, :email, :first_name, :last_name
-      # json.profile_img url_for(user.profile_img)
+      json.profile_img url_for(user.profile_img)
       json.reviewsCount user.reviews.length
       json.photoCount user.uploads.length
     end

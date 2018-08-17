@@ -73,6 +73,14 @@
     }
     .price-tag {
       font-size: 16px;
+      .tag:after {
+        content: ", ";
+        color: #999;
+        position:relative;
+      }
+      .tag:last-child:after {
+        content: ""
+      }
     }
   }
 

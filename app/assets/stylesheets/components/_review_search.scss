@@ -271,6 +271,15 @@
                 .price-tag {
                   font-size: 14px;
 
+                  .tag:after {
+                    content: ", ";
+                    color: #999;
+                    position:relative;
+                  }
+                  .tag:last-child:after {
+                    content: ""
+                  }
+
                   .price-span:after {
                     content:" • ";
                     color: #999;

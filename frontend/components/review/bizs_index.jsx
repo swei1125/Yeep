@@ -59,7 +59,7 @@ const BizsIndex = ({bizs, currentUserId}) => (
 
                     <span>
                       {tagNames.map((tag, i) => (
-                        <span key={i}>{tag}</span>
+                        <span className='tag' key={i}>{tag}</span>
                       ))}
                     </span>
                   </section>
