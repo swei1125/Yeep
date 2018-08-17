@@ -6,12 +6,14 @@ Tag.destroy_all
 Tagging.destroy_all
 Upload.destroy_all
 
-User.create(
+guest = User.create(
   email: 'guest@email.com',
   password:'guest_login',
   first_name:'Guest',
   last_name: 'Yeep'
 )
+guest.profile_img.attach(io: File.open("./app/assets/images/profile.png"), filename:"profile.png")
+
 
 user1 = User.create(email:'1@gmail.com', password:'123456', first_name:'John', last_name:'Doe')
 user2 = User.create(email:'2@gmail.com', password:'123456', first_name:'Jane', last_name:'Doe')
@@ -540,7 +542,8 @@ review8_2 = Review.create!(
 review8_3 = Review.create!(
   user_id: user12.id,
   biz_id: biz8.id,
-  body: "Excellent fresh sushi with very reasonable price!\n\nFood: \n- hamachi carpaccio with truffle oil: the fish was very fresh and I was a bit surprised that the portion was pretty for this plate. The ponzu and the truffle oil balanced perfectly together with the fish. \n\n- scallop and ankimo spoon: it was sooo delicious that I wish it was bigger in portion. The scallop was very fresh and sweet, no fishy smell to it. The ankimo just melts in your mouth. \n\n-12 nigiri omakase: $72 - this price is very reasonable compare to other high end places. And the fish quality and taste does not disappoint!!! Loved the freshness and other unique flavors they add to the sushi. I would definitely order this again.\n\nService was excellent and ambiance, as you can tell from the picture, very dark. Waited for 1.5 hour on a Saturday night at 8PM.... so be prepared. ENJOY!",
+  body: "Excellent fresh sushi with very reasonable price!\n\nFood: \n- hamachi carpaccio with truffle oil: the fish was very fresh and I was a bit surprised that the portion was pretty for this plate. The ponzu and the truffle oil balanced perfectly together with the fish. \n\n- scallop and ankimo spoon: it was sooo delicious that I wish it was bigger in portion. The scallop was very fresh and sweet, no fishy smell to it. The ankimo just melts in your mouth. \n\n-12 nigiri omakase: $72 - this price is very reasonable compare to other high end places. And the fish quality and taste does not disappoint!!! Loved the freshness and other unique flavors they add to the sushi. I would definitely order this again.
+  \n\nService was excellent and ambiance, as you can tell from the picture, very dark. Waited for 1.5 hour on a Saturday night at 8PM.... so be prepared. ENJOY!",
   rating: 5)
 
 tag1 = Tag.create!(name: 'Korean')

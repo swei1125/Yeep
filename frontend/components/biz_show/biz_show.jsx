@@ -119,6 +119,7 @@ class BizShow extends React.Component {
                   ) : ("");
                   const btnDsiplay = (idx !== 0 || this.props.currentUserId !== review.userId) ? ("none") : ('inline-block');
                   console.log(this.props.users[review.userId].profile_img);
+                  // const profiel = this.props.users[review.userId].profile_img ? () : ()
                   return (
                     <li className='review' key={idx}>
                       <div className='review-wrapper'>

@@ -16,25 +16,25 @@ class BizsMap extends React.Component {
     });
   }
 
-  // componentDidMount() {
-  //   const location = this.props.match.params.location;
-  //   const center = location === 'default' ? 'San Francisco' : location;
-  //   let geocoder = new google.maps.Geocoder();
-  //   const mapOptions = {
-  //     center: { lat: 0, lng: 0 },
-  //     zoom: 12
-  //   };
-  //   this.map = new google.maps.Map(this.mapNode, mapOptions);
-  //   const that = this;
-  //   geocoder.geocode({'address': center}, function(results, status) {
-  //     if (status === 'OK') {
-  //       that.map.setCenter(results[0].geometry.location);
-  //       that.props.bizs.forEach(biz => that.createMarker(biz));
-  //     } else {
-  //       alert('Geocode was not successful for the following reason: ' + status);
-  //     }
-  //   });
-  // }
+  componentDidMount() {
+    const location = this.props.match.params.location;
+    const center = location === 'default' ? 'San Francisco' : location;
+    let geocoder = new google.maps.Geocoder();
+    const mapOptions = {
+      center: { lat: 0, lng: 0 },
+      zoom: 12
+    };
+    this.map = new google.maps.Map(this.mapNode, mapOptions);
+    const that = this;
+    geocoder.geocode({'address': center}, function(results, status) {
+      if (status === 'OK') {
+        that.map.setCenter(results[0].geometry.location);
+        that.props.bizs.forEach(biz => that.createMarker(biz));
+      } else {
+        alert('Geocode was not successful for the following reason: ' + status);
+      }
+    });
+  }
 
   componentWillReceiveProps(newProps) {
     const urlDiff = this.props.match.url !== newProps.match.url;
@@ -53,7 +53,7 @@ class BizsMap extends React.Component {
       geocoder.geocode({'address': center}, function(results, status) {
         if (status === 'OK') {
           that.map.setCenter(results[0].geometry.location);
-          newProps.bizs.forEach(biz => that.createMarker(biz));
+          that.props.bizs.forEach(biz => that.createMarker(biz));
         } else {
           alert('Geocode was not successful for the following reason: ' + status);
         }
