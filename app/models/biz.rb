@@ -40,15 +40,26 @@ class Biz < ApplicationRecord
   end
 
   def self.in_term(bizs, search_term)
-    arr1 = bizs.select {|biz| biz.name.downcase == search_term.downcase}
+
+    arr1 = bizs.select {|biz| biz.term_arr.include?(search_term.downcase)}
     arr2 = bizs.select do |biz|
       biz.tag_names.any? do |tag|
         tag.downcase == search_term.downcase
       end
     end
-    arr3 = bizs.select {|biz| biz.category.downcase == search_term.downcase}
+    arr3 = bizs.select {|biz| biz.category.downcase.split(" ").include?(search_term.downcase)}
     result = arr1 + arr2 + arr3
     result.uniq
+  end
+
+  def term_arr
+    result = []
+    (0...self.name.length).each do |i|
+      (i+2..self.name.length).each do |j|
+        result << self[i..j].downcase
+      end
+    end
+    result
   end
 
   def rating
