@@ -29,7 +29,6 @@ class UploadPhoto extends React.Component {
   upload(e) {
     e.preventDefault();
     const formData = new FormData();
-    console.log(this);
     formData.append('upload[biz_id]', this.props.match.params.bizId);
     formData.append('upload[photo]', this.state.file);
     $.ajax({

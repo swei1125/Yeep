@@ -39,7 +39,6 @@ class BizsMap extends React.Component {
   componentWillReceiveProps(newProps) {
     const urlDiff = this.props.match.url !== newProps.match.url;
     const bizsDiff = this.props.bizs.length !== newProps.bizs.length;
-    console.log(newProps);
     if (urlDiff || bizsDiff) {
       const location = newProps.match.params.location;
       const center = location === 'default' ? 'San Francisco' : location;
