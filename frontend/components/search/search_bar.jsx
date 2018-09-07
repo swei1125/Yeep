@@ -57,7 +57,7 @@ class SearchBar extends React.Component {
   render() {
     return(
       <div className='search-bar-wrapper'>
-        <div className='search-bar'>
+        <form onSubmit={this.handleSubmit} className='search-bar'>
           <label className='search-find'>
             <span className='search-title'>Find</span>
             <span className='search-inp'>
@@ -83,11 +83,11 @@ class SearchBar extends React.Component {
 
             </span>
           </label>
-          <button className='search-btn' onClick={this.handleSubmit}>
+          <button className='search-btn' type='submit'>
             <img className='search-icon' src={window.images.search} />
           </button>
 
-        </div>
+        </form>
       </div>
     );
   }
