@@ -35,10 +35,10 @@ class Home extends React.Component {
                   <p>Restaurants</p>
                 </span>
               </Link>
-              <Link to='/search/Nightlife&default'>
+              <Link to="/search/Tea&default">
                 <span>
-                  <i className="material-icons">local_bar</i>
-                  <p>Nightlife</p>
+                  <i className="fas fa-coffee"></i>
+                  <p>Coffee & Tea</p>
                 </span>
               </Link>
               <Link to='/search/Home%20Service&default'>
@@ -50,6 +50,45 @@ class Home extends React.Component {
             </div>
           </div>
 
+        </div>
+        <div className='categories-wrapper'>
+          <div className='cate-box'>
+            <h2>Find the Best Businesses in Town</h2>
+            <div className='boxes-wrapper'>
+              <div className='box-1'>
+                <Link to='/search/Ramen&default'>
+                  <div className='img-box'>
+                    <img src={window.images.ramen}/>
+                  </div>
+                  <div className='category'><span>Ramen</span></div>
+                </Link>
+              </div>
+              <div className='box-2'>
+                <Link to='/search/Boba&default'>
+                  <div className='img-box'>
+                    <img src={window.images.boba}/>
+                  </div>
+                  <div className='category'><span>Boba</span></div>
+                </Link>
+              </div>
+              <div className='box-3'>
+                <Link to='/search/Nightlife&default'>
+                  <div className='img-box'>
+                    <img src={window.images.bar} />
+                  </div>
+                  <div className='category'><span>Nightlife</span></div>
+                </Link>
+              </div>
+              <div className='box-4'>
+                <Link to='/search/Bakeries&default'>
+                  <div className='img-box'>
+                    <img src={window.images.bakery}/>
+                  </div>
+                  <div className='category'><span>Bakeries</span></div>
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

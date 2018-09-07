@@ -9,4 +9,60 @@
   background-repeat: no-repeat;
   background-color: #f5f5f5;
   border-top: 1px solid #ccc;
+
+  .links-wrapper {
+    width: 960px;
+    height: auto;
+    padding: 36px 0 18px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+    .link-list {
+      margin-top: 15px;
+
+      li {
+        margin-bottom: 6px;
+        font-family: $main-font;
+        font-size: 14px;
+        list-style: none;
+        color: black;
+      }
+
+      a {
+        color: $blue;
+      }
+      a:hover {
+        text-decoration: underline;;
+      }
+    }
+
+    h3 {
+      color: $red;
+      margin: 0;
+      font-family: $main-font;
+      font-size: 16px;
+    }
+  }
+
+  // .links {
+  //   width: 500px;
+  //   margin:20px auto;
+  //   display: flex;
+  //   justify-content: space-around;
+  //   color: $red;
+  //
+  //   a {
+  //     font-size: 22px;
+  //     font-family: $Arimo;
+  //     // font-weight: bold;
+  //   }
+  //   a:hover {
+  //     border-bottom: 1px solid $red;
+  //   }
+  //
+  //   i {
+  //     margin-right: 5px;
+  //   }
+  // }
 }

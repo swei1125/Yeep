@@ -16,7 +16,7 @@ Yeep is a Yelp clone that allows users to browse any businesses in any location.
 * Users can search business by name, category, and location.
 * Users can find business results on the google map using GoogleMap API.
 * Display a business information in an organized layout.
-* Users can upload a pictures to a business using Amazon Web Services.
+* Users can upload a picture to a business using Amazon Web Services.
 * Users can write and edit review for businesses.
 
 #### Search

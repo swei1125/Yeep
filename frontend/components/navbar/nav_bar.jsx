@@ -49,8 +49,8 @@ class NavBar extends React.Component {
               </Link>
               <Link to='/search/Nightlife&default'>
                 <span>
-                  <i className="material-icons">local_bar</i>
-                  Nightlife
+                  <i className="fas fa-coffee"></i>
+                  <p>Coffee & Tea</p>
                 </span>
               </Link>
               <Link to='/search/Home%20Service&default'>

@@ -423,27 +423,6 @@ review2_4 = Review.create!(
   body: "It's an entire place dedidated to mac and cheese..how can it get any better?\n\nThe Jalapenño Popper Mac is by far my favorite. The staff is sweet and even though there is often a wait to get a table, the food makes it all worthwhile. Definitely would recommend even if just for the expericience of such a unique place!",
   rating: 3)
 
-review5_1 = Review.create!(
-  user_id: user10.id,
-  biz_id: biz3.id,
-  body: "This was probably one of the better bowls of ramen I've had!  I literally held my bowl up and drank all of the soup broth!\n\nWe ordered the Original Ramen ($14), Crispy Mushrooms ($8), and a side of Oxtail ($5).  The Crispy Mushrooms were well-battered and flavorful.  The shimeji mushroom was nice and smooth.  The Original Ramen consists of a beef bone broth and came with incredibly tender beef filets, a delicious black truffle oil, bouncy noodles, slices of king oyster mushroom, an onsen egg, and green onions.  The ramen broth was light yet flavorful.  The king oyster mushrooms were very fresh and had a creamy coconut taste to them!  The onsen egg and noodles were cooked perfectly.  The Oxtail beef was also tender and fall off the bone, and it was marinated in a thick tomato stew that is really familiar.\n\nBy the end of my bowl of ramen, I still had the perfect amount of ingredients to balance it all out.  At some places, you're left with a bowl of thick and heavy broth; but Ushi Taro gives the perfect proportion and taste for me!\n\nService was friendly and attentive.  They offer water and green tea, which is very soothing and cleansing.  I was pretty blown away by the flavors and I'm definitely coming back.  I almost don't want to write this review so it doesn't get too crowded!",
-  rating: 4)
-review4_2 = Review.create!(
-  user_id: user11.id,
-  biz_id: biz3.id,
-  body: "Probably my favorite ramen place for now! Don't like most pork soup base, the beef soup base not salty or fatty at all. I can taste their high quality beef and soup! definitely will come back and bring more friends to try this special beef soup base ramen!",
-  rating: 4)
-review3_3 = Review.create!(
-  user_id: user12.id,
-  biz_id: biz3.id,
-  body: "Came to the softy opening and really enjoyed the ramen and crispy mushrooms. Make sure to stir the broth to mix in the truffle if you get the original. The noodles were very good, even got an extra order, but they are short for ramen which I have never really seen before. Not really meant for slurping. Hope this place sticks around.\n\nWe will return for sure!\n\nA few things I would like to see on the menu and the shop in the future.\nChicken Karage and Rice (to add to broth when noodles are finished)\nAlso Shichimin (7 spices), Garlic, and White Pepper condiments.",
-  rating: 5)
-review2_4 = Review.create!(
-  user_id: user13.id,
-  biz_id: biz3.id,
-  body: "Date & Time:  Saturday June 30, 2018 @ 6pm\nDining Companions:  Mommy & Husband\nScene:  Solo Diners, Couples & Families In Denim Jackets, Crop Tops, Cut-Offs, Converse & MK Cross-Body Bags Tuck into Delicious Piping Hot Bowls of Ramen\nMusic:  Florence + The Machine\nDecor:  The Very Sweet Hostess/Server will Greet You Warmly & Give You A Choice Of Counter-Seating OverLooking 9th St or Communal  Tables.   The Place is Reminiscent of a Japanese Tavern\nService:  Awesome One-Woman Show- A Real SweetHeart\nImbibe:  Green Tea.  Beer & Wine Available Soon\nDevour:  Original Bone Broth Ramen & Tsukeman(Ramen w/ Dipping Sauce & Bone Broth on the Side.  For Dessert Green Tea Mochi & Green Tea CheeseCake\nTotal:  $59.33",
-  rating: 3)
-
 review3_1 = Review.create!(
   user_id: user10.id,
   biz_id: biz3.id,
