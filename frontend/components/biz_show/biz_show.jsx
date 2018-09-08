@@ -10,6 +10,7 @@ class BizShow extends React.Component {
 
   componentDidMount() {
     this.props.fetchBiz(this.props.match.params.bizId);
+    window.scrollTo(0, 0);
   }
 
   translateDate(str) {

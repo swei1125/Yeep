@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Route, Redirect, withRouter } from 'react-router-dom';
 
 class HomeSearchBar extends React.Component {
@@ -7,7 +8,6 @@ class HomeSearchBar extends React.Component {
     this.state = {search_term: "default", location: "default"};
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
 
   handleSubmit(e) {
     e.preventDefault();
@@ -36,24 +36,21 @@ class HomeSearchBar extends React.Component {
             <span className='search-inp'>
 
               <input
-
-                placeholder='burgers, barbers, spas, handymen...'
+                placeholder='ramen, boba, bakeries...'
                 onChange={this.handleUpdate('search_term')}
               />
-
             </span>
 
           </label>
+          <div className='line'></div>
           <label className='search-location'>
             <span className='search-title'>Near</span>
             <span className='search-inp'>
 
               <input
-
-                placeholder='Chinatown SF, San Francisco,CA'
+                placeholder='San Francisco,CA'
                 onChange={this.handleUpdate('location')}
               />
-
             </span>
           </label>
           <button type='submit' className='search-btn'>

@@ -1,9 +1,14 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import { Link } from 'react-router-dom';
 import NavBarContainer from '../navbar/nav_bar_container';
 import BizsMapContainer from '../map/bizs_map_container';
 
 class BizsIndex extends React.Component {
+
+  componentDidMount() {
+     window.scrollTo(0, 0);
+  }
 
   render() {
     const heading = this.props.bizs.length ? (
