@@ -66,6 +66,114 @@ class SideBar extends React.Component {
     const hours = this.parseHours();
     const today = this.today();
     const priceRemainder = this.remainder();
+    const infoReservation = reservation ? (
+      <dl>
+        <dt>Takes Reservations</dt>
+        <dd>{reservation}</dd>
+      </dl>
+    ) : "";
+    const infoDelivery = delivery ? (
+      <dl>
+        <dt>Delivery</dt>
+        <dd>{delivery}</dd>
+      </dl>
+    ) : "";
+    const infoTakeout = takeOut ? (
+      <dl>
+        <dt>Take-out</dt>
+        <dd>{takeOut}</dd>
+      </dl>
+    ) : "";
+    const infoCreditCard = creditCard ? (
+      <dl>
+        <dt>Accepts Credit Cards</dt>
+        <dd>{creditCard}</dd>
+      </dl>
+    ) : "";
+    const infoApplePay = applePay ? (
+      <dl>
+        <dt>Accepts Apple Pay</dt>
+        <dd>{applePay}</dd>
+      </dl>
+    ) : "";
+    const infoGooglePay = googlePay ? (
+      <dl>
+        <dt>Accepts Google Pay</dt>
+        <dd>{googlePay}</dd>
+      </dl>
+    ) : "";
+    const infoGoodfor = goodFor ? (
+      <dl>
+        <dt>Good For</dt>
+        <dd>{goodFor}</dd>
+      </dl>
+    ) : "";
+    const infoParking = parking ? (
+      <dl>
+        <dt>Parking</dt>
+        <dd>{parking}</dd>
+      </dl>
+    ) : "";
+    const infoBikeParking = bikeParking ? (
+      <dl>
+        <dt>Bike Parking</dt>
+        <dd>{bikeParking}</dd>
+      </dl>
+    ) : "";
+    const infoForKids = forKids ? (
+      <dl>
+        <dt>Good for Kids</dt>
+        <dd>{forKids}</dd>
+      </dl>
+    ) : "";
+    const infoForGroup = forGroup ? (
+      <dl>
+        <dt>Good for Groups</dt>
+        <dd>{forGroup}</dd>
+      </dl>
+    ) : "";
+    const infoAttier = attier ? (
+      <dl>
+        <dt>Attier</dt>
+        <dd>{attier}</dd>
+      </dl>
+    ) : "";
+    const infoOutdoorSeat = outdoorSeat ? (
+      <dl>
+        <dt>Outdoor Seating</dt>
+        <dd>{outdoorSeat}</dd>
+      </dl>
+    ) : "";
+    const infoDogAllowed = dogAllowed ? (
+      <dl>
+        <dt>Dog Allowed</dt>
+        <dd>{dogAllowed}</dd>
+      </dl>
+    ) : "";
+    const infoWifi = wifi ? (
+      <dl>
+        <dt>Wi-Fi</dt>
+        <dd>{wifi}</dd>
+      </dl>
+    ) : "";
+    const infoHasTV = hasTv ? (
+      <dl>
+        <dt>Has TV</dt>
+        <dd>{hasTv}</dd>
+      </dl>
+    ) : "";
+    const infoWaiterService = waiterService ? (
+      <dl>
+        <dt>Waiter Service</dt>
+        <dd>{waiterService}</dd>
+      </dl>
+    ) : "";
+    const infoCaters = caters ? (
+      <dl>
+        <dt>Caters</dt>
+        <dd>{caters}</dd>
+      </dl>
+    ) : "";
     return(
       <div className='side-bar'>
         <div className='little-summary'>
@@ -158,78 +266,24 @@ class SideBar extends React.Component {
         <div className='more-info'>
           <h3>More business info</h3>
           <ul className='info-list'>
-            <dl>
-              <dt>Takes Reservations</dt>
-              <dd>{reservation}</dd>
-            </dl>
-            <dl>
-              <dt>Delivery</dt>
-              <dd>{delivery}</dd>
-            </dl>
-            <dl>
-              <dt>Take-out</dt>
-              <dd>{takeOut}</dd>
-            </dl>
-            <dl>
-              <dt>Accepts Credit Cards</dt>
-              <dd>{creditCard}</dd>
-            </dl>
-            <dl>
-              <dt>Accepts Apple Pay</dt>
-              <dd>{applePay}</dd>
-            </dl>
-            <dl>
-              <dt>Accepts Google Pay</dt>
-              <dd>{googlePay}</dd>
-            </dl>
-            <dl>
-              <dt>Good For</dt>
-              <dd>{goodFor}</dd>
-            </dl>
-            <dl>
-              <dt>Parking</dt>
-              <dd>{parking}</dd>
-            </dl>
-            <dl>
-              <dt>Bike Parking</dt>
-              <dd>{bikeParking}</dd>
-            </dl>
-            <dl>
-              <dt>Good for Kids</dt>
-              <dd>{forKids}</dd>
-            </dl>
-            <dl>
-              <dt>Good for Groups</dt>
-              <dd>{forGroup}</dd>
-            </dl>
-            <dl>
-              <dt>Attier</dt>
-              <dd>{attier}</dd>
-            </dl>
-            <dl>
-              <dt>Outdoor Seating</dt>
-              <dd>{outdoorSeat}</dd>
-            </dl>
-            <dl>
-              <dt>Dog Allowed</dt>
-              <dd>{dogAllowed}</dd>
-            </dl>
-            <dl>
-              <dt>Wi-Fi</dt>
-              <dd>{wifi}</dd>
-            </dl>
-            <dl>
-              <dt>Has TV</dt>
-              <dd>{hasTv}</dd>
-            </dl>
-            <dl>
-              <dt>Waiter Service</dt>
-              <dd>{waiterService}</dd>
-            </dl>
-            <dl>
-              <dt>Caters</dt>
-              <dd>{caters}</dd>
-            </dl>
+            {infoReservation}
+            {infoDelivery}
+            {infoTakeout}
+            {infoCreditCard}
+            {infoApplePay}
+            {infoGooglePay}
+            {infoGoodfor}
+            {infoParking}
+            {infoBikeParking}
+            {infoForKids}
+            {infoForGroup}
+            {infoAttier}
+            {infoOutdoorSeat}
+            {infoDogAllowed}
+            {infoWifi}
+            {infoHasTV}
+            {infoWaiterService}
+            {infoCaters}
           </ul>
         </div>
       </div>

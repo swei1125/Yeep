@@ -24,7 +24,7 @@ class Footer extends React.Component {
             <div className='contact'>
               <h3>Contact</h3>
               <ul className='link-list'>
-                <li>Mobile: (626) 371-5714</li>
+                <li>Phone: (626) 371-5714</li>
                 <li>Email: shiyuwei941125@gmail.com</li>
               </ul>
             </div>

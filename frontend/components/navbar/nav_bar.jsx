@@ -47,7 +47,7 @@ class NavBar extends React.Component {
                   Restaurants
                 </span>
               </Link>
-              <Link to='/search/Nightlife&default'>
+              <Link to='/search/Tea&default'>
                 <span>
                   <i className="fas fa-coffee"></i>
                   <p>Coffee & Tea</p>
