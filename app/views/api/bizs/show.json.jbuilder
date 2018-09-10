@@ -22,6 +22,9 @@ json.moreInfo do
   :for_group,
   :for_kids,
   :attier,
+  :wheelchair,
+  :appointment_only,
+  :neutral_restrooms,
   :hours
 end
 

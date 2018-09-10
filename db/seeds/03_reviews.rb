@@ -7,6 +7,31 @@
   biz6 = Biz.find_by_name('Urban Rital')
   biz7 = Biz.find_by_name("Ryoko's")
   biz8 = Biz.find_by_name('Saru Sushi Bar')
+  spa_vitale = Biz.find_by_name('Spa Vitale')
+  burke = Biz.find_by_name('Burke Williams Day Spa')
+  qua = Biz.find_by_name('Qua The Spa at SOMA GRAND')
+  nob = Biz.find_by_name('Nob Hill Spa')
+  pure = Biz.find_by_name('Pure Organic Spa')
+  kabuki = Biz.find_by_name('Kabuki Springs & Spa')
+  earthbody = Biz.find_by_name('Earthbody')
+  little_sweet = Biz.find_by_name('Little Sweet')
+  quali = Biz.find_by_name('QualiTea')
+  teaspoon = Biz.find_by_name('Teaspoon')
+  itea = Biz.find_by_name('i-Tea')
+  identitea = Biz.find_by_name('Indentitea')
+  teahut = Biz.find_by_name("Tea Hut")
+  alchemist = Biz.find_by_name("Alchemist Bar & Lounge")
+  beer_pong = Biz.find_by_name("The Beer Pong Lounge")
+  f8 = Biz.find_by_name("F8 Nightclub and Bar")
+  view_lounge = Biz.find_by_name("The View Lounge")
+  monroe = Biz.find_by_name("Monroe")
+  b_pati = Biz.find_by_name("B Patisserie")
+  tartine = Biz.find_by_name("Tartine Bakery & Cafe")
+  holmes = Biz.find_by_name("Mr Holmes Bakehouse")
+  golden = Biz.find_by_name("Golden Gate Bakery")
+  schubert = Biz.find_by_name("Schubert’s Bakery")
+  craftsman = Biz.find_by_name("Craftsman and Wolves")
+
   user1 = User.find_by(email: "1@gmail.com")
   user2 = User.find_by(email: "2@gmail.com")
   user3 = User.find_by(email: "3@gmail.com")
@@ -22,6 +47,745 @@
   user13 = User.find_by(email: "13@gmail.com")
   user14 = User.find_by(email: "14@gmail.com")
   user15 = User.find_by(email: "15@gmail.com")
+
+  craftsman1 = Review.create!(
+    user_id:user2.id,
+    biz_id:craftsman.id,
+    body: "Craftsman and wolves has been on my brunch list for so long now. Finally my husband and I were able to make it out to here on our continuing quest to visit all the brunch places and I (and my tummy) are so glad I did! ",
+    rating: 5
+  )
+  craftsman2 = Review.create!(
+    user_id:user7.id,
+    biz_id:craftsman.id,
+    body: "To be honest, I'm not the biggest fan of Craftsman, mainly because I think their Rebel Within is overhyped and overpriced. However, I'm glad I gave their other desserts a chance! ",
+    rating: 4
+  )
+  craftsman3 = Review.create!(
+    user_id:user6.id,
+    biz_id:craftsman.id,
+    body: "I came here on a Friday morning looking to do some work. I'm a big fan of pastries and cakes so I've always wanted to try Craftsman and Wolves. I ordered the 'Alfajores' kouign amann & a matcha latte with almond milk for myself and then a croissant to-go for my bf.",
+    rating: 4
+  )
+  craftsman4 = Review.create!(
+    user_id:user10.id,
+    biz_id:craftsman.id,
+    body: "I am a sucker for a fancy dessert. Eating something sweet and beautiful while drinking a cup of coffee and writing in my journal is my favorite way to reflect on my life. Am I moving in the direction that will make me feel truly fulfilled when I'm 70? How can I make more of the moments of my day feel as special as eating this pastry? Who knew dessert could be so life changing, right?!",
+    rating: 5
+  )
+  craftsman5 = Review.create!(
+    user_id:user13.id,
+    biz_id:craftsman.id,
+    body: "Was hoping for a bit more from the pictures, but this place isn't bad either. It's pretty much a cafe with food, there are a bunch of options at the start of the counter of various baked goods. You order what you want, get a number, they hear it up, and then you eat!",
+    rating: 3
+  )
+
+  schubert1 = Review.create!(
+    user_id:user10.id,
+    biz_id:schubert.id,
+    body: "Schubert's has the best cakes in San Francisco hands DOWN! The crazy thing too is that they have always had the best cakes... even before foodie culture invaded in SF. Their princess cake is absolutely to die for and super reasonably priced. GET THE PRINCESS CAKE! Marzipan and raspberry... what's there not to like?! ",
+    rating: 5
+  )
+  schubert2 = Review.create!(
+    user_id:user11.id,
+    biz_id:schubert.id,
+    body: "Right when I walked in, I was entranced by all the gorgeous looking desserts. OMG...princess cakes, cakes, tarts, eclairs, cream puffs, mousse, opera cake, Neapolitans, cookies, and so much more. The cakes come in different sizes and slices. The tarts come in cake size, handheld ($4-5), and bite size minis ~$2. Ya!  The mini bite size tart had a buttery dense crust with smooth custard filling and fresh berries. ",
+    rating: 4
+  )
+  schubert3 = Review.create!(
+    user_id:user14.id,
+    biz_id:schubert.id,
+    body: "A cute little French style bakery on Clement at that has cakes, pastries, and Mousses. I ordered a chocolate mousse that tasted great. Very decadent and rich in chocolatey goodness, it was chocolate mousse with chocolate shavings, on a chocolate sponge cake, with pieces of chocolate on top. Then a raspberry on top! High quality but I would definitely recommend sharing it amongst 3 people. I think most people come here for the cakes and although I haven't tried em, they look beautiful.",
+    rating: 4
+  )
+  schubert4 = Review.create!(
+    user_id:user15.id,
+    biz_id:schubert.id,
+    body: "Highly recommend this place. The service was so fast and very friendly. They asked if we wanted forks to go. We ordered double chocolate mouse and Swedish princess cake. The presentation of the cakes are amazing and so is the taste. Both were fantastic. I just wish I had more.",
+    rating: 5
+  )
+  schubert5 = Review.create!(
+    user_id:user4.id,
+    biz_id:schubert.id,
+    body: "From cookies to cakes and every other delicious confectionary in-between, I have yet to try something here I do not love. We just started going here this summer and yet their cakes were so superb I wanted to have my birthday cake from them this year. Seriously, stop here for coffee and a slice of one of their indulgent cakes. Grab a bag of tea cookies for later or as a gift!",
+    rating: 5
+  )
+
+  golden1 = Review.create!(
+    user_id:user6.id,
+    biz_id:golden.id,
+    body: "Best egg custard in SF Chinatown. They're warm and the crust is not as thick as some places I've tried. It's a good size not the minis at dim sum. The taste is more on the eggy side... Will come back to try coconut tart!",
+    rating: 5
+  )
+  golden2 = Review.create!(
+    user_id:user7.id,
+    biz_id:golden.id,
+    body: "The egg tart I had was brought all over SF and shoved into a fridge before my friend reheated it for me and W O W - it was probably one of the best egg tarts I've had to date. The first thingI noticed was that this egg tart was a bit bigger than most I've had before. The exterior is thick enough to hold the custard filling and not get soggy but was also buttery & flaky (no cookie type crusts here!!). The filling is also nice and smooth and is not overpoweringly sweet - it's honestly a perfect balance. ",
+    rating: 5
+  )
+  golden3 = Review.create!(
+    user_id:user8.id,
+    biz_id:golden.id,
+    body: "From the corner of my eye, I saw a giant line hugging the streets up ahead. I've heard of Golden Gate Bakery from plenty of people but have yet to try it. I decided that this would be the day to embark on a 45 min wait on a Saturday evening to take the chance! ",
+    rating: 4
+  )
+  golden4 = Review.create!(
+    user_id:user9.id,
+    biz_id:golden.id,
+    body: "Finally was able to catch them open. No joke, like many others, whenever I pass by this place, they're always on vacation so it's definitely a win when I finally got my hands on these egg tart. ",
+    rating: 4
+  )
+  golden5 = Review.create!(
+    user_id:user10.id,
+    biz_id:golden.id,
+    body: "Foodgasm in your mouth! These egg-tarts should always be a go-to when you're in San Francisco. Fresh out of the oven and piping hot, the custard is so buttery soft that it melts in your mouth. The crust is flaky and crisp, but also thick and layered to hold all that custard without falling apart. It's sweet but not overpowering like warm milk in your mouth. When they're hot out of the oven, they're amazing. When they're cold, they're still freakin' good.",
+    rating: 5
+  )
+
+  holmes1 = Review.create!(
+    user_id:user1.id,
+    biz_id:holmes.id,
+    body: "Wonderfully fresh and delicious baked goods! The bakery is teeny tiny and almost always has a line out the door. It goes by fast, but tons of people take pictures with the 'I got baked in San Francisco' sign which makes it even more cramped. ",
+    rating: 5
+  )
+  holmes2 = Review.create!(
+    user_id:user2.id,
+    biz_id:holmes.id,
+    body: "The pastry that they are most known for is their mcruffin which is basically just a croissant in the shape of a muffin. I somehow thought it was suppose to be a crossover of a muffin and a croissant but it was all croissant. The line was pretty long but it went by pretty fast as everyone just tells the staff what they want and they put it in the box. You have to order a total of 6 pastries to get a box (which I wanted). ",
+    rating: 4
+  )
+  holmes3 = Review.create!(
+    user_id:user3.id,
+    biz_id:holmes.id,
+    body: "Long line moves pretty quickly. Delicious pastries! Least favorite was the matcha... most favorite was the peach. Cookie dough stuffed donut close second. My husband and I spent $38 and ate everything within 24 hours.",
+    rating: 4
+  )
+  holmes4 = Review.create!(
+    user_id:user4.id,
+    biz_id:holmes.id,
+    body: "Personally, I have mixed feelings about Mr Holmes Bakehouse. I remember waking up extra early on a weekend just to buy their famous Cruffins. Failed numerous times despite waking up before 7 am. Those were the good times, now I don't go as often as I used too. ",
+    rating: 4
+  )
+  holmes5 = Review.create!(
+    user_id:user9.id,
+    biz_id:holmes.id,
+    body: "It's such a cute little bakery. There's no sign saying the bakery name, but it's obvious when you see a line out the door and you can't miss the neon pink instagram famous sign 'I got baked in San Francisco'. I arrived around noon so by then the selection was limited. Many things were sold out already, including their famous cruffin sadly.",
+    rating: 5
+  )
+
+  tartine1 = Review.create!(
+    user_id:user5.id,
+    biz_id:tartine.id,
+    body: "This place is definitely worth sticking through the long lines because the quality of the food they sell is hard to find elsewhere.  If you find yourself losing patience, just know that you will be happy you stuck through it at the end when you're eating the yumminess.",
+    rating: 5
+  )
+  tartine2 = Review.create!(
+    user_id:user10.id,
+    biz_id:tartine.id,
+    body: "Quite excellent! Light banana, hint of chocolate. Crust was a tad dry, but we also kept this in the fridge for a day before eating it.",
+    rating: 4
+  )
+  tartine3 = Review.create!(
+    user_id:user13.id,
+    biz_id:tartine.id,
+    body: "Can't emphasize enough.. chocolate eclair + frangipane tart.. so freaking good. Anytime I have out of town visitors, I MAKE SURE THEY HAVE THE CHOCOLATE ECLAIR. It never, ever, ever disappoints.",
+    rating: 5
+  )
+  tartine4 = Review.create!(
+    user_id:user14.id,
+    biz_id:tartine.id,
+    body: "Banana Cream Tart ($7.75) 4/5. Tart is very light and creamy and the crust is buttery, flaky and crunchy. It is sweet but not overpowering! Their banana cream tart was the only thing I got from Tartine bakery so I cannot say much about other pastry. But It's definitely worth a try and wait! Next time, I would like to try their morning buns!",
+    rating: 4
+  )
+  tartine5 = Review.create!(
+    user_id:user1.id,
+    biz_id:tartine.id,
+    body: "Drove by and saw that there was a line wrapped along the building so we definitely had to stop by! And the wait was worth it! We got the lemon tart and the banana cream tart. The lemon tart was way too tarty for me but the banana cream tart was too die for! It was perfectly sweet and refreshing with the slices of banana. The wait wasn't too bad. It goes by quickly.",
+    rating: 5
+  )
+
+  b_pati1 = Review.create!(
+    user_id:user4.id,
+    biz_id:b_pati.id,
+    body: "This place has a line out the door almost all day, but it does go by fast. You'll find that there are regulars here as well as tourists who went out of their way to try the chocolate banana croissant, or the macaron on a saturday morning. ",
+    rating: 4
+  )
+  b_pati2 = Review.create!(
+    user_id:user7.id,
+    biz_id:b_pati.id,
+    body: "You will never find a better find a more satisfying kouign amann anywhere. I've tried. Save yourself the trouble. I had other pastries here as well that were good but the kouign amann takes the cake. ",
+    rating: 5
+  )
+  b_pati3 = Review.create!(
+    user_id:user9.id,
+    biz_id:b_pati.id,
+    body: "Came by the other morning for pastries it was a heavenly experience! Parking is palateable on a weekday morning right when they open at 8 am since street parking is free until 9 am! With the expansion not too long ago, the bakery is much more comfortable!",
+    rating: 5
+  )
+  b_pati4 = Review.create!(
+    user_id:user10.id,
+    biz_id:b_pati.id,
+    body: "I love love love B Patisserie!
+Their Kouign Amann is to die for! Definitely the best Kouign Amann I have ever had! Very flaky, crispy, buttery and sweet! Their chocolate banana almond croissant is also very delicious. It is a bit heavy but definitely worth a try! Their passion fruit bostock was dry for me but it has just right amount of sweetness! If you want something fruity and not overly sweet, try their bostock!",
+    rating: 5
+  )
+  b_pati5 = Review.create!(
+    user_id:user13.id,
+    biz_id:b_pati.id,
+    body: "My favorite french pastries place to go to when I am in the Bay. Always one of my stops. I was recently here during Labor day weekend and even though the line was out the door, the wait was not bad. ",
+    rating: 5
+  )
+
+  monroe1 = Review.create!(
+    user_id:user5.id,
+    biz_id:monroe.id,
+    body: "I attended a work outing here with karaoke and had a blast! This cool little spot is located in a historic jazz venue. Musicians like Miles Davis, James Moody, Johnny Coltrane, Lenny Bruce and other legends have performed inside.",
+    rating: 5
+  )
+  monroe2 = Review.create!(
+    user_id:user6.id,
+    biz_id:monroe.id,
+    body: "Super swank bar/lounge in the heart of North Beach! I've only been here a few times (since my club-going days are behind me). My most recent visit was for a company party (rock star theme). This place is certainly cool enough for rock star. Long bar; leather seating; sexy paintings on the walls; dj booth + dance floor; outdoor patio. This place has it all!",
+    rating: 4
+  )
+  monroe3 = Review.create!(
+    user_id:user10.id,
+    biz_id:monroe.id,
+    body: "Attended a company party at Monroe and WOW,  do I love this venue! It doesn't look like much from the outside but inside you'll find the perfect intertwining of Art Deco with modern flair. The walls are covered with beautiful murals and the furniture is decked out in gorgeous velvet. What I genuinely loved about the space was that there are pockets to hang out and converse with friends, as well as a small stage and dance floor area which brings together the energy of the party. During our event we had live karaoke which everyone jovially sang and danced to for hours. It really takes a special room to do that for a group of about 130 guests and it made for a truly memorable evening we'll all remember.",
+    rating: 5
+  )
+  monroe4 = Review.create!(
+    user_id:user11.id,
+    biz_id:monroe.id,
+    body: "Wonderful classical music. The drinks were on point as well. Overall a lovely place to enjoy music on a Wednesday night, in a relaxed atmosphere",
+    rating: 5
+  )
+  monroe5 = Review.create!(
+    user_id:user15.id,
+    biz_id:monroe.id,
+    body: "You'd probably walk right past it without noticing, but the Monroe is a surprisingly large venue that has a vintage, lounge-like, speakeasy feel to it. It hosts plenty of private functions during the week as well as events ranging from Classical Revolution to Battle of the Decades. Drinks are quite reasonably priced and service is courteous and professional. Worth checking out if one of their events appeals to you.",
+    rating: 4
+  )
+  view_lounge1 = Review.create!(
+    user_id:user11.id,
+    biz_id:view_lounge.id,
+    body: "OH MY GOSH. Salute to Yelp and my trip to San Francisco. I was in SF for 72 hours and ended up at this place twice!! LOVED it - it is totally a touristy situation and a very elite spot. The view was AMAZING. The buildings were so tall into the fog and was such a gorgeous view. I can't get over it. ",
+    rating: 5
+  )
+  view_lounge2 = Review.create!(
+    user_id:user13.id,
+    biz_id:view_lounge.id,
+    body: "This lounge atop the Marriott hotel has a fantastic rooftop view (all indoors, FYI) of downtown SF. For a nice lounge, the vibe here is surprisingly laidback...You're welcome to come in and seat yourself anywhere you can find a table/chair -- even on a Friday night at 8pm!  ",
+    rating: 4
+  )
+  view_lounge3 = Review.create!(
+    user_id:user15.id,
+    biz_id:view_lounge.id,
+    body: "Haight-Ashbury, Soma Spritzer, Creme Bruleé and the Cheesecake. This re-shoots and lives up to the Four Stars I marked on my previous review. I'd go back to have all items for myself and in that regard, the view and the motion sickness to get up here are the bonuses. Great.",
+    rating: 4
+  )
+  view_lounge4 = Review.create!(
+    user_id:user2.id,
+    biz_id:view_lounge.id,
+    body: "Get here before 5PM to grab a seat by the window. Make sure you check out both sides before you call it quits. Don't be afraid to share a couch or table with another couple. $$$ cocktails. The service isn't the best, but the view makes up for any qualms, plus, the wait is totally worth it",
+    rating: 4
+  )
+  view_lounge5 = Review.create!(
+    user_id:user4.id,
+    biz_id:view_lounge.id,
+    body: "Wow. This is a must see in SF. The 39 floor of the Marriott marque opens up a world of sights and sounds of the City by the Bay. Take out of town guests for the evening of a lifetime.",
+    rating: 5
+  )
+
+  f81 = Review.create!(
+    user_id:user1.id,
+    biz_id:f8.id,
+    body: "I love this place if you are looking to get down on a weekday/sunday with a couple stages and fun music w/ an interesting crowd! Fun to bring friends in town who complain that there is nothing to do on weekdays or sundays (Monarch is a great spot too) and I really enjoyed myself to be honest! I would go back for sure!",
+    rating: 5
+  )
+  f82 = Review.create!(
+    user_id:user3.id,
+    biz_id:f8.id,
+    body: "I have been coming here a lot lately because they are always having a diverse variety of events! Last week, I saw Candy Rain and this past Friday, they had an art/music event with performance by Pluto Mars and Aux Lord. I have been here for quite a few years and they definitely have increased the quality of their speakers and have hired better bartenders! For such a stand up venue, I am not surprised that they are getting more and more awesome headliners as the years go on! F8 keep doing what you are doing, can't wait to come back!",
+    rating: 4
+  )
+  f83 = Review.create!(
+    user_id:user5.id,
+    biz_id:f8.id,
+    body: "Small venue playing good music! It wasn't as packed as I typically like, but the crowd is cool and the DJs are usually really good. The music tended towards hip hop when I last went.",
+    rating: 4
+  )
+  f84 = Review.create!(
+    user_id:user7.id,
+    biz_id:f8.id,
+    body: "Awesome local spot in a neighborhood that is changing faster than life. Support small business and come here. The door staff are chill and the bartenders are sweet. Props to Demitria for the good vibes, and someone please thank that DJ for the upbeat moving grooves. Cheers!",
+    rating: 5
+  )
+  f85 = Review.create!(
+    user_id:user9.id,
+    biz_id:f8.id,
+    body: "This is a pretty great spot on Folsom for a night out drinking and dancing with friends. There are DJs at the main stage in front and the back stage. The back room was quite small in my opinion so it was a little difficult to maneuver around, but good thing they had a full service bar in the back. Great music and nice venue, would come back for sure!",
+    rating: 4
+  )
+  beer_pong1 = Review.create!(
+    user_id:user2.id,
+    biz_id:beer_pong.id,
+    body: "The bartender was more interested in the deejay, it was so hot in the beer pong area, & the bartender also had the whole house to herself. She took two shots with the deejay while just kinda chillin. So after we said we were hot we decided to move to the front area away from where it was so hot, but again her friend was here so she was at the end of the bar taking shots. Just no customer service in this place.",
+    rating: 3
+  )
+  beer_pong2 = Review.create!(
+    user_id:user4.id,
+    biz_id:beer_pong.id,
+    body: "I LOVE this place!!! Great service and the beer pong is a delight!!! Plus a nice dance floor!",
+    rating: 5
+  )
+  beer_pong3 = Review.create!(
+    user_id:user6.id,
+    biz_id:beer_pong.id,
+    body: "They have pool, TV and beer pong table! Omg..... foods are so good. It's perfect place for football season",
+    rating: 5
+  )
+  beer_pong4 = Review.create!(
+    user_id:user8.id,
+    biz_id:beer_pong.id,
+    body: "awesome place- beer pong events every weekend always at least one game on, cheap beer, cool staff (Theresa and Greg are awesome), lots of fun. part of/connected to Scores sports bar- they also serve kick ass nachos sliders tacos and a bunch of other bar snacks for super cheap- GET THE SLIDERS you wont regret it! some of my favorite food on broadway",
+    rating: 5
+  )
+  beer_pong5 = Review.create!(
+    user_id:user10.id,
+    biz_id:beer_pong.id,
+    body: "Was here few weekends ago with friends on a Friday. Found out this place just opened not too long ago! It is attached to another bar called Score! The concept is to bring back our college memories of beer pong! On Fridays, they have this thing called Beer Olympics. It's organized by this lady and she facilitates the whole game. She had different types of games. They have multiple rounds to win the prize!",
+    rating: 5
+  )
+
+  alchemist1 = Review.create!(
+    user_id:user10.id,
+    biz_id:alchemist.id,
+    body: "Some close friends brought me here after dinner in Soma for some cocktails. It's a funky place with fun decor, couches, a great cocktail menu and some very friendly and accommodating bartenders. ",
+    rating: 4
+  )
+  alchemist2 = Review.create!(
+    user_id:user12.id,
+    biz_id:alchemist.id,
+    body: "I'm going to say this bar & lounge is unique! It's like being in this abandoned warehouse or huge brick-walled loft. There's an empty space in the main living area for either people standing around or a dance floor, some comfy couches to lounge in and a fully-stocked bar in the corner with a dope bartender! Their cocktail menu here is something I haven't seen before with unique blends. ",
+    rating: 4
+  )
+  alchemist3 = Review.create!(
+    user_id:user11.id,
+    biz_id:alchemist.id,
+    body: "Very mysterious and interesting type of bar. Very fun, have you read the book? I went here one night and yeah, it's pretty dark and that haubted house type of disney vibe is here.",
+    rating: 5
+  )
+  alchemist4 = Review.create!(
+    user_id:user13.id,
+    biz_id:alchemist.id,
+    body: "Good drinks, fun atmosphere!
+
+My boyfriend and I came here before a giants game. It was only a couple of blocks away. It was nice too because they were playing the basketball playoff games on their projector. ",
+    rating: 4
+  )
+  alchemist5 = Review.create!(
+    user_id:user14.id,
+    biz_id:alchemist.id,
+    body: "Cool upstairs bar that is walking distance to/from AT&T Park. The tonic they use in there drinks is really good so if you are a vodka tonic fan I recommend trying it. Seems to be a pretty popular spot. Took a little bit to get a drink due to the crowed but like I said the drinks were good and you can tell most people behind the bar are legit bartenders. The look and feel of this place is unique and trendy. Great spot to grab a drink or 3 after a game!",
+    rating: 4
+  )
+
+
+  teahut1 = Review.create!(
+    user_id:user3.id,
+    biz_id:teahut.id,
+    body: "I discovered this place from the NorCal Night Market and was not disappointed. The drink was fresh and the drink was a lot different than other places. They used fresh fruits and the cup itself is interesting... wish they were reusable! Me and my friends order 4 and finished them fast.",
+    rating: 5
+  )
+  teahut2 = Review.create!(
+    user_id:user5.id,
+    biz_id:teahut.id,
+    body: "I ordered the fruit fusion tea with 50% sweetness. It was the perfect amount of sweetness and tea flavor for me but I'll be honest, the fruit inside makes it a bit difficult to drink. You're left with only a few sips of the actual tea drink and you have a bunch of leftover boba and chunks of fruit. If you're fine with scooping out the boba's and fruit, I'd recommend this one.",
+    rating: 3
+  )
+  teahut3 = Review.create!(
+    user_id:user7.id,
+    biz_id:teahut.id,
+    body: "I got the grapefruit green tea and was pleasantly surprised. The drink itself is lightly blended with ice and it's actually delightful this way! No ice cubes to get in the way lol. It was refreshing and tart-- my kinda drink! It also came with fresh grapefruit slices which were more of an aesthetic thing but still a nice touch :-) ",
+    rating: 5
+  )
+  teahut4 = Review.create!(
+    user_id:user9.id,
+    biz_id:teahut.id,
+    body: "We ordered the fruit fusion green tea and it's really good. There's a lot of fresh fruit in the drink, but because there's a lot of fruit inside, I feel like there's not much of the tea. It's also expensive because the total came out to $6~ for just one drink...",
+    rating: 4
+  )
+  teahut5 = Review.create!(
+    user_id:user11.id,
+    biz_id:teahut.id,
+    body: "Stopped by before closing and no regrets! This is a very minimalistic and quick boba place if you're craving something sweet. They have a fair selection of plain teas, milk teas and fruity options. I ordered the strawberry energy which was a cold, slightly slushy strawberry drink. I added cheese cream on top which made it creamier and almost a smoothie-like texture! Surprisingly, the cheese cream was the perfect add-on! ",
+    rating: 5
+  )
+
+  identitea1 = Review.create!(
+    user_id:user2.id,
+    biz_id:identitea.id,
+    body: "Best oolong milk tea I've had in awhile. Boba was the perfect texture. Love the unique concept and how they celebrate sf's neighborhoods. Employees were so kind and helped me when I was being indecisive.",
+    rating: 5
+  )
+  identitea2 = Review.create!(
+    user_id:user4.id,
+    biz_id:identitea.id,
+    body: "I came in for my first time and was really excited that they had some drink specials that I hadn't seen before. I went for The Castro which has guava and lychee and was not disappointed! I see how it could be too sweet for some but I really enjoyed it. I removed one star because the guy behind the counter forgot to make my drink and served about 3 other people before I had to ask for mine. However, they were very polite about it and gave me an upgrade on size so I appreciated their effort! I'm looking forward to coming back to try their other signature drinks",
+    rating: 4
+  )
+  identitea3 = Review.create!(
+    user_id:user6.id,
+    biz_id:identitea.id,
+    body: "I wanted to try their matcha drink but they said no more match on that day, I ended up trying the sunset drink which was tasteless, I expected it will taste sweet because it has lychee in it, but not sweet at all 3stars because the cashier was nice and friendly",
+    rating: 3
+  )
+  identitea4 = Review.create!(
+    user_id:user8.id,
+    biz_id:identitea.id,
+    body: "Came here right after eating pizza across the street. I ordered the Mission (house roasted milk tea with grass jelly). Got it half sweet and I really enjoyed the flavor. I also love that the tea was lactose and dairy free. Shout out to the employees who were friendly and helpful.",
+    rating: 5
+  )
+  identitea5 = Review.create!(
+    user_id:user10.id,
+    biz_id:identitea.id,
+    body: "I couldn't find this place cause I was spelling it like 'identitty' on Maps. But this place was at a perfect location because there aren't a lot of boba places around. I'm glad to have this place near my work. I got the Chinatown which was a winter melon tea and guuuurrrrrrlllll it was refreshing.",
+    rating: 5
+  )
+  itea1 = Review.create!(
+    user_id:user12.id,
+    biz_id:itea.id,
+    body: "Lots of flavors and good boba ball consistency. Small space and sometimes a long line...but a great place to take an afternoon boba break! Wintermelon tea was so yummy :)",
+    rating: 4
+  )
+  itea2 = Review.create!(
+    user_id:user13.id,
+    biz_id:itea.id,
+    body: "Loveee their mango sago drink (and if you feel like splurging, + agar boba). It's a super refreshing mango/milk drink with mango bits and sago. Also really enjoy their jasmine green milk tea (30% sugar & ice, 50% if you like your drink a little sweeter) with boba. Their milk teas are more Taiwanese than American (they have that milkier taste rather than strong tea taste), so I come here when I'm craving that. Their boba can be pretty good for the most part, but there have been a few times where it hasn't been sweet enough.",
+    rating: 5
+  )
+  itea3 = Review.create!(
+    user_id:user14.id,
+    biz_id:itea.id,
+    body:  "Meh, possibly I'm spoiled by the abundance of boba tea places in the South Bay, but this place just didn't do it for me. It's small, terrible lay out if you haven't been there before (you'll end up standing in the line where people are waiting for their drinks), and the tea was just mediocre at best. Boba was fair, nothing great. ",
+    rating: 2
+  )
+  itea4 = Review.create!(
+    user_id:user15.id,
+    biz_id:itea.id,
+    body: "Typical boba joint, but it was definitely packed around 3PM on a weekday. I got the matcha green tea with just the red bean topping since I wasn't really feelin' matcha jelly. 50% sweet and 30% ice. OMG, it totally hit the spot! I admit I'd never gotten red bean as a topping with matcha green tea before, but now I find myself wondering when I'll be back so I can get it again!",
+    rating: 5
+  )
+  itea5 = Review.create!(
+    user_id:user1.id,
+    biz_id:itea.id,
+    body: "It's nice that the variety and taste of drinks at iTea stays pretty much the same from store to store. The only difference is the food they serve, if any. I especially love the beef over rice! A bit pricey, but it does fill you up. Their egg puffs are delicious as well, super crunchy on the outside and soft in the inside. The drinks weren't bad and the boba tasted pretty fresh. ",
+    rating:3
+  )
+
+  teaspoon1 = Review.create!(
+    user_id:user11.id,
+    biz_id:teaspoon.id,
+    body: "A solid boba shop that doesn't close so early. The girl was nice enough to give me access to the restroom so props to her. Moreover they are very clear with their message about being loyal to their customers (see photos below!). Will come back again.",
+    rating: 5
+  )
+  teaspoon2 = Review.create!(
+    user_id:user12.id,
+    biz_id:teaspoon.id,
+    body: "Teaspoon has a great ambience. Their menu is very simple to follow and it doesn't overwhelm you with lots of options. Their jasmine milk tea was very nice and had just the right amount of a floral kick. I can't speak for their boba but I imagine it was just as tasty. ",
+    rating: 4
+  )
+  teaspoon3 = Review.create!(
+    user_id:user13.id,
+    biz_id:teaspoon.id,
+    body: "I came here on a Saturday afternoon and had to wait in line for about 10 minutes. The place itself isn't very large - it has very limited seating and I didn't see any board games or anything of that sort so I'm not sure it's really a place you could chill at with a large group. I only came here with one other person so it wasn't a problem for me, but it's something to consider if you're trying to go here with a number of friends. ",
+    rating: 3
+  )
+  teaspoon4 = Review.create!(
+    user_id:user14.id,
+    biz_id:teaspoon.id,
+    body: "I love bubble tea and I'm mad I walked past it so many times. The boba is soft sweet and delicious. The also have a lot of options and make ur own flavors. I would definitely return and I would absolutely recommend.",
+    rating: 5
+  )
+  teaspoon5 = Review.create!(
+    user_id:user15.id,
+    biz_id:teaspoon.id,
+    body: "I've been here a handful of times and it's always a clusterfk.  You have to wait at least 10 minutes to even get your order taken.  There are always 2-3 people working but it seems like they need more workers, or they need to streamline how they produce the orders.  If you want better service and quality drinks try Boba Guys.",
+    rating: 3
+  )
+
+  quali1 = Review.create!(
+    user_id:user6.id,
+    biz_id:quali.id,
+    body: "This is a perfect boba spot with friendly employees that will help you customize your drink, a pretty and relaxing ambiance, and delicious teas! Whenever I'm in the area I love popping by.",
+    rating:5
+  )
+  quali2 = Review.create!(
+    user_id:user7.id,
+    biz_id:quali.id,
+    body: "I ordered the Roasted Oolong Milk Tea at 70% sweetness and loved it! I was pleasantly surprised by how big the cups are. I'm usually not a fan of oolong tea but the flavor of the milk tea was delicious creamy with hints of oolong coming through. Coming from someone with very high boba standards, the boba was pretty good - a little softer than I like but still great texture!",
+    rating: 5
+  )
+  quali3 = Review.create!(
+    user_id:user10.id,
+    biz_id:quali.id,
+    body: "I like how you can customize your own drink in the event you do not like any of their static menu items. I had the passion cooler with clear boba (0% sugar and no ice) and it was a nice refreshing drink that wasn't overly sweet. I could also really taste the green tea come through in the Passion cooler . The Taro kisses was made with (30% sugar and 40% ice) and the taro chunks were a nice touch, and this beverage was so good",
+    rating: 4
+  )
+  quali4 = Review.create!(
+    user_id:user8.id,
+    biz_id:quali.id,
+    body: "Attempted to go to another dessert place but they were closed so ended up at this boba place which was pretty satisfying and very cute inside! Ordered: matcha blossom ($5.50), golden oolong with mango star jelly ($5.25), black tea with cream",
+    rating: 4
+  )
+  quali5 = Review.create!(
+    user_id:user9.id,
+    biz_id:quali.id,
+    body: "Good amount of seating indoor + outdoor, interesting tea combos, and there's also a few board games to play. They're particularly good at fruity teas and use real fruit, but their milk teas are also tasty. Alternative milk options such as soy and almond are available in place of cream or whole milk. They're a tad more expensive than your average boba shop, but not obscenely so. Think Boba Guys pricing.",
+    rating: 5
+  )
+  little_sweet1 = Review.create!(
+    user_id:user11.id,
+    biz_id:little_sweet.id,
+    body: "Balls in milk. What more can you ask for? But really, their boba is great quality and their drinks are also amazing. Recommend the jasmine green milk tea. Pro tip: ask for a stamp card because you'll be coming back a lot",
+    rating: 5
+  )
+  little_sweet2 = Review.create!(
+    user_id:user12.id,
+    biz_id:little_sweet.id,
+    body: "Excellent. Ginger teas are great. small misunderstanding on our order which they went above and beyond to take care of. really nice selection of teas you don't see everywhere too. plus a number of decaf drinks, which is rare.",
+    rating: 5
+  )
+  little_sweet3 = Review.create!(
+    user_id:user13.id,
+    biz_id:little_sweet.id,
+    body: "The White Gourd Milk Tea is bomb!!  It's super creamy and delicious!  It's definitely my go-to when I come here.  The Jasmine Milk Tea is also great.  My sister often gets the Roasted or High Mountain with cream.  The boba is soft and chewy too.",
+    rating: 4
+  )
+  little_sweet4 = Review.create!(
+    user_id:user14.id,
+    biz_id:little_sweet.id,
+    body: "I was craving boba after going to the farmer's market around the corner and had been meaning to check this place out. I wanted something fruity and decided on the pineapple watermelon slush with boba at regular sweetness. My total came out to $5.50. ",
+    rating: 4
+  )
+  little_sweet5 = Review.create!(
+    user_id:user15.id,
+    biz_id:little_sweet.id,
+    body: "I've been here twice, the first time I ordered an Oolong milk tea which was what i was going to get the second time. However I saw that they have watermelon juice which i was so surprised at and had to jump at the opportunity to order it! The watermelon juice was AMAZINGGGGG!!! It made me so happy that it was that good because I was debating if it was going to come out good or not. My friend who I went with was not interested in getting a drink at all until she tasted my drink and then she was completely hooked hahah. If you have a chance to check out and try the watermelon juice, I definitely recommend it. You won't be disappointed at all.",
+    rating: 4
+  )
+
+  spa_vitale1 = Review.create!(
+    user_id: user1.id,
+    biz_id:spa_vitale.id,
+    body: "I had THE most unbelievable spa experience here. My wonderful boyfie surprised me with a staycation in the city and topped it off with a spa day at Spa Vitale. We had a couples massage which was GREAT. I told my masseuse I'd like her to focus on my upper back and that's exactly what she did majority of the time. ",
+    rating: 5
+  )
+  spa_vitale2 = Review.create!(
+    user_id: user2.id,
+    biz_id:spa_vitale.id,
+    body: "What a lovely little spa! Soaking in the tub makes it all worth while in amazing experience from beginning to and not to mention stellar Massage",
+    rating: 5
+  )
+  spa_vitale3 = Review.create!(
+    user_id: user3.id,
+    biz_id:spa_vitale.id,
+    body: "I sent my mom here for a birthday present and she had a massage and 25min bath.  She had a great time and loved the bath.  The massage was very basic and she wasn't too impressed.",
+    rating: 3
+  )
+  spa_vitale4 = Review.create!(
+    user_id: user4.id,
+    biz_id:spa_vitale.id,
+    body: "Went here for part of a girls weekend trip and had the best time! My friend and I did the bathing ritual and a massage. We both Love the tubs they had so much we have each started planning bathroom remodels to get one.",
+    rating: 4
+  )
+  spa_vitale5 = Review.create!(
+    user_id: user5.id,
+    biz_id:spa_vitale.id,
+    body: "Loved this place!  We chose the couple bathing ritual. It was a beautiful sunny day in the city. The location was in the balcony of the 8th floor surrounded by bamboo. They provided champagne,  berries, lemon water and tea. The water was perfect temperature infused by lavender bath salts. It was relaxing, romantic and overall amazing experience. Definitely recommend for special occasions!",
+    rating: 5
+  )
+  burke1 = Review.create!(
+    user_id: user10.id,
+    biz_id: burke.id,
+    body: "Wow. What a spa! Such a calm and relaxing place. Who knew that such a wonderland would be located at Westfield centre. As soon as I walked in, I was greeted with hot tea. The jacuzzi, showers, and even mirrors are amazing. My facial was wonderful. Main reason why I was there. I really needed to get my face 'fixed'. such a 'calm' and relaxing 80 minutes. The lady who worked with me was truly amazing. She was very easy to talk to and knew her stuff. I'm impressed. Worth every penny.",
+    rating: 5
+  )
+  burke2 = Review.create!(
+    user_id: user6.id,
+    biz_id: burke.id,
+    body: "It's nice to unwind and relax with a monthly membership.  I've had great facials from LC and Vivian.  I also do the deep tissue massage which helps relax my problematic back.I've been to many spas and BW is one of the cleanest and professional places.  All the amenities you need to pamper yourself.  It also has a sleep room in case you want to get a nap.",
+    rating: 4
+  )
+  burke3 = Review.create!(
+    user_id: user7.id,
+    biz_id: burke.id,
+    body: "This is my favorite spot for full pampering. I've gone for a deep tissue massage and it was really relaxing and helped relieve problematic tension areas. My mother enjoyed the facial here too. The lounge area has tea and snacks and magazines to relax and hang out. There are some sample products to try out too which is fun. There's also a relaxation room with lounge chairs to take a nap. Then the shower rooms and wet spa include hot tub, cold waterfall, dry Swedish sauna, and eucalyptus steam room. Super nice and relaxing ambiance!",
+    rating: 5
+  )
+  burke4 = Review.create!(
+    user_id: user9.id,
+    biz_id: burke.id,
+    body: "Real fancy and nice. Pricey, but worth treating yourself.Massage was great. I'd give it 5 stars if they offered 90 minute or even 120 minute sessions. 80 minutes is good though.",
+    rating: 4
+  )
+  burke5 = Review.create!(
+    user_id: user8.id,
+    biz_id: burke.id,
+    body: "I've been going to Burke Williams in both LA and San Francisco for probably 15 years now. I always considered it a luxury 'splurge' - you go for the fancy facilities (hot tub, steam room, etc). But the treatments are fairly mediocre - never once have I had a truly great massage at BW. I took a hiatus from the 'luxury spa' scene for a few years, instead spending my time/money on a really amazing trigger point masseuse.",
+    rating: 2
+  )
+  qua1 = Review.create!(
+    user_id: user15.id,
+    biz_id: qua.id,
+    body: "I was back after a week long camping trip with my hands really dry and cuticles torn. My hands needed attention so got an appointment for Manicure and it was the best, Tina was just great she did her magic and my hands were back to normal in the next twenty minutes. Maybe instead of going to Tina for Manicure only after a camping trip like once a year thinking of doing it more.",
+    rating: 5
+  )
+  qua2 = Review.create!(
+    user_id: user11.id,
+    biz_id: qua.id,
+    body: "Got a groupon special. Good small location with parking. Overall it was enjoyable and a good massage. Th place is clean and the staff was friendly, but very limited on extras and seems limited. Staff was skilled and nice; price was reasonable but limited to anything other really didn't have much to offer for mani-pedi's. Not a full service Spa on my option.",
+    rating: 3
+  )
+  qua3 = Review.create!(
+    user_id: user12.id,
+    biz_id: qua.id,
+    body: "Great service and staff. Especially good if you are looking for more than one session. Deep tissue massage really helped with my sport injuries and they were very happy to accommodate any requests. Booking is extremely easy as well. Highly recommend.",
+    rating: 5
+  )
+  qua4 = Review.create!(
+    user_id: user13.id,
+    biz_id: qua.id,
+    body: "This place is my favorite spa ever in the city. I've been their client for almost two years now. I usually go for gel manicure and pedicure, Tina is the best! She takes care of my nails like they are hers, every time I travel or go somewhere else for a reason, I deeply regret it. The staff is very friendly, Henry and Sabrina. They're all amazing, always offer tea and water and make sure that the service is great. This is my to go to spa whenever I need to get anything done!",
+    rating: 5
+  )
+  qua5 = Review.create!(
+    user_id: user14.id,
+    biz_id: qua.id,
+    body: "I arrived 15 minutes early, as instructed when I made my reservation, for my massage / facial package and discovered I was too early... nobody was in yet to greet me. I waited outside for ~5 minutes (in a pretty dodgy area) before anyone who worked at the spa showed up. I wasn't asked my preference in gender of massage therapist - which does matter to a lot of people getting massages. I got over it after a few minutes, but was thrown off at first. ",
+    rating: 2
+  )
+  nob1 = Review.create!(
+    user_id: user1.id,
+    biz_id: nob.id,
+    body: "Oh my my! This is one of the most incredible relaxing massages I have had. The staff was welcoming and very hospitable when arriving. The greeted us and escorted us to the lockers while providing a tour of the facility. We changed and prepped for our massages at 7. There was an incredible lounge with a beautiful pool to relax in while waiting. The massage was incredible. Probably one of the best I have had. After massages we had dinner at the adjacent restaurant. Even though this ended up beginning at 9:30, it was an amazing 5 courses!",
+    rating: 5
+  )
+  nob2 = Review.create!(
+    user_id: user3.id,
+    biz_id: nob.id,
+    body: "I came here for an 80 minute couple's massage. The overall experience was truly relaxing and the masseuses were professional and caring. I had a neck and back pain after a day of roller coaster fun, and Katrina made sure to focus on those pain points. You can also lower or raise the pressure point based on your preference. My pain was literally gone after the massage, and my partner and I experienced a body high (floating on clouds). ",
+    rating: 5
+  )
+  nob3 = Review.create!(
+    user_id: user5.id,
+    biz_id: nob.id,
+    body: "Finally got back to Nob Hill Spa, and this time my terrific massage therapist was Semegn. I truly think that was the best massage I've ever had. On the negative, the spa menu is in serious need of some updating in both offerings (very limited) and the quality of the food. I had a mixed greens with a few strawberries - which I'm pretty sure is the same salad I had in 2009 on my last visit...and it was overdressed, had too much cheese on it, and the bread served on the side was sort of like an egg bread....soft and not that great. With such good food (and bread!) available everywhere in the Bay Area and an allegedly great restaurant on premises, it was a real disappointment.",
+    rating: 4
+  )
+  nob4 = Review.create!(
+    user_id: user7.id,
+    biz_id: nob.id,
+    body: "Not very relaxing. I used to get massages regularly so I know what a quality massage feels like. This definitely wasn't it. It felt like The masseuse was tired or not well trained. I actually left more stressed and tense than when I came in (i have a headache).  From moment I laid down on the table, I was counting down the 80 mins until it was over. I'll give 2 stars for good customer service, but my back is still super tight and I actually have an appointment at a different place tomorrow. I really wanted to like this place , but for the price we paid, I expected a more luxurious experience.",
+    rating: 2
+  )
+  nob5 = Review.create!(
+    user_id: user9.id,
+    biz_id: nob.id,
+    body: "Such a great place to spend the day and relax! The service here is amazing, atmosphere is even better. I had a massage here with my husband and it was definitely one to remember.",
+    rating: 5
+  )
+  pure1 = Review.create!(
+    user_id: user2.id,
+    biz_id: pure.id,
+    body: "I had a amazing massage therapist Lenn she listened to all my aches and pains, she had perfect pressure and worked on all the right areas. I have finally found my ideal massage lady which is hard to find! She also was happy to give me advice to help my back at the end of my treatment. Thank you Lenn!",
+    rating: 5
+  )
+  pure2 = Review.create!(
+    user_id: user4.id,
+    biz_id: pure.id,
+    body: "One of the best massages I have ever had! Small little place in the middle of the city. The masseuse was super knowledgeable and aware of the body, the rooms were nice. Highly recommend",
+    rating: 5
+  )
+  pure3 = Review.create!(
+    user_id: user10.id,
+    biz_id: pure.id,
+    body: "Pure Organic Spa is a hidden gem in SF, literally. Don't let the elevator entrance throw you. The moment the door opens, its as though you're in an enchanted forrest. The decor is beautiful and it is such a relaxing environment. The lemongrass tea and almonds were a nice wind down touch. I booked two massages for a girls trip based off of these Yelp reviews. Lenn and Angela were fantastic. This is a no brainer massage spot. I absolutley recommend it.",
+    rating: 4
+  )
+  pure4 = Review.create!(
+    user_id: user6.id,
+    biz_id: pure.id,
+    body: "Love the ambience of the spa and that you get to select your own scented oil experience. My massage was definitely sub-par though. I bought a deep tissue massage and it was definitely more of the Swedish level. The masseuse was not adept at finding my knots and working through them...he kept finding them and then just moved along. He also seemed tired.",
+    rating: 3
+  )
+  pure5 = Review.create!(
+    user_id: user8.id,
+    biz_id: pure.id,
+    body: "I was in San Francisco for a holiday party, and I walked into this lovely spa right across from the Sir Francis Drake where I was staying.  WOW!  The front desk gal was so lovely and nice.  And David was the best swedish masseuse in my life.  Traveling is always hard, and it's blissful to find a good masseuse who can fix your aches and pains while you take a nap.  HIghly recommended!!  I will return next year!",
+    rating: 5
+  )
+  kabuki1 = Review.create!(
+    user_id: user11.id,
+    biz_id: kabuki.id,
+    body: "The facilities were extremely clean which I appreciated. Staff were constantly replenishing everything. They offer salt scrubs, cucumbers for your eyes, tea, toiletries (including plastic disposable combs which would be awesome for travel), towels... plus I am obsessed with their cucumber shower gel. It smells like watermelon!!! ",
+    rating: 5
+  )
+  kabuki2 = Review.create!(
+    user_id: user13.id,
+    biz_id: kabuki.id,
+    body: "I love this place!!! I have been coming here on the women only days for a couple of years now. It is fabulous and so rejuvenating to drink tea while going from the steam room, hot tub and dry sauna room. I love scrubbing with salts and laying down in the steam room. Also got my first massage there recently with Louise. She was great! She worked on my neck and shoulders and she released so much tension that I didn't realize I was holding on to.",
+    rating: 5
+  )
+  kabuki3 = Review.create!(
+    user_id: user15.id,
+    biz_id: kabuki.id,
+    body: "I husband and I went here to have a massage and spa day for our anniversary. It was nice and relaxing. I have never had a shiatsu massage before so I didn't know what to expect. I thought it was nice and pleasant, but not the kind of massage that gets knots out of your muscles - more pressure point focused it seems. Overall I enjoyed it.",
+    rating: 4
+  )
+  kabuki4 = Review.create!(
+    user_id: user9.id,
+    biz_id: kabuki.id,
+    body: "Amazing. Love the communal Was so relaxing we actually successfully conceived that night at home!!!",
+    rating: 5
+  )
+  kabuki5 = Review.create!(
+    user_id: user7.id,
+    biz_id: kabuki.id,
+    body: "
+This spa is the place to go if you're looking for a Japanese styles communal bath spa experience. The staff is friendly and efficient which is appreciated as it can get pretty busy there sometimes. Surrounded by good eats and a highly rated movie theatre, this is the spot for when you need that rest and relaxation.",
+    rating: 5
+  )
+  earthbody1 = Review.create!(
+    user_id: user12.id,
+    biz_id: earthbody.id,
+    body: "I had an amazing 90 minute massage with Danielle. I chose the Inspired Repattern and it came with a mini ritual of my choice. I told Danielle it was tough to choose between the facial massage, neck therapy and hot stone foot massage since they all sounded so amazing. She ended up doing a little bit of each on me and it was incredible! She really got deep into my muscles and made me so relaxed",
+    rating: 5
+  )
+  earthbody2 = Review.create!(
+    user_id: user14.id,
+    biz_id: earthbody.id,
+    body: "The massage was ok. It was a bit too strong for my taste. I mentioned that I needed more work done on my right side. It never happened! The masseuse seemed to go through the motions. I also said that the hot towels were too hot for me. I still got them put on me after I mentioned that. Then, there was no scalp or foot massage! What is up with that? Why not? A disappointing experience after really looking forward to a good massage. :(",
+    rating: 2
+  )
+  earthbody3 = Review.create!(
+    user_id: user8.id,
+    biz_id: earthbody.id,
+    body: "I passed by here one day and it was closed so I grabbed a menu and mulled it over for a couple days. I decided to splurge on a facial (usually go to Pratima in NYC) and a forearm/hand massage. Amy was incredible!!!! I left looking and feeling extremely relaxed and about 12 years younger. It was the standard earthbody facial I believe. I left with some natural products and even bought a gift certificate for my friend to come and see Amy (it was THAT good!) Honestly the staff is so lovely and the treatments so top notch, this will definitely be my go-to spot whenever I'm in SF.",
+    rating: 5
+  )
+  earthbody4 = Review.create!(
+    user_id: user6.id,
+    biz_id: earthbody.id,
+    body: "Every time I leave here, I feel like I'm coming back from a little vacation. It's so warm and welcoming and relaxing, and everything is designed for your comfort. I love the tea and snacks before and after a service, and I can never resist trying out the products lined up on the wall - I keep some at my desk at work to bring some of the earthbody relaxation into my everyday. :)",
+    rating: 5
+  )
+  earthbody5 = Review.create!(
+    user_id: user4.id,
+    biz_id: earthbody.id,
+    body: "I have been going to Earthbdoy for a long time and I love it. It's clean, relaxing and I feel pampered by everyone there. Great scheduling app, responsive with calls and emails, and great massage therapists. I like to go to Rhea because I feel like she really cares about getting the knots out. She's super attentive, cheerful and professional.",
+    rating: 5
+  )
 
   review1_1 = Review.create!(
     user_id: user1.id,
@@ -73,7 +837,7 @@
   review3_1 = Review.create!(
     user_id: user10.id,
     biz_id: biz3.id,
-    body: "This was probably one of the better bowls of ramen I've had!  I literally held my bowl up and drank all of the soup broth!\n\nWe ordered the Original Ramen ($14), Crispy Mushrooms ($8), and a side of Oxtail ($5).  The Crispy Mushrooms were well-battered and flavorful.  The shimeji mushroom was nice and smooth.  The Original Ramen consists of a beef bone broth and came with incredibly tender beef filets, a delicious black truffle oil, bouncy noodles, slices of king oyster mushroom, an onsen egg, and green onions.  The ramen broth was light yet flavorful.  The king oyster mushrooms were very fresh and had a creamy coconut taste to them!  The onsen egg and noodles were cooked perfectly.  The Oxtail beef was also tender and fall off the bone, and it was marinated in a thick tomato stew that is really familiar."
+    body: "This was probably one of the better bowls of ramen I've had!  I literally held my bowl up and drank all of the soup broth!\n\nWe ordered the Original Ramen ($14), Crispy Mushrooms ($8), and a side of Oxtail ($5).  The Crispy Mushrooms were well-battered and flavorful.  The shimeji mushroom was nice and smooth.  The Original Ramen consists of a beef bone broth and came with incredibly tender beef filets, a delicious black truffle oil, bouncy noodles, slices of king oyster mushroom, an onsen egg, and green onions.  The ramen broth was light yet flavorful.  The king oyster mushrooms were very fresh and had a creamy coconut taste to them!  The onsen egg and noodles were cooked perfectly.  The Oxtail beef was also tender and fall off the bone, and it was marinated in a thick tomato stew that is really familiar.",
     rating: 4)
   review3_2 = Review.create!(
     user_id: user11.id,

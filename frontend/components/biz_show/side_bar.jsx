@@ -62,6 +62,10 @@ class SideBar extends React.Component {
       forGroup,
       forKids,
       attier,
+      wheelchair,
+      appointmentOnly,
+      acceptInsurance,
+      neutralRestrooms
     } = this.props.moreInfo;
     const hours = this.parseHours();
     const today = this.today();
@@ -174,6 +178,24 @@ class SideBar extends React.Component {
         <dd>{caters}</dd>
       </dl>
     ) : "";
+    const infoWheelchair = wheelchair ? (
+      <dl>
+        <dt>Wheelchair Accessible</dt>
+        <dd>{wheelchair}</dd>
+      </dl>
+    ) : "";
+    const infoAppointment = appointmentOnly ? (
+      <dl>
+        <dt>By Appointment Only</dt>
+        <dd>{appointmentOnly}</dd>
+      </dl>
+    ) : "";
+    const infoNeutralRestrooms = neutralRestrooms ? (
+      <dl>
+        <dt>Gender Neutral Restrooms</dt>
+        <dd>{neutralRestrooms}</dd>
+      </dl>
+    ) : "";
     return(
       <div className='side-bar'>
         <div className='little-summary'>
@@ -284,6 +306,9 @@ class SideBar extends React.Component {
             {infoHasTV}
             {infoWaiterService}
             {infoCaters}
+            {infoAppointment}
+            {infoWheelchair}
+            {infoNeutralRestrooms}
           </ul>
         </div>
       </div>

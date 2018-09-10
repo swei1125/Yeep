@@ -43,10 +43,10 @@ class Home extends React.Component {
                   <p>Coffee & Tea</p>
                 </span>
               </Link>
-              <Link to='/search/Home%20Service&default'>
+              <Link to='/search/Spas&default'>
                 <span>
-                  <i className="material-icons">build</i>
-                  <p>Home Services</p>
+                  <i class="fas fa-spa"></i>
+                  <p>Spas</p>
                 </span>
               </Link>
             </div>
@@ -66,11 +66,11 @@ class Home extends React.Component {
                 </Link>
               </div>
               <div className='box-2'>
-                <Link to='/search/Boba&default'>
+                <Link to='/search/Bubble%20Tea&default'>
                   <div className='img-box'>
                     <img src={window.images.boba}/>
                   </div>
-                  <div className='category'><span>Boba</span></div>
+                  <div className='category'><span>Bubble Tea</span></div>
                 </Link>
               </div>
               <div className='box-3'>
