@@ -22,7 +22,7 @@ export const createReview = (review, bizId) => dispatch => (
   ReviewAPI.createReview(review, bizId)
   .then(
     newBizInfo => dispatch(receiveSingleBiz(newBizInfo)),
-    err => dispatch(receiveReviewErrors(err))
+    err => dispatch(receiveReviewErrors(err.responseJSON))
   )
 );
 
