@@ -55,7 +55,7 @@ class NavBar extends React.Component {
               </Link>
               <Link to='/search/Spas&default'>
                 <span>
-                  <i class="fas fa-spa"></i>
+                  <i className="fas fa-spa"></i>
                   Spas
                 </span>
               </Link>

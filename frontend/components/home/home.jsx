@@ -7,6 +7,7 @@ import {Link} from 'react-router-dom';
 class Home extends React.Component {
   componentDidMount() {
     window.scrollTo(0, 0);
+    this.props.clearAll();
   }
 
   render() {
@@ -45,7 +46,7 @@ class Home extends React.Component {
               </Link>
               <Link to='/search/Spas&default'>
                 <span>
-                  <i class="fas fa-spa"></i>
+                  <i className="fas fa-spa"></i>
                   <p>Spas</p>
                 </span>
               </Link>
