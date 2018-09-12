@@ -2,6 +2,7 @@
   min-width: 1020px;
   font-family: $Arimo;
   padding-bottom: 36px;
+  position: relative;
 
   .heading {
     font-size: 22px;
@@ -45,6 +46,10 @@
           object-fit: fill;
         }
       }
+      .err {
+        list-style: none;
+        color: $red;
+      }
 
       button {
         background-color: $red;
@@ -56,6 +61,7 @@
         font-size: 14px;
         font-weight: 700;
         color: white;
+        margin-bottom: 10px;
       }
       button:hover {
         background-color: $bright-red;
