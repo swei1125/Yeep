@@ -3,14 +3,33 @@ import SearchBarContainer from '../search/search_bar_container';
 import {Link} from 'react-router-dom';
 
 class NavBar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {display: "none"};
+  }
+
+  showDropdown(e) {
+
+    e.preventDefault();
+    if (this.state.display === 'none') {
+      this.setState({display: "block"});
+    }else {
+      this.setState({display: "none"});
+    }
+
+  }
 
   render() {
     const session = this.props.currentUser ? (
-      <div className='nav-session'>
-        <span className='welcome-msg'>Hi
-          &nbsp;
-          {this.props.currentUser.firstName}
-        </span>
+      <div className='nav-session-dropdown'>
+        <div onClick={this.showDropdown.bind(this)} className='user-menu' >
+          <img src={this.props.currentUser.img} />
+          <section><i className="fas fa-caret-down"></i></section>
+        </div>
+        <div className='dropdown' style={{ display: this.state.display }}>
+          <div className='arrow'></div>
+          <a onClick={this.props.logout}>Log Out</a>
+        </div>
       </div>
     ) : (
       <div className='nav-session'>
@@ -22,11 +41,7 @@ class NavBar extends React.Component {
       <div className='bottom-btn'>
         <button><Link to='/login'>Log In</Link></button>
       </div>
-    ) : (
-      <div className='bottom-btn'>
-        <button onClick={this.props.logout}>Log out</button>
-      </div>
-    );
+    ) : "";
     return (
       <div className='nav-wrapper'>
         <div className='nav-top'>

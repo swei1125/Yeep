@@ -36,7 +36,7 @@ class HomeSearchBar extends React.Component {
             <span className='search-inp'>
 
               <input
-                placeholder='ramen, boba, bakeries...'
+                placeholder='ramen, bars, bakeries...'
                 onChange={this.handleUpdate('search_term')}
               />
             </span>

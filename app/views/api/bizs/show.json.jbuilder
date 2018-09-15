@@ -51,8 +51,8 @@ json.users do
     json.set! user.id do
       json.extract! user, :id, :email, :first_name, :last_name
       json.profile_img url_for(user.profile_img)
-      json.reviewsCount user.reviews.length
-      json.photoCount user.uploads.length
+      json.reviews_count user.reviews.length
+      json.photo_count user.uploads.length
     end
   end
 end

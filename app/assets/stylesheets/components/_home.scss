@@ -33,15 +33,193 @@
       padding-bottom: 8px;
     }
 
+    .nav-session-dropdown {
+      display: block;
+      justify-content: space-between;
+      position: relative;
+
+      .user-menu {
+        width: 58px;
+        height: 38px;
+        background: rgba(0,0,0,.25);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+          width: 38px;
+          height: 100%;
+          border-radius: 2px 0 0 2px;
+          vertical-align: middle;
+        }
+        section {
+          width: 20px;
+          display: flex;
+          justify-content: center;
+          color: white;
+        }
+      }
+
+      .dropdown {
+        margin-top: 10px;
+        position: absolute;
+        z-index: 10;
+        right: 0;
+        padding: 12px;
+        min-width: 217px;
+        background: #fff;
+        border: 1px solid #ccc;
+        border-color: rgba(0,0,0,.2);
+        border-radius: 3px;
+        box-shadow: 0 2px 8px rgba(0,0,0,.2);
+        box-sizing: border-box;
+        min-height: 200px;
+
+
+        .arrow:after{
+          bottom: 100%;
+          right: 8px;
+          border: solid transparent;
+          content: "";
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-bottom-color: #fff;
+          border-width: 10px;
+          margin-left: -10px;
+        }
+        .menu-list{
+          list-style: none;
+          margin-top: 12px;
+          border-top: 1px solid #e6e6e6;
+          padding-top: 11px;
+
+          li{
+            color: $blue;
+            font-weight: 700;
+            cursor: pointer;
+            margin-bottom: 10px;
+            margin-left: 5px;
+
+            a:hover {
+              span{
+                text-decoration: underline;
+              }
+            }
+            a{
+              display: flex;
+              align-items: center;
+              font-size: 15px;
+
+              i{
+                color: #666;
+                font-size: 21px;
+                margin-right: 10px;
+              }
+              .about-me{
+                margin-right: 12px;
+              }
+            }
+          }
+        }
+        .logout{
+          margin-top: 12px;
+          border-top: 1px solid #e6e6e6;
+          padding-top: 11px;
+          font-size: 15px;
+          a{
+            color: $blue;
+            cursor: pointer;
+          }
+          a:hover{
+            text-decoration: underline;
+          }
+        }
+        .user-content{
+          display: flex;
+          width: 100%;
+          height: 60px;
+
+          img{
+            width: 60px;
+            height: 60px;
+            border-radius: 3px;
+            margin-right: 10px;
+          }
+          .user-info{
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            li{
+              display: flex;
+              align-items: center;
+
+              a {
+                color: $blue;
+                cursor: pointer;
+                font-weight: 700;
+              }
+              a:hover {
+                text-decoration: underline;
+              }
+
+              .review-count{
+                display: flex;
+                margin-right: 10px;
+              }
+              .photo-count{
+                display: flex;
+              }
+            }
+
+            .icon {
+              background-color: #f15c00;
+              width: 13px;
+              height: 13px;
+              border-radius: 3px;
+              margin-right: 6px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              i {
+                font-size: 10px;
+                color: white;
+                position: relative;
+                bottom: 0.1px;
+              }
+            }
+            span {
+              font-size: 12px;
+              font-weight: 700;
+              color: #666;
+            }
+
+            .photo-count {
+              display: flex;
+              align-items: center;
+              i {
+                position: relative;
+                right: 2px;
+                margin-right: 1px;
+                font-size: 18px;
+                color: #f15c00;
+              }
+            }
+          }
+        }
+
+      }
+    }
+
     .nav-session {
       display: flex;
       justify-content: space-between;
+      position: relative;
 
-      .welcome-msg {
-        color: #d32323;
-        font-weight: 700;
-        padding: 9px 12px 10px;
-      }
+
 
       .login {
         margin-right: 15px;

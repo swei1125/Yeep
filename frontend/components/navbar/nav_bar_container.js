@@ -4,7 +4,8 @@ import {logout} from '../../actions/session_actions';
 import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => ({
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  singleBiz: false
 });
 
 const mapDispatchToProps = dispatch => ({

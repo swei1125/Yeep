@@ -50,7 +50,11 @@ class SearchBar extends React.Component {
 
   handleUpdate(filed) {
     return (e) => {
-      this.setState({[filed]: e.target.value});
+      if (e.target.value === "") {
+        this.setState({[filed]: "default"});
+      }else {
+        this.setState({[filed]: e.target.value});
+      }
     };
   }
 
@@ -64,7 +68,7 @@ class SearchBar extends React.Component {
 
               <input
                 value={this.state.search_term === 'default' ? "" : this.state.search_term}
-                placeholder='burgers, barbers, spas, handymen...'
+                placeholder='ramen, tea, bakeries, spas...'
                 onChange={this.handleUpdate('search_term')}
               />
 
@@ -77,7 +81,7 @@ class SearchBar extends React.Component {
 
               <input
                 value={this.state.location === 'default' ? "" : this.state.location}
-                placeholder='Chinatown SF, San Francisco,CA'
+                placeholder='San Francisco,CA'
                 onChange={this.handleUpdate('location')}
               />
 

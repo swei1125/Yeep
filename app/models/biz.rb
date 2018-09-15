@@ -43,10 +43,10 @@ class Biz < ApplicationRecord
 
     arr1 = bizs.select {|biz| biz.term_arr.include?(search_term.downcase)}
     arr2 = bizs.select do |biz|
-      (biz.tag_names.any? {|tag| tag == search_term}) || (
+      (biz.tag_names.any? {|tag| tag.downcase == search_term.downcase}) || (
       biz.tag_names.any? do |tag|
         tag.downcase.split(" ").include?(search_term.downcase)
-      end) 
+      end)
     end
     arr3 = bizs.select {|biz| biz.category.downcase.split(" ").include?(search_term.downcase)}
 

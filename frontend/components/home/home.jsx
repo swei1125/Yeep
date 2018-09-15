@@ -28,7 +28,7 @@ class Home extends React.Component {
           <HomeSearchBar
             fetchBizs={this.props.fetchBizs}
             changeSearch={this.props.changeSearch}
-          />
+            />
 
           <div className='bottom-wrapper'>
             <div className='tags'>
@@ -54,6 +54,7 @@ class Home extends React.Component {
           </div>
 
         </div>
+
         <div className='categories-wrapper'>
           <div className='cate-box'>
             <h2>Find the Best Businesses in Town</h2>
