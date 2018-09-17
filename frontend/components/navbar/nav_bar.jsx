@@ -18,17 +18,57 @@ class NavBar extends React.Component {
     }
 
   }
+  handleLogout(e) {
+    e.preventDefault();
+    this.setState({display: "none"});
+    this.props.logout();
+  }
 
   render() {
+    const currentUser = this.props.currentUser;
     const session = this.props.currentUser ? (
       <div className='nav-session-dropdown'>
         <div onClick={this.showDropdown.bind(this)} className='user-menu' >
-          <img src={this.props.currentUser.img} />
+          <img src={currentUser.img} />
           <section><i className="fas fa-caret-down"></i></section>
         </div>
         <div className='dropdown' style={{ display: this.state.display }}>
           <div className='arrow'></div>
-          <a onClick={this.props.logout}>Log Out</a>
+            <div className='user-content' >
+              <img src={currentUser.img}/>
+              <div className='user-info' >
+                <li><a>{`${currentUser.firstName} ${currentUser.lastName[0]}.`}</a></li>
+                <li>
+                  <section className='review-count'>
+                    <div className='icon'>
+                      <i className="material-icons">star</i>
+                    </div>
+                    <span>{currentUser.reviewsCount}</span>
+                  </section>
+                  <section className='photo-count'>
+                    <i className="material-icons camera">camera_alt</i>
+                    <span>{currentUser.photoCount}</span>
+                  </section>
+                </li>
+              </div>
+            </div>
+            <ul className='menu-list' >
+              <li>
+                <Link to='#'>
+                  <i className="fas fa-user about-me"></i>
+                  <span>About Me</span>
+                </Link>
+              </li>
+              <li>
+                <Link to='#'>
+                  <i className="fas fa-cog"></i>
+                  <span>Account Settings</span>
+                </Link>
+              </li>
+            </ul>
+            <div className='logout' >
+              <a onClick={this.handleLogout.bind(this)}>Log Out</a>
+            </div>
         </div>
       </div>
     ) : (

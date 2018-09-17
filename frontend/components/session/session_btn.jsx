@@ -17,6 +17,11 @@ class SessionBtn extends React.Component{
     }
 
   }
+  handleLogout(e) {
+    e.preventDefault();
+    this.setState({display: "none"});
+    this.props.logout();
+  }
 
   render() {
     const {currentUser, logout, login, guest} = this.props;
@@ -61,7 +66,7 @@ class SessionBtn extends React.Component{
             </li>
           </ul>
           <div className='logout' >
-            <a onClick={logout}>Log Out</a>
+            <a onClick={this.handleLogout.bind(this)}>Log Out</a>
           </div>
         </div>
 

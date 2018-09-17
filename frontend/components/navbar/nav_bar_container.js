@@ -5,7 +5,6 @@ import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = state => ({
   currentUser: state.session.currentUser,
-  singleBiz: false
 });
 
 const mapDispatchToProps = dispatch => ({

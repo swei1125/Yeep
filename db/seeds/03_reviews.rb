@@ -3,8 +3,8 @@
   biz2 = Biz.find_by_name('Homeroom')
   biz3 = Biz.find_by_name('Ushi Taro')
   biz4 = Biz.find_by_name('Mensho Tokyo')
-  biz5 = Biz.find_by_name('Boba Guys')
-  biz6 = Biz.find_by_name('Urban Rital')
+  boba_guy = Biz.find_by_name('Boba Guys')
+  rital = Biz.find_by_name('Urban Rital')
   biz7 = Biz.find_by_name("Ryoko's")
   biz8 = Biz.find_by_name('Saru Sushi Bar')
   spa_vitale = Biz.find_by_name('Spa Vitale')
@@ -873,33 +873,33 @@ This spa is the place to go if you're looking for a Japanese styles communal bat
 
   review5_1 = Review.create!(
     user_id: user2.id,
-    biz_id: biz5.id,
+    biz_id: boba_guy.id,
     body: "TRY: the JASMINE MILK TEA or HONG KONG STYLE (hot!!!).\n\nThis Boba Guys is a tiny little shop that has barely enough standing room, so always plan on taking your drink to-go. The hot milk teas are absolutely delicious and the tapioca pearls are the perfect texture and sweetness-- the best drink to warm you up on another windy day in SanFran.",
     rating: 5)
   review5_2 = Review.create!(
     user_id: user6.id,
-    biz_id: biz5.id,
+    biz_id: boba_guy.id,
     body: "UHH Boba Guys is THE best boba in SF. Don't @ me.\n\nEven though it's the best, this is probably the worst location. It's way smaller than the other shops and the line is ridiculously long. After you place your order, there's a ton of people at the other half of the waiting area hanging around for their drinks. If you wait outside, most likely your drink is given to someone else or someone effed up decides to steal it, so no good.\n\nMatcha Latte is easily one of my favorite drinks here. They recommend 75% sweet and I think that's WAYYYYY too sweet. Especially when you order their boba and it comes with a honey-like syrup, it's too much sugar overall. If you get boba, maybe consider 25% sweet. Without boba, 50% should be puuurfect.\n\nAlso delicious: Hong Kong Milk Tea, Strawberry Matcha Latte and their Mango Tea (only available during the summer!)",
     rating: 4)
   review5_3 = Review.create!(
     user_id: user7.id,
-    biz_id: biz5.id,
+    biz_id: boba_guy.id,
     body: "Best boba shop by far, creative and tasty selections along with their own house specials makes it a unique place to get boba.\n\nThere is a long line in front and you need to be willing to stand in line for your cup of heaven!!\nWe had the strawberry/matcha boba, tropical selection and the lychee jasmine tea. \n\nThe first two were amazing!! Memorable and very tasty dinner Inka. Unfortunately the lychee tea didn't seem to be lychee and was something else, so I ended up tossing more than half of mine as I didn't care for the flavor. Will be back on the long line and ordering their specialty drinks next time.",
     rating: 4)
 
   review6_1 = Review.create!(
     user_id: user6.id,
-    biz_id: biz6.id,
+    biz_id: rital.id,
     body: "Honestly, one of the better boba places that I've tried in the Bay! My favorite in SF is still Boba Guys, but Urban Ritual isn't bad at all. Their menu is smaller compared to some other place I've been to, but I would say it's still a good selection of teas/fruity flavors/etc. Something for everyone. (You can also build your own drink as well!)\n\nI tried the House Milk Tea (usually my go-to if I'm at a new boba place) and loved it! The tea was strong and flavorful, just the right enough of milkiness, and their boba is chewy and sweet! (I hate boba that isn't sweetened and clearly isn't freshly made.)\n\nI can't wait to come back here again and try some of their other flavors!",
     rating: 5)
   review6_2 = Review.create!(
     user_id: user9.id,
-    biz_id: biz6.id,
+    biz_id: rital.id,
     body: "GET HONEY BOBA IN YOUR DRINK!! The flavor of the boba is definitely enhanced compared to nearby SF boba shops. \n\nTHEY HAVE OAT MILK!! And their tea flavors are quite strong so it's good that they have a neutral dairy free alternative (soy milk always wrecks a good milk tea) \n\nVERY LITTLE SEATING INSIDE!! Idk why I'm yelling. Employees were nice, friendly. Right near the main Hayes Valley area. A little pricey too but well worth it for an occasional treat.",
     rating: 4)
   review6_3 = Review.create!(
     user_id: user10.id,
-    biz_id: biz6.id,
+    biz_id: rital.id,
     body: "Solid 4 stars for their matcha milk toffee drink and good customer service.\n\nThey listened when I asked for it not too sweet, and were friendly with their samples.\n\nThey followed up by asking if I liked my drink, and seemed to be on top of their drink orders.\n\nA great addition to the area.",
     rating: 4)
 

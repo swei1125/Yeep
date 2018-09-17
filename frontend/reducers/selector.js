@@ -10,7 +10,11 @@ export const sortedReviews = (state) => {
   if (currentUserId) {
     const idx = Object.keys(state.entities.reviews).indexOf(`${currentUserId}`);
     const reviews = Object.values(state.entities.reviews);
-    return reviews.slice(idx, idx+1).concat(reviews.slice(0, idx)).concat(reviews.slice(idx+1));
+    if (idx === -1) {
+      return reviews;
+    }else {
+      return reviews.slice(idx, idx+1).concat(reviews.slice(0, idx)).concat(reviews.slice(idx+1));
+    }
   }else {
     return Object.values(state.entities.reviews);
   }
