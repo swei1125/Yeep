@@ -46,8 +46,10 @@ class ReviewForm extends React.Component {
       id: +this.state.id
     };
     this.props.action(review, this.props.match.params.bizId)
-    .then(() => this.props.history.push(`/bizs/${this.props.match.params.bizId}`))
-    ;
+    .then(() => {
+      this.props.updateCurrentUser(this.props.currentUserId);
+      this.props.history.push(`/bizs/${this.props.match.params.bizId}`);
+    });
   }
 
   updateMsg(tag, pos) {

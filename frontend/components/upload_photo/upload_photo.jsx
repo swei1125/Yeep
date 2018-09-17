@@ -47,6 +47,7 @@ class UploadPhoto extends React.Component {
         processData: false
       }).then(
         window.setTimeout(() => {
+          this.props.updateCurrentUser(this.props.currentUserId);
           this.props.history.push(`/bizs/${this.props.match.params.bizId}`);
         }, 6000)
       );

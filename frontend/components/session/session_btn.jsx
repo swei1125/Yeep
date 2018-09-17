@@ -42,11 +42,11 @@ class SessionBtn extends React.Component{
                   <div className='icon'>
                     <i className="material-icons">star</i>
                   </div>
-                  <span>{currentUser.reviewsCount}</span>
+                  <span>{currentUser.reviews ? Object.values(currentUser.reviews).length : 0}</span>
                 </section>
                 <section className='photo-count'>
                   <i className="material-icons camera">camera_alt</i>
-                  <span>{currentUser.photoCount}</span>
+                  <span>{currentUser.photos ? Object.values(currentUser.photos).length : 0}</span>
                 </section>
               </li>
             </div>

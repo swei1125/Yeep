@@ -4,6 +4,7 @@ import { createReview, updateReview, clearReviewErrors } from '../../actions/rev
 import ReviewForm from './review_form';
 import { fetchBiz } from '../../actions/biz_actions';
 import { getSingleReview } from '../../reducers/selector';
+import { updateCurrentUser } from '../../actions/user_actions';
 
 
 const msg = {
@@ -25,6 +26,7 @@ const mapStateToProps = (state, ownProps) => {
   const review = getSingleReview(state);
   if (!review) return {formType: 'edit', reviewState: {}};
   return{
+    currentUserId: state.session.currentUser.id,
     formType: 'edit',
     errors: state.errors.review,
     reviewState: Object.assign(
@@ -36,7 +38,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = dispatch => ({
   action: (review) => dispatch(updateReview(review)),
   clearReviewErrors: () => dispatch(clearReviewErrors),
-  fetchBiz: (id) => dispatch(fetchBiz(id))
+  fetchBiz: (id) => dispatch(fetchBiz(id)),
+  updateCurrentUser: id => dispatch(updateCurrentUser(id))
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ReviewForm));
