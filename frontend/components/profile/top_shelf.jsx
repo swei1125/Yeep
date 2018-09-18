@@ -36,7 +36,7 @@ class TopShelf extends React.Component{
               <li>
                 <Link to='#'>
                   <i className="fas fa-camera-retro camera"></i>
-                  <span>Add Ptofile Photos</span>
+                  <span>Update Ptofile Photo</span>
                 </Link>
               </li>
               <li>

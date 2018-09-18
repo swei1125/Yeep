@@ -9,5 +9,6 @@
     json.city review.biz.city
     json.price review.biz.price
     json.tags review.biz.tags.map { |tag| tag.name }
+    json.photo url_for(review.biz.top_photo)
   end
 end

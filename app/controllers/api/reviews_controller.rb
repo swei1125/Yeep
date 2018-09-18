@@ -12,7 +12,8 @@ class Api::ReviewsController < ApplicationController
   end
 
   def index
-    @reviews = Review.all.select {|r| r.user_id == params[:user_id]}
+    user = User.find(params[:user_id])
+    @reviews = user.reviews
   end
 
   def update

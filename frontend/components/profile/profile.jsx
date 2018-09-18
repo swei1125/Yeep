@@ -2,7 +2,6 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import NavbarContainer from '../navbar/nav_bar_container';
 import TopShelfContainer from './top_shelf_container';
-import SideBar from './sidebar';
 
 class Profile extends React.Component{
 
@@ -15,7 +14,6 @@ class Profile extends React.Component{
   }
 
   render(){
-    console.log(this.props.activities);
     const starPos = {
       0: "0 -240px",
       1: "0 -258px",
@@ -28,21 +26,39 @@ class Profile extends React.Component{
       4.5: "0 -384px",
       5: "0 -402px"
     };
-    const { firstName, lastName, img, photos, reviews } = this.props.user;
+    const { firstName, lastName, img, photos, reviews, id } = this.props.user;
     return(
       <div className='profile-wrapper'>
-        <NavbarContainer />
+        <NavbarContainer singleBiz={true}/>
         <TopShelfContainer />
         <div className='user-content-wrapper'>
           <div className='left-column'>
             <h1>{`${firstName}'s Profile`}</h1>
-            <SideBar />
+            <ul className='nav-items'>
+              <li className='active'>
+                <Link to='/profile'>
+                  <i className="fas fa-user profile"></i>
+                  <span>Profile Overview</span>
+                </Link>
+              </li>
+              <li>
+                <Link to={`/reviews/${id}`}>
+                  <div className='icon'>
+                    <i className="material-icons">star</i>
+                  </div>
+                  <span>Reviews</span>
+                </Link>
+              </li>
+            </ul>
           </div>
           <div className='right-column'>
             <div className='activity-wrapper'>
               <h2>Recent Activity</h2>
               <ul>
-                {this.props.activities.map((act, i) => {
+                {this.props.activities.length < 1 ? (
+                  <h3 className='note'>You don't have any recent activities.</h3>
+                ) : (
+                  this.props.activities.map((act, i) => {
                   if (act.body) {
                     return (
                       <li className='act-block' key={i}>
@@ -79,7 +95,8 @@ class Profile extends React.Component{
                       </li>
                     );
                   }
-                })}
+                })
+                )}
               </ul>
             </div>
           </div>

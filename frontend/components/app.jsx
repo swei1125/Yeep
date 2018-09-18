@@ -13,6 +13,7 @@ import EditReviewContainer from './review/editReview_form_container';
 import ReviewSearch from './review/review_search';
 import ReviewSearchResult from './review/review_search_result';
 import ProfileContainer from './profile/profile_container';
+import UserReviewsContainer from './profile/reviews_container';
 
 const App = () => (
   <div className='main-wrapper'>
@@ -29,10 +30,9 @@ const App = () => (
       <Route exact path='/reviewsearch/' component={ReviewSearch} />
       <Route exact path="/reviewsearch/:search_term&:location" component={ReviewSearchResult}/>
       <ProtectedRoute exact path='/profile' component={ProfileContainer} />
+      <ProtectedRoute exact path='/reviews/:userId' component={UserReviewsContainer} />
       <Redirect to='/' />
     </Switch>
-
-
 
     <Footer />
 

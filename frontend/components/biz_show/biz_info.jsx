@@ -47,7 +47,7 @@ class BizInfo extends React.Component {
                   {reviewBtn}
                 </span>
             </button>
-        </Link>
+          </Link>
           <button className='photo-btn'>
             <Link to={`/bizs/${id}&${name}/add_photo`}>
               <span>

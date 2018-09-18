@@ -4,6 +4,12 @@ import { receiveSingleBiz } from './biz_actions';
 export const REMOVE_REVIEW = 'DELETE_REVIEW';
 export const RECEIVE_REVIEW_ERRORS = 'RECEIVE_REVIEW_ERRORS';
 export const CLEAR_REVIEW_ERRORS = 'CLEAR_REVIEW_ERRORS';
+export const RECEIVE_USER_REVIEWS = 'RECEIVE_USER_REVIEWS';
+
+export const receiveUserReviews = (reviews) => ({
+  type: RECEIVE_USER_REVIEWS,
+  reviews
+});
 
 export const removeReview = () => ({
   type: REMOVE_REVIEW
@@ -17,6 +23,11 @@ export const receiveReviewErrors = (err) => ({
 export const clearReviewErrors = () => ({
   type: CLEAR_REVIEW_ERRORS
 });
+
+export const fetchUserReviews = id => dispatch => (
+  ReviewAPI.fetchUserReviews(id)
+  .then(reviews => dispatch(receiveUserReviews(reviews)))
+);
 
 export const createReview = (review, bizId) => dispatch => (
   ReviewAPI.createReview(review, bizId)

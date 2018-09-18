@@ -21,3 +21,10 @@ export const deleteReview = (id) => (
     url: `api/reviews/${id}`
   })
 );
+
+export const fetchUserReviews = id => (
+  $.ajax({
+    method: 'get',
+    url: `api/users/${id}/reviews`
+  })
+);

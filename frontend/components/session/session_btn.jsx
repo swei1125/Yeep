@@ -7,14 +7,6 @@ class SessionBtn extends React.Component{
     this.state = {display: "none"};
   }
 
-  // componentDidMount(){
-    // window.addEventListener("click", () => {
-    //   if (this.state.display === 'block') {
-    //     this.setState({display: "none"});
-    //   }
-    // });
-  // }
-
   showDropdown(e) {
 
     e.preventDefault();
@@ -44,7 +36,7 @@ class SessionBtn extends React.Component{
           <div className='user-content' >
             <img src={currentUser.img}/>
             <div className='user-info' >
-              <li><a>{`${currentUser.firstName} ${currentUser.lastName[0]}.`}</a></li>
+              <li><Link to='/profile'>{`${currentUser.firstName} ${currentUser.lastName[0]}.`}</Link></li>
               <li>
                 <section className='review-count'>
                   <div className='icon'>

@@ -36,12 +36,12 @@ export const sortActivities = user => {
   }else if (user.reviews) {
     const today = new Date;
     return Object.values(user.reviews).filter(el => {
-      today - new Date(el.date) <= 7689600000;
+      return today - new Date(el.date) <= 7689600000;
     });
   }else if (user.photos) {
     const today = new Date;
     return Object.values(user.photos).filter(el => {
-      today - new Date(el.date) <= 7689600000;
+      return today - new Date(el.date) <= 7689600000;
     });
   }else{
     return [];
