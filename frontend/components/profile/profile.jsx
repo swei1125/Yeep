@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import NavbarContainer from '../navbar/nav_bar_container';
 import TopShelfContainer from './top_shelf_container';
+import SideBar from './sidebar';
 
 class Profile extends React.Component{
 
@@ -15,6 +16,18 @@ class Profile extends React.Component{
 
   render(){
     console.log(this.props.activities);
+    const starPos = {
+      0: "0 -240px",
+      1: "0 -258px",
+      1.5: "0 -276px",
+      2: "0 -294px",
+      2.5: "0 -312px",
+      3: "0 -330px",
+      3.5: "0 -348px",
+      4: "0 -366px",
+      4.5: "0 -384px",
+      5: "0 -402px"
+    };
     const { firstName, lastName, img, photos, reviews } = this.props.user;
     return(
       <div className='profile-wrapper'>
@@ -23,26 +36,51 @@ class Profile extends React.Component{
         <div className='user-content-wrapper'>
           <div className='left-column'>
             <h1>{`${firstName}'s Profile`}</h1>
-            <ul className='nav-items'>
-              <li className='active'>
-                <Link to='/profile'>
-                  <i className="fas fa-user profile"></i>
-                  <span>Profile Overview</span>
-                </Link>
-              </li>
-              <li>
-                <Link to='#'>
-                  <div className='icon'>
-                    <i className="material-icons">star</i>
-                  </div>
-                  <span>Reviews</span>
-                </Link>
-              </li>
-            </ul>
+            <SideBar />
           </div>
           <div className='right-column'>
             <div className='activity-wrapper'>
               <h2>Recent Activity</h2>
+              <ul>
+                {this.props.activities.map((act, i) => {
+                  if (act.body) {
+                    return (
+                      <li className='act-block' key={i}>
+                        <div className='pic-box'>
+                          <img src={img}/>
+                        </div>
+                        <div className='action-wrapper'>
+                          <div className='action'>
+                            <span className='act'>You wrote a review for <Link to={`/bizs/${act.bizId}`}>{act.biz}</Link></span>
+                            <span className='date'>{this.translateDate(act.date)}</span>
+                          </div>
+                          <div className='action-detail'>
+                            <div className='star' style={{backgroundPosition: starPos[act.rating]}}></div>
+                            <p>{act.body}</p>
+                          </div>
+                        </div>
+                      </li>
+                    );
+                  }else{
+                    return(
+                      <li className='act-block' key={i}>
+                        <div className='pic-box'>
+                          <img src={img}/>
+                        </div>
+                        <div className='action-wrapper'>
+                          <div className='action'>
+                            <span className='act'>You added a photo for <Link to={`/bizs/${act.bizId}`}>{act.biz}</Link></span>
+                            <span className='date'>{this.translateDate(act.date)}</span>
+                          </div>
+                          <div className='action-detail'>
+                            <img src={act.url}/>
+                          </div>
+                        </div>
+                      </li>
+                    );
+                  }
+                })}
+              </ul>
             </div>
           </div>
         </div>
