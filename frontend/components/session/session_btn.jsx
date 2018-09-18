@@ -7,6 +7,14 @@ class SessionBtn extends React.Component{
     this.state = {display: "none"};
   }
 
+  // componentDidMount(){
+    // window.addEventListener("click", () => {
+    //   if (this.state.display === 'block') {
+    //     this.setState({display: "none"});
+    //   }
+    // });
+  // }
+
   showDropdown(e) {
 
     e.preventDefault();
@@ -53,7 +61,7 @@ class SessionBtn extends React.Component{
           </div>
           <ul className='menu-list' >
             <li>
-              <Link to='#'>
+              <Link to='/profile'>
                 <i className="fas fa-user about-me"></i>
                 <span>About Me</span>
               </Link>

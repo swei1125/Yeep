@@ -11,6 +11,10 @@ class Api::ReviewsController < ApplicationController
     end
   end
 
+  def index
+    @reviews = Review.all.select {|r| r.user_id == params[:user_id]}
+  end
+
   def update
     @review = Review.find(params[:id])
     @biz = @review.biz

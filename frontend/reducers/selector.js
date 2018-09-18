@@ -19,3 +19,31 @@ export const sortedReviews = (state) => {
     return Object.values(state.entities.reviews);
   }
 };
+
+export const sortActivities = user => {
+  if (user.reviews && user.photos) {
+    const reviews = Object.values(user.reviews);
+    const photos = Object.values(user.photos);
+    const arr = reviews.concat(photos).sort((a, b) => {
+      return (new Date(b.date) - new Date(a.date));
+    });
+    const today = new Date;
+
+    return arr.filter(el => {
+      return today - new Date(el.date) <= 7689600000;
+    });
+
+  }else if (user.reviews) {
+    const today = new Date;
+    return Object.values(user.reviews).filter(el => {
+      today - new Date(el.date) <= 7689600000;
+    });
+  }else if (user.photos) {
+    const today = new Date;
+    return Object.values(user.photos).filter(el => {
+      today - new Date(el.date) <= 7689600000;
+    });
+  }else{
+    return [];
+  }
+};

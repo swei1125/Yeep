@@ -54,7 +54,7 @@ class NavBar extends React.Component {
             </div>
             <ul className='menu-list' >
               <li>
-                <Link to='#'>
+                <Link to='/profile'>
                   <i className="fas fa-user about-me"></i>
                   <span>About Me</span>
                 </Link>

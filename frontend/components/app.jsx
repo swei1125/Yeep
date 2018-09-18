@@ -12,6 +12,7 @@ import WriteReviewContainer from './review/writeReview_form_container';
 import EditReviewContainer from './review/editReview_form_container';
 import ReviewSearch from './review/review_search';
 import ReviewSearchResult from './review/review_search_result';
+import ProfileContainer from './profile/profile_container';
 
 const App = () => (
   <div className='main-wrapper'>
@@ -27,6 +28,7 @@ const App = () => (
       <ProtectedRoute exact path='/editreview/:bizId&:bizName' component={EditReviewContainer} />
       <Route exact path='/reviewsearch/' component={ReviewSearch} />
       <Route exact path="/reviewsearch/:search_term&:location" component={ReviewSearchResult}/>
+      <ProtectedRoute exact path='/profile' component={ProfileContainer} />
       <Redirect to='/' />
     </Switch>
 
