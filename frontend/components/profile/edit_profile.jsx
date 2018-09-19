@@ -42,7 +42,7 @@ class EditProfile extends React.Component {
                 </Link>
               </li>
               <li>
-                <Link to='#'><span>Password</span></Link>
+                <Link to='/changepassword'><span>Password</span></Link>
               </li>
             </ul>
           </div>

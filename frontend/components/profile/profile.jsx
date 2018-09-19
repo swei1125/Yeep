@@ -12,6 +12,9 @@ class Profile extends React.Component{
     if (date[0][0] === '0') date[0] = date[0][1];
     return date.join('/');
   }
+  componentDidMount(){
+    window.scrollTo(0, 0);
+  }
 
   render(){
     const starPos = {

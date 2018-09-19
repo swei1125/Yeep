@@ -6,6 +6,7 @@ import TopShelfContainer from './top_shelf_container';
 class Reviews extends React.Component {
 
   componentDidMount() {
+    window.scrollTo(0, 0);
     this.props.fetchUserReviews(this.props.user.id);
   }
 

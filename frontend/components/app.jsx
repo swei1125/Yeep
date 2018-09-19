@@ -14,7 +14,8 @@ import ReviewSearch from './review/review_search';
 import ReviewSearchResult from './review/review_search_result';
 import ProfileContainer from './profile/profile_container';
 import UserReviewsContainer from './profile/reviews_container';
-import EditProfile from './profile/edit_profile_container';
+import EditProfileContainer from './profile/edit_profile_container';
+import EditPasswordContainer from './profile/edit_password_container';
 
 const App = () => (
   <div className='main-wrapper'>
@@ -32,7 +33,8 @@ const App = () => (
       <Route exact path="/reviewsearch/:search_term&:location" component={ReviewSearchResult}/>
       <ProtectedRoute exact path='/profile' component={ProfileContainer} />
       <ProtectedRoute exact path='/reviews/:userId' component={UserReviewsContainer} />
-      <ProtectedRoute exact path='/profileupdate' component={EditProfile} />
+      <ProtectedRoute exact path='/profileupdate' component={EditProfileContainer} />
+      <ProtectedRoute exact path='/changepassword' component={EditPasswordContainer} />
       <Redirect to='/' />
     </Switch>
 
