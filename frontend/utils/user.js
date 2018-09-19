@@ -12,3 +12,11 @@ export const editCurrentUserInfo = (id, user) => (
     data: {user}
   })
 );
+
+export const changePassword = (id, user) => (
+  $.ajax({
+    method: 'patch',
+    url: `api/password/${id}`,
+    data: {user}
+  })
+);

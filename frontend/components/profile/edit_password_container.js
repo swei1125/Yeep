@@ -1,13 +1,16 @@
 import { connect } from 'react-redux';
-import { updateCurrentUserInfo } from '../../actions/user_actions';
+import { withRouter } from 'react-router-dom';
+import { updatePassword, clearPasswordErrors } from '../../actions/user_actions';
 import EditPassword from './edit_password';
 
 const mapStateToProps = state => ({
-  user: state.session.currentUser
+  user: state.session.currentUser,
+  errors: state.errors.password
 });
 
 const mapDispathToProps = dispatch => ({
-  updateCurrentUserInfo: (id, user) => dispatch(updateCurrentUserInfo(id, user))
+  updatePassword: (id, data) => dispatch(updatePassword(id, data)),
+  clearPasswordErrors: () => dispatch(clearPasswordErrors)
 });
 
-export default connect(mapStateToProps, mapDispathToProps)(EditPassword);
+export default withRouter(connect(mapStateToProps, mapDispathToProps)(EditPassword));

@@ -5,13 +5,38 @@ import NavbarContainer from '../navbar/nav_bar_container';
 class EditPassword extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {currentPassword: "", newPassword: "",confirmPassword: ""};
+    this.state = {
+      currentPassword: "",
+      newPassword: "",
+      confirmPassword: "",
+      demoUser: false
+    };
   }
 
   handleChange(field) {
     return (e) => {
       this.setState({[field]: e.target.value});
     };
+  }
+  componentWillUnmount() {
+    this.props.clearPasswordErrors();
+  }
+
+  submit(e){
+    if (this.props.user.id === 1) {
+      this.setState({demoUser: true});
+      return null;
+    }
+    const data = {
+      current_password: this.state.currentPassword,
+      password: this.state.newPassword,
+      confirm_password: this.state.confirmPassword,
+      email: this.props.user.email
+    };
+    this.props.updatePassword(this.props.user.id, data)
+    .then(() => {
+      this.props.history.push("/profile");
+    });
   }
 
   render() {
@@ -35,28 +60,38 @@ class EditPassword extends React.Component {
           </div>
           <div className='right-column'>
             <h2>Change your password</h2>
-            <label>Current password</label>
-            <span className='reminder'>Enter your existing password.</span>
-            <input
-              type='password'
-              value={this.state.first_name}
-              onChange={this.handleChange('currentPassword')}
-              required/>
-            <label>New password</label>
-            <span className='reminder'>Enter the new password you would like.</span>
-            <input type='password'
-              value={this.state.last_name}
-              onChange={this.handleChange('newPassword')}
-              required/>
-            <label>Verify new password</label>
-            <span className='reminder'>Reenter your password to verify.</span>
-            <input type='password'
-              value={this.state.last_name}
-              onChange={this.handleChange('confirmPassword')}
-              required/>
+            <div className='error' style={{display: this.state.demoUser ? "block" : "none"}}>
+              <p>Please do not change demo user's password.</p>
+            </div>
+            {this.props.errors.length === 0 ? "" : (
+              <div className='error'>
+                <p>{this.props.errors[0]}</p>
+              </div>
+            )}
+            <form onSubmit={this.submit.bind(this)}>
+              <label>Current password</label>
+              <span className='reminder'>Enter your existing password.</span>
+              <input
+                type='password'
+                value={this.state.first_name}
+                onChange={this.handleChange('currentPassword')}
+                required/>
+              <label>New password</label>
+              <span className='reminder'>Enter the new password you would like.</span>
+              <input type='password'
+                value={this.state.last_name}
+                onChange={this.handleChange('newPassword')}
+                required/>
+              <label>Verify new password</label>
+              <span className='reminder'>Reenter your password to verify.</span>
+              <input type='password'
+                value={this.state.last_name}
+                onChange={this.handleChange('confirmPassword')}
+                required/>
 
-            <button className='ps-btn'>Save New Password</button>
-            <Link to='/profile' className='cancel'>Cancel</Link>
+              <button type='submit' className='ps-btn'>Save New Password</button>
+              <Link to='/profile' className='cancel'>Cancel</Link>
+            </form>
           </div>
         </div>
       </div>
