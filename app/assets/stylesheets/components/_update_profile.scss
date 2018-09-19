@@ -81,6 +81,23 @@
     padding: 0 0 0 30px;
     width: 75%;
 
+    .alert{
+      background: #daecd2;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      margin-bottom: 12px;
+      padding: 18px 18px 18px 24px;
+      border-radius: 3px;
+      font-size: 16px;
+      line-height: 1.5em;
+
+      p{
+        margin: 0;
+        padding-right: 30px;
+      }
+    }
+
     .error{
       background: #fcd6d3;
       width: 100%;
@@ -133,9 +150,12 @@
       margin: 0 0 18px;
       padding: 5px 9px;
       background: #fff;
-      border: 1px solid #999;
+      border: 1.4px solid #999;
       border-radius: 3px;
       font-size: 14px;
+    }
+    input:focus {
+      border: 1.4px solid $blue;
     }
     .reminder{
       display: block;

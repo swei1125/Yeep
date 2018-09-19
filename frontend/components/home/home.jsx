@@ -38,10 +38,10 @@ class Home extends React.Component {
                   <p>Restaurants</p>
                 </span>
               </Link>
-              <Link to="/search/Tea&default">
+              <Link to="/search/Tea%20Shop&default">
                 <span>
                   <i className="fas fa-coffee"></i>
-                  <p>Coffee & Tea</p>
+                  <p>Tea Shop</p>
                 </span>
               </Link>
               <Link to='/search/Spas&default'>

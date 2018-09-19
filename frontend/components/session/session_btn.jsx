@@ -7,11 +7,25 @@ class SessionBtn extends React.Component{
     this.state = {display: "none"};
   }
 
+  handleClick() {
+    return () => {
+      this.setState({display: "none"});
+    };
+  }
+  removeListener() {
+    return () => {
+      const body = document.querySelector("body");
+      window.removeEventListener("mousedown", this.handleClick);
+    };
+  }
+
   showDropdown(e) {
 
     e.preventDefault();
     if (this.state.display === 'none') {
       this.setState({display: "block"});
+      window.addEventListener("mousedown", this.handleClick);
+      window.addEventListener("mouseup", this.removeListener);
     }else {
       this.setState({display: "none"});
     }

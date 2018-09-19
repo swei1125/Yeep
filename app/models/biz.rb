@@ -48,7 +48,7 @@ class Biz < ApplicationRecord
         tag.downcase.split(" ").include?(search_term.downcase)
       end)
     end
-    arr3 = bizs.select {|biz| biz.category.downcase.split(" ").include?(search_term.downcase)}
+    arr3 = bizs.select {|biz| biz.category.downcase == search_term.downcase || biz.category.downcase.split(" ").include?(search_term.downcase)}
 
     result = arr1 + arr2 + arr3
     result.uniq

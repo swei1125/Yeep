@@ -816,8 +816,8 @@ This spa is the place to go if you're looking for a Japanese styles communal bat
   review2_1 = Review.create!(
     user_id: user5.id,
     biz_id: biz2.id,
-    body: "HOMEROOM IS A PLACE FOR COMFORT FOOD.\nEverything I stop by Oakland, you know that Homeroom is the restaurant to go to.\n\nHomeroom specializes in Mac&Cheese, but not any Mac & Cheese, flavorful, tasty, creamy M&C. I like this place because of its variety.\n\nIt has its basics but the add ons are what really makes it in my opinion. I love getting my Mac and cheese with breadcrumbs and hot dogs, call me trash all you want but it is really good!!! They offer other toppings too such as vegetables, bacon and more. You basically have unlimited variations.\n\nThe only downside I see is that the toppings add up, and it can get pretty pricey. My friend spent $20 on his dish before. But the counter to that is personally for me, I can't finish one plate by myself so if you aren't someone with the biggest appetite this could be a 2 in 1 meal.\n\nYou should try this place at least once to know the hype!",
-    rating: 4)
+    body: "HOMEROOM IS A PLACE FOR COMFORT FOOD.\nEverything I stop by Oakland, you know that Homeroom is the restaurant to go to.\n\nHomeroom specializes in Mac&Cheese, but not any Mac & Cheese, flavorful, tasty, creamy M&C. I like this place because of its variety.\n\nIt has its basics but the add ons are what really makes it in my opinion.",
+    rating: 5)
   review2_2 = Review.create!(
     user_id: user8.id,
     biz_id: biz2.id,
@@ -826,7 +826,7 @@ This spa is the place to go if you're looking for a Japanese styles communal bat
   review2_3 = Review.create!(
     user_id: user1.id,
     biz_id: biz2.id,
-    body: "I love coming to homeroom, but as someone lactose intolerant, I am always debating the pros and cons of stuffing my face with mac n cheese. This time, I tried out their vegan mac n cheese for the first time, and I did not regret it. The server recommended that I try it with the mexican flavoring since she said that the regular vegan mac n cheese is good but not super flavorful. With the mexican adobo sauce, cilantro, lime, and soyrizo, the vegan mac n cheese ended up being delicious. It didn't taste super \"cheesy\" but it was creamy, spicy, and savory. I'm so glad that their non-dairy option did not dissapoint since it is so hard to find dairy-free mac n cheese anywhere. It was delicious and I may be trying more of their vegan mac n cheeses again soon.\n\nI came here at 2:30 on a Sunday and only had to wait about 10 minutes before getting a table. The service was overall great, and I was overall very satisfied with the dining experience.",
+    body: "I love coming to homeroom, but as someone lactose intolerant, I am always debating the pros and cons of stuffing my face with mac n cheese. This time, I tried out their vegan mac n cheese for the first time, and I did not regret it. The server recommended that I try it with the mexican flavoring since she said that the regular vegan mac n cheese is good but not super flavorful.",
     rating: 5)
   review2_4 = Review.create!(
     user_id: user10.id,
@@ -837,7 +837,7 @@ This spa is the place to go if you're looking for a Japanese styles communal bat
   review3_1 = Review.create!(
     user_id: user10.id,
     biz_id: biz3.id,
-    body: "This was probably one of the better bowls of ramen I've had!  I literally held my bowl up and drank all of the soup broth!\n\nWe ordered the Original Ramen ($14), Crispy Mushrooms ($8), and a side of Oxtail ($5).  The Crispy Mushrooms were well-battered and flavorful.  The shimeji mushroom was nice and smooth.  The Original Ramen consists of a beef bone broth and came with incredibly tender beef filets, a delicious black truffle oil, bouncy noodles, slices of king oyster mushroom, an onsen egg, and green onions.  The ramen broth was light yet flavorful.  The king oyster mushrooms were very fresh and had a creamy coconut taste to them!  The onsen egg and noodles were cooked perfectly.  The Oxtail beef was also tender and fall off the bone, and it was marinated in a thick tomato stew that is really familiar.",
+    body: "This was probably one of the better bowls of ramen I've had!  I literally held my bowl up and drank all of the soup broth!\n\nWe ordered the Original Ramen ($14), Crispy Mushrooms ($8), and a side of Oxtail ($5).  The Crispy Mushrooms were well-battered and flavorful.  The shimeji mushroom was nice and smooth.  The Original Ramen consists of a beef bone broth and came with incredibly tender beef filets, a delicious black truffle oil, bouncy noodles, slices of king oyster mushroom, an onsen egg, and green onions.",
     rating: 4)
   review3_2 = Review.create!(
     user_id: user11.id,
@@ -852,7 +852,7 @@ This spa is the place to go if you're looking for a Japanese styles communal bat
   review3_4 = Review.create!(
     user_id: user13.id,
     biz_id: biz3.id,
-    body: "Date & Time:  Saturday June 30, 2018 @ 6pm\nDining Companions:  Mommy & Husband\nScene:  Solo Diners, Couples & Families In Denim Jackets, Crop Tops, Cut-Offs, Converse & MK Cross-Body Bags Tuck into Delicious Piping Hot Bowls of Ramen\nMusic:  Florence + The Machine\nDecor:  The Very Sweet Hostess/Server will Greet You Warmly & Give You A Choice Of Counter-Seating OverLooking 9th St or Communal  Tables.   The Place is Reminiscent of a Japanese Tavern\nService:  Awesome One-Woman Show- A Real SweetHeart\nImbibe:  Green Tea.  Beer & Wine Available Soon\nDevour:  Original Bone Broth Ramen & Tsukeman(Ramen w/ Dipping Sauce & Bone Broth on the Side.  For Dessert Green Tea Mochi & Green Tea CheeseCake\nTotal:  $59.33",
+    body: "Date & Time:  Saturday June 30, 2018 @ 6pm. Dining Companions:  Mommy & Husband\nScene:  Solo Diners, Couples & Families In Denim Jackets, Crop Tops, Cut-Offs, Converse & MK Cross-Body Bags Tuck into Delicious Piping Hot Bowls of Ramen\nMusic:  Florence + The Machine\nDecor:  The Very Sweet Hostess/Server will Greet You Warmly & Give You A Choice Of Counter-Seating OverLooking 9th St or Communal  Tables.",
     rating: 3)
 
   review4_1 = Review.create!(
@@ -863,7 +863,7 @@ This spa is the place to go if you're looking for a Japanese styles communal bat
   review4_2 = Review.create!(
     user_id: user5.id,
     biz_id: biz4.id,
-    body: "The HYPE exist! But be warned this is not your typical ramen spot. First of all there is a huge wait no matter what day you go on but it's definitely better on a weekday. They open pretty late so if you prefer not to wait as long I suggest going an hour before they close. Surprising they seated everyone who was waiting in line after closing. \n\nWe ordered the deviled oysters, spicy lamb ramen (added duck chashu) and a spicy tori patina ramen (added duck chashu) The duck chashu was really GOOD but wish it came with more duck. The devil oysters were pretty good too but not amazing. Next came the ramen! Finally, the broth was creamy and the noodles were thick. Just how you would eat tsukenmen (dipping ramen) I felt like it was a similar concept without the separation of the dipping. I really love how the thickness of the sauce cling onto \n\nthe ramen and the flavors were on point.",
+    body: "The HYPE exist! But be warned this is not your typical ramen spot. First of all there is a huge wait no matter what day you go on but it's definitely better on a weekday. They open pretty late so if you prefer not to wait as long I suggest going an hour before they close. Surprising they seated everyone who was waiting in line after closing. \n\nWe ordered the deviled oysters, spicy lamb ramen (added duck chashu) and a spicy tori patina ramen (added duck chashu) The duck chashu was really GOOD but wish it came with more duck. The devil oysters were pretty good too but not amazing.",
     rating: 4)
   review4_3 = Review.create!(
     user_id: user7.id,

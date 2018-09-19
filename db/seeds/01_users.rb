@@ -6,7 +6,7 @@ guest = User.create(
   first_name:'Guest',
   last_name: 'Yeep'
 )
-guest.profile_img.attach(io: File.open("./app/assets/images/profile.png"), filename:"profile.png")
+guest.profile_img.attach(io: File.open("./app/assets/images/demo_user_pic.png"), filename:"demo_user_pic.png")
 
 
 user1 = User.create(email:'1@gmail.com', password:'123456', first_name:'John', last_name:'Doe')

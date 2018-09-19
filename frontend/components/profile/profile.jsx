@@ -59,7 +59,14 @@ class Profile extends React.Component{
               <h2>Recent Activity</h2>
               <ul>
                 {this.props.activities.length < 1 ? (
-                  <h3 className='note'>You don't have any recent activities.</h3>
+                  <div className='write-review'>
+                    <p className='note'>You don't have any recent activities yet. Go find some local businesses and write a review for them!</p>
+                    <Link to='/reviewsearch/'>
+                      <button className='review-btn'>
+                        Write a Review
+                      </button>
+                    </Link>
+                  </div>
                 ) : (
                   this.props.activities.map((act, i) => {
                   if (act.body) {

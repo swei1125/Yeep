@@ -9,7 +9,8 @@ class EditPassword extends React.Component {
       currentPassword: "",
       newPassword: "",
       confirmPassword: "",
-      demoUser: false
+      demoUser: false,
+      display: "none"
     };
   }
 
@@ -35,7 +36,12 @@ class EditPassword extends React.Component {
     };
     this.props.updatePassword(this.props.user.id, data)
     .then(() => {
-      this.props.history.push("/profile");
+      this.setState({
+        display: "block",
+        currentPassword: "",
+        newPassword: "",
+        confirmPassword: "",
+      });
     });
   }
 
@@ -60,6 +66,9 @@ class EditPassword extends React.Component {
           </div>
           <div className='right-column'>
             <h2>Change your password</h2>
+            <div className='alert' style={{display: this.state.display}}>
+              <p>Great, your password has been updated!</p>
+            </div>
             <div className='error' style={{display: this.state.demoUser ? "block" : "none"}}>
               <p>Please do not change demo user's password.</p>
             </div>
@@ -73,19 +82,19 @@ class EditPassword extends React.Component {
               <span className='reminder'>Enter your existing password.</span>
               <input
                 type='password'
-                value={this.state.first_name}
+                value={this.state.currentPassword}
                 onChange={this.handleChange('currentPassword')}
                 required/>
               <label>New password</label>
               <span className='reminder'>Enter the new password you would like.</span>
               <input type='password'
-                value={this.state.last_name}
+                value={this.state.newPassword}
                 onChange={this.handleChange('newPassword')}
                 required/>
               <label>Verify new password</label>
               <span className='reminder'>Reenter your password to verify.</span>
               <input type='password'
-                value={this.state.last_name}
+                value={this.state.confirmPassword}
                 onChange={this.handleChange('confirmPassword')}
                 required/>
 

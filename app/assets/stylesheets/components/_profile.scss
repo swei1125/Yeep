@@ -242,6 +242,43 @@
       padding: 0 15px 0 30px;
       border-right: 1px solid #e6e6e6;
 
+      .write-review{
+        .note{
+          width: 100%;
+          font-weight: 400;
+          font-size: 14px;
+          margin-bottom: 15px;
+        }
+        a {
+          text-decoration: none;
+          color: inherit;
+          width: auto;
+          display: block;
+
+          .review-btn {
+            height: 36px;
+            width: 134px;
+            border: 1px solid $dark-red;
+            background-color: $red;
+            color: white;
+            font-size: 14px;
+            font-family: $main-font;
+            font-weight: 700;
+            border-radius: 3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+            margin-right: 20px;
+          }
+
+          .review-btn:hover {
+            background-color: $bright-red;
+          }
+        }
+
+      }
+
       h2{
         margin-top: 10px;
         margin-bottom: 15px;
