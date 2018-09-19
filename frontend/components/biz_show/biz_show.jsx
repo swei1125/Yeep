@@ -153,8 +153,14 @@ class BizShow extends React.Component {
                             <p className='body'>{review.body}</p>
                           </div>
                           <div className='review-footer clearfix'>
-                            <div className='btn-wrap'>
+                            <div className='btn-wrap' style={{display: `${btnDsiplay}`}}>
+                              <Link to={`/editreview/${id}&${name}`} className='btn'>
+                                <i className="fas fa-pencil-alt"></i>
+                              </Link>
+                            </div>
+                            <div className='btn-wrap last'>
                               <button
+                                className='btn'
                                 style={{display: `${btnDsiplay}`}}
                                 onClick={this.removeReview(review.id)}
                               >
