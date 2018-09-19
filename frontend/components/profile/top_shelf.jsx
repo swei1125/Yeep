@@ -40,7 +40,7 @@ class TopShelf extends React.Component{
                 </Link>
               </li>
               <li>
-                <Link to='#'>
+                <Link to='/profileupdate'>
                   <i className="fas fa-id-card"></i>
                   <span>Update Your Profile</span>
                 </Link>

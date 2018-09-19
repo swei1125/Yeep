@@ -1,10 +1,11 @@
 .nav-wrapper {
-  background-color: pink;
   height: 91px;
   width: 100%;
+  min-width: 1020px;
 
   .nav-bottom {
     width: 100%;
+    min-width: 1020px;
     height: 27px;
     background-color: #bd1f1f;
 
@@ -12,8 +13,6 @@
       width: 990px;
       display: flex;
       margin: 0 auto;
-
-
 
       .bottom-btn {
         width: 104px;
@@ -68,7 +67,7 @@
     background-color: $red;
 
     .top-inner-wrapper {
-      width: 990px;
+      width: 960px;
       margin: 0 auto;
       display: flex;
       align-items: center;
@@ -346,7 +345,7 @@
     .logo {
       img{
         position: relative;
-        left: 15px;
+
         width: 100px;
         height: 68px;
       }

@@ -4,3 +4,11 @@ export const getCurrentUser = (id) => (
     url: `api/users/${id}`
   })
 );
+
+export const editCurrentUserInfo = (id, user) => (
+  $.ajax({
+    method: 'patch',
+    url: `api/users/${id}`,
+    data: {user}
+  })
+);
