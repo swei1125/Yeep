@@ -4,6 +4,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create, :update, :show] do
       resources :reviews, only: :index
     end
+    patch '/password/:id', to: 'users#update_password', as: 'user_password'
     resource :session, only: [:create, :destroy]
     resources :bizs, only: [:index, :show] do
       resources :reviews, only: :create

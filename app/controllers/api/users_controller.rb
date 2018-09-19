@@ -20,12 +20,16 @@ class Api::UsersController < ApplicationController
     end
   end
 
+  def update_password
+
+  end
+
   def show
     @user = User.find(params[:id])
   end
 
   private
   def user_params
-    params.require(:user).permit(:email, :first_name, :last_name, :password, :profile_img)
+    params.require(:user).permit(:email, :first_name, :last_name, :password, :profile_img, :current_password)
   end
 end
