@@ -92,7 +92,8 @@
 
           img {
             width: 38px;
-            height: 100%;
+            height: 38px;
+            object-fit: cover;
             border-radius: 2px 0 0 2px;
             vertical-align: middle;
           }
@@ -188,6 +189,7 @@
             img{
               width: 60px;
               height: 60px;
+              object-fit: cover;
               border-radius: 3px;
               margin-right: 10px;
             }

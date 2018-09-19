@@ -11,7 +11,7 @@ class Footer extends React.Component {
               <h3>About</h3>
               <ul className='link-list'>
                 <li><a href='https://github.com/swei1125/Yeep'>About Yeep</a></li>
-                <li><a href='https://www.linkedin.com/feed/'>About Developer</a></li>
+                <li><a href='http://shiyuwei-94.com/'>About Developer</a></li>
               </ul>
             </div>
             <div className='dicover'>

@@ -50,7 +50,7 @@ class EditProfile extends React.Component {
             <h2>Profile</h2>
             <div className='pic-update'>
               <span>Your Profile Photo&nbsp;</span>
-              <Link to='#'>(Edit)</Link>
+              <Link to='/profilephoto'>(Edit)</Link>
               <img src={img}/>
             </div>
             <label>First Name</label>

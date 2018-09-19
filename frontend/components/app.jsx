@@ -16,6 +16,7 @@ import ProfileContainer from './profile/profile_container';
 import UserReviewsContainer from './profile/reviews_container';
 import EditProfileContainer from './profile/edit_profile_container';
 import EditPasswordContainer from './profile/edit_password_container';
+import ProfilePhotoContainer from './profile/profile_photo_container';
 
 const App = () => (
   <div className='main-wrapper'>
@@ -35,6 +36,7 @@ const App = () => (
       <ProtectedRoute exact path='/reviews/:userId' component={UserReviewsContainer} />
       <ProtectedRoute exact path='/profileupdate' component={EditProfileContainer} />
       <ProtectedRoute exact path='/changepassword' component={EditPasswordContainer} />
+      <ProtectedRoute exact path='/profilephoto' component={ProfilePhotoContainer} />
       <Redirect to='/' />
     </Switch>
 

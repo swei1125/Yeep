@@ -59,7 +59,7 @@ class SessionBtn extends React.Component{
               </Link>
             </li>
             <li>
-              <Link to='#'>
+              <Link to='/profileupdate'>
                 <i className="fas fa-cog"></i>
                 <span>Account Settings</span>
               </Link>
