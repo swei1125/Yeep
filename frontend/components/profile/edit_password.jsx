@@ -24,6 +24,7 @@ class EditPassword extends React.Component {
   }
 
   submit(e){
+    e.preventDefault();
     if (this.props.user.id === 1) {
       this.setState({demoUser: true});
       return null;
