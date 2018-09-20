@@ -21,28 +21,19 @@ export const sortedReviews = (state) => {
 };
 
 export const sortActivities = user => {
-  if (user.reviews && user.photos) {
-    const reviews = Object.values(user.reviews);
-    const photos = Object.values(user.photos);
+  if (user.recentReviews && user.recentPhotos) {
+    const reviews = Object.values(user.recentReviews);
+    const photos = Object.values(user.recentPhotos);
     const arr = reviews.concat(photos).sort((a, b) => {
       return (new Date(b.date) - new Date(a.date));
     });
-    const today = new Date;
+    return arr;
 
-    return arr.filter(el => {
-      return today - new Date(el.date) <= 7689600000;
-    });
+  }else if (user.recentReviews) {
+    return Object.values(user.recentReviews);
 
-  }else if (user.reviews) {
-    const today = new Date;
-    return Object.values(user.reviews).filter(el => {
-      return today - new Date(el.date) <= 7689600000;
-    });
-  }else if (user.photos) {
-    const today = new Date;
-    return Object.values(user.photos).filter(el => {
-      return today - new Date(el.date) <= 7689600000;
-    });
+  }else if (user.recentPhotos) {
+    return Object.values(user.recentPhotos);
   }else{
     return [];
   }

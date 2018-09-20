@@ -50,4 +50,19 @@ class User < ApplicationRecord
   def ensure_session_token
     self.session_token ||= SecureRandom.urlsafe_base64
   end
+
+  def recent_reviews
+    today = Date.today
+    self.reviews.select do |review|
+      date = Date.parse(review.created_at.to_s)
+      today - date <= 90
+    end
+  end
+  def recent_uploads
+    today = Date.today
+    self.uploads.select do |upload|
+      date = Date.parse(upload.created_at.to_s)
+      today - date <= 90
+    end
+  end
 end

@@ -29,7 +29,7 @@ class Profile extends React.Component{
       4.5: "0 -384px",
       5: "0 -402px"
     };
-    const { firstName, lastName, img, photos, reviews, id } = this.props.user;
+    const { firstName, lastName, img, recentPhotos, recentReviews, id, reviewCount, photoCount } = this.props.user;
     return(
       <div className='profile-wrapper'>
         <NavbarContainer singleBiz={true}/>
@@ -107,6 +107,38 @@ class Profile extends React.Component{
                   }
                 })
                 )}
+              </ul>
+            </div>
+          </div>
+          <div className='activity-sidebar'>
+            <h3>{`About ${firstName} ${lastName[0]}.`}</h3>
+            <div className='record'>
+              <h4>Last 90 days</h4>
+              <ul className='icon-list'>
+                <li className='icon-item'>
+                  <div className='icon-wrapper'>
+                    <div className='review-star'>
+                      <i className="material-icons">star</i>
+                    </div>
+                  </div>
+                  <div className='item-record'>
+                    <span>{recentReviews ? Object.values(recentReviews).length : 0}</span>
+                    <br></br>
+                    New reviews
+                  </div>
+                </li>
+                <li className='icon-item'>
+                  <div className='icon-wrapper'>
+                    <div className='camera'>
+                      <img src={window.images.camera} />
+                    </div>
+                  </div>
+                  <div className='item-record'>
+                    <span>{recentPhotos ? Object.values(recentPhotos).length : 0}</span>
+                    <br></br>
+                    New photos
+                  </div>
+                </li>
               </ul>
             </div>
           </div>

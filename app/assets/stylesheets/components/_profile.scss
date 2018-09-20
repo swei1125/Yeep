@@ -81,7 +81,6 @@
             i {
               font-size: 12px;
               color: white;
-
             }
           }
         }
@@ -147,6 +146,7 @@
 }
 
 .user-content-wrapper{
+  font-family: $main-font;
   padding: 15px 15px 36px;
   width: 960px;
   margin: 0 auto;
@@ -524,6 +524,83 @@
             i {
               color: black;
             }
+          }
+        }
+      }
+    }
+  }
+
+  .activity-sidebar{
+    padding-left: 15px;
+    width: 217px;
+
+    h3{
+      color: $red;
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.3125em;
+    }
+    .record{
+      width: 100%;
+      text-align: left;
+
+      h4{
+        font-weight: 700;
+        color: #333;
+        margin: 0;
+        margin-bottom: 6px;
+        font-size: 15px;
+        line-height: 1.28571em;
+      }
+
+      .icon-list{
+        list-style: none;
+        width: 100%;
+
+        .icon-item{
+          display: flex;
+          align-items: center;
+          .item-record{
+            width: 168px;
+            border-top: 1px solid #e6e6e6;
+            margin-left: 10px;
+            padding-bottom: 9px;
+            padding-top: 9px;
+            font-size: 14px;
+            span{
+              font-size: 15px;
+              font-weight: 700;
+            }
+          }
+          .icon-wrapper{
+            width: 38px;
+            display: flex;
+            justify-content: center;
+
+            .review-star {
+              width: 24px;
+              height: 24px;
+              border: 2px solid #666;
+              border-radius: 5px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              i {
+                font-size: 20px;
+                color: #666;
+              }
+            }
+            .camera{
+              img{
+                width: 36px;
+              }
+            }
+          }
+        }
+        .icon-item:first-child{
+          .item-record{
+            border-top: none;
           }
         }
       }

@@ -18,7 +18,7 @@ class SessionBtn extends React.Component{
     }
     this.setState({display: "none"});
   }
-  
+
   showDropdown(e) {
 
     e.preventDefault();
@@ -35,6 +35,7 @@ class SessionBtn extends React.Component{
     e.preventDefault();
     this.setState({display: "none"});
     this.props.logout();
+    window.removeEventListener("mousedown", this.handleClick);
   }
 
   render() {
@@ -56,11 +57,11 @@ class SessionBtn extends React.Component{
                   <div className='icon'>
                     <i className="material-icons">star</i>
                   </div>
-                  <span>{currentUser.reviews ? Object.values(currentUser.reviews).length : 0}</span>
+                  <span>{currentUser.reviewCount}</span>
                 </section>
                 <section className='photo-count'>
                   <i className="material-icons camera">camera_alt</i>
-                  <span>{currentUser.photos ? Object.values(currentUser.photos).length : 0}</span>
+                  <span>{currentUser.photoCount}</span>
                 </section>
               </li>
             </div>

@@ -5,8 +5,8 @@ import {Link} from 'react-router-dom';
 class TopShelf extends React.Component{
 
   render(){
-    const { firstName, lastName, img, photos, reviews } = this.props.user;
-    const reviewsWord = (reviews && Object.values(reviews).length > 1) ? 'Reviews' : 'Review';
+    const { firstName, lastName, img, recentPhotos, recentReviews, reviewCount, photoCount } = this.props.user;
+    const reviewsWord = (recentReviews && Object.values(recentReviews).length > 1) ? 'Reviews' : 'Review';
     return(
       <div className='top-shelf-profile'>
         <div className='content-container'>
@@ -21,12 +21,12 @@ class TopShelf extends React.Component{
                 <div className='icon'>
                   <i className="material-icons">star</i>
                 </div>
-                <span className='count'>{reviews ? Object.values(reviews).length : 0}</span>
+                <span className='count'>{reviewCount}</span>
                 <span>{reviewsWord}</span>
               </section>
               <section className='photo-count'>
                 <i className="material-icons camera">camera_alt</i>
-                <span className='count'>{photos ? Object.values(photos).length : 0}</span>
+                <span className='count'>{photoCount}</span>
                 <span>Photos</span>
               </section>
             </div>

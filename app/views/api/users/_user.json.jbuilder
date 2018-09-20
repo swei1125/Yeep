@@ -1,7 +1,9 @@
 json.extract! user, :id, :email, :first_name, :last_name, :review_ids
 json.img url_for(user.profile_img)
-json.photos do
-  user.uploads.each do |up|
+json.review_count user.reviews.length
+json.photo_count user.uploads.length
+json.recent_photos do
+  user.recent_uploads.each do |up|
     json.set! up.id do
       json.url url_for(up.photo)
       json.biz up.biz.name
@@ -10,8 +12,8 @@ json.photos do
     end
   end
 end
-json.reviews do
-  user.reviews.each do |r|
+json.recent_reviews do
+  user.recent_reviews.each do |r|
     json.set! r.id do
       json.biz r.biz.name
       json.bizId r.biz.id
