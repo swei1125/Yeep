@@ -18,7 +18,6 @@ class ProfilePhoto extends React.Component {
   handleFile(files) {
     this.setState({error: []});
     const file = files[0];
-    console.log(file);
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
       this.setState({file: file, url: fileReader.result});
@@ -30,7 +29,6 @@ class ProfilePhoto extends React.Component {
   }
 
   upload() {
-    // e.preventDefault();
     if (this.state.file) {
       this.setState({loading: true});
       const formData = new FormData();
@@ -43,7 +41,6 @@ class ProfilePhoto extends React.Component {
         processData: false
       }).then(
         window.setTimeout(() => {
-          console.log("settimeout");
           this.props.updateCurrentUser(this.props.currentUserId);
           this.props.history.push(`/profile`);
         }, 6000)

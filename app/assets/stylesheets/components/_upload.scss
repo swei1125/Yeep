@@ -22,51 +22,110 @@
     }
   }
 
-  .upload-form {
-    width: 960px;
-    height: 500px;
-    margin: 20px auto;
+  .dropzone-biz{
+    width: 850px;
+    margin: 50px auto;
+    padding: 100px 0;
+    display: table;
+    box-sizing: border-box;
+    border: 3px dashed #999;
+    border-radius: 8px;
+    text-align: center;
 
-    form {
-      height: 100%;
-      display: flex;
-      flex-direction: column;
+    .preview{
+      width: 300px;
+      margin: 0 auto;
 
-      input {
-        margin-bottom: 50px;
+      .another-one{
+        display: block;
+        vertical-align: middle;
+        margin-top: 10px;
+        color: $blue;
+        font-size: 14px;
+        pointer-events: all;
+        cursor: pointer;
+      }
+      .another-one:hover{
+        text-decoration: underline;
       }
 
-      .preview {
+      img{
+        width: 300px;
+        height: 300px;
+        border-radius: 4px;
+        object-fit: cover;
         margin-bottom: 30px;
-        overflow: hidden;
+      }
+    }
 
-        img {
-          height: 300px;
-          width: auto;
-          object-fit: fill;
+    .upload{
+      display: table-cell;
+      vertical-align: middle;
+      padding: 12px;
+
+      .hr-line{
+        max-width: 80%;
+        margin: 18px auto;
+        border: none;
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid transparent;
+        text-align: center;
+        legend{
+          font-size: 1em;
+          padding: 0 15px;
+          margin: 0 auto;
+          color: #666;
         }
       }
-      .err {
-        list-style: none;
-        color: $red;
+      button{
+        height: 34px;
+        width: 134px;
+        border: 1px solid $dark-red;
+        background-color: $red;
+        color: white;
+        font-size: 14px;
+        font-family: $main-font;
+        font-weight: 700;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+      }
+      button:hover{
+        background-color: $bright-red;
       }
 
-      button {
-        background-color: $red;
-        width: 100px;
-        height: 24px;
-        padding: 5px 0px;
-        text-align: center;
-        border-radius: 4px;
-        font-size: 14px;
+      h1{
+        color: #333;
         font-weight: 700;
-        color: white;
-        margin-bottom: 10px;
-      }
-      button:hover {
-        background-color: $bright-red;
-        text-decoration: none;
+        margin-bottom: 6px;
+        font-size: 30px;
+        line-height: 1.2em;
+        padding-top: 6px;
       }
     }
   }
+
+  .btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    .submit{
+      margin: 0 auto;
+      text-align: center;
+      height: 34px;
+      width: 134px;
+      border: 1px solid $dark-red;
+      background-color: $red;
+      color: white;
+      font-size: 14px;
+      font-family: $main-font;
+      font-weight: 700;
+      border-radius: 3px;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+      margin-bottom: 20px;
+    }
+    .submit:hover{
+      background-color: $bright-red;
+    }
+  }
+
 }

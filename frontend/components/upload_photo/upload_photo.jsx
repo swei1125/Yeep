@@ -3,7 +3,7 @@ import NavBarContainer from '../navbar/nav_bar_container';
 import { Link } from 'react-router-dom';
 import { css } from 'react-emotion';
 import { BeatLoader } from 'react-spinners';
-
+import Dropzone from 'react-dropzone';
 
 class UploadPhoto extends React.Component {
   constructor(props) {
@@ -16,13 +16,9 @@ class UploadPhoto extends React.Component {
     };
   }
 
-  // componentDidMount() {
-  //   this.props.fetchBiz(this.props.match.params.bizId);
-  // }
-
-  handleFile(e) {
+  handleFile(files) {
     this.setState({error: []});
-    const file = e.currentTarget.files[0];
+    const file = files[0];
     const fileReader = new FileReader();
     fileReader.onloadend = () => {
       this.setState({file: file, url: fileReader.result});
@@ -33,7 +29,6 @@ class UploadPhoto extends React.Component {
   }
 
   upload(e) {
-    // e.preventDefault();
     if (this.state.file) {
       this.setState({loading: true});
       const formData = new FormData();
@@ -62,7 +57,8 @@ class UploadPhoto extends React.Component {
     border-color: red;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
+    z-index: 99;
     `;
     const preview = this.state.url ? <img src={this.state.url}/> : null;
     return(
@@ -85,16 +81,38 @@ class UploadPhoto extends React.Component {
             </span>
           </h2>
         </div>
-        <div className='upload-form' style={{ opacity: this.state.loading ? "0.15" : "1" }}>
-
-          <form onSubmit={this.upload.bind(this)}>
-            <input type='file' onChange={this.handleFile.bind(this)}/>
+        <Dropzone
+          className='dropzone-biz'
+          multiple={false}
+          accept="image/*"
+          onDrop={this.handleFile.bind(this)}
+          style={{ opacity: this.state.loading ? "0.15" : "1" }}
+        >
+          {this.state.url ? (
             <div className='preview'>
-              {preview}
+              <img src={this.state.url}/>
+              <span className='another-one'>Change another one?</span>
             </div>
-            <button disabled={this.state.loading ? "true" : ""} type='submit'>Add Photo</button>
-            {this.state.error.map((err, i) => <li className='err' key={i}>{err}</li>)}
-          </form>
+          ) : (
+            <div className='upload'>
+              <h1>Drag and drop your photos here</h1>
+              <fieldset className='hr-line'>
+                <legend>OR</legend>
+              </fieldset>
+              <button>Browse Files</button>
+            </div>
+          )}
+        </Dropzone>
+        <div className='btn'>
+          <button
+            className='submit'
+            style={{display: this.state.url ? "block" : "none"}}
+            disabled={this.state.loading ? "true" : ""}
+            type='submit'
+            onClick={this.upload.bind(this)}
+            >
+            Add Photo
+          </button>
         </div>
       </div>
     );
