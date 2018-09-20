@@ -6,6 +6,18 @@ class NavBar extends React.Component {
   constructor(props) {
     super(props);
     this.state = {display: "none"};
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick(e) {
+    if (this.node.contains(e.target)) {
+      return;
+    }
+    this.setState({display: "none"});
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("mousedown", this.handleClick);
   }
 
   showDropdown(e) {
@@ -13,10 +25,11 @@ class NavBar extends React.Component {
     e.preventDefault();
     if (this.state.display === 'none') {
       this.setState({display: "block"});
+      window.addEventListener("mousedown", this.handleClick);
+      window.addEventListener("mouseup", this.removeListener);
     }else {
       this.setState({display: "none"});
     }
-
   }
   handleLogout(e) {
     e.preventDefault();
@@ -27,7 +40,7 @@ class NavBar extends React.Component {
   render() {
     const currentUser = this.props.currentUser;
     const session = this.props.currentUser ? (
-      <div className='nav-session-dropdown'>
+      <div className='nav-session-dropdown' ref={node => {this.node = node;}}>
         <div onClick={this.showDropdown.bind(this)} className='user-menu' >
           <img src={currentUser.img} />
           <section><i className="fas fa-caret-down"></i></section>

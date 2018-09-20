@@ -5,20 +5,20 @@ class SessionBtn extends React.Component{
   constructor(props) {
     super(props);
     this.state = {display: "none"};
+    this.handleClick = this.handleClick.bind(this);
   }
 
-  handleClick() {
-    return () => {
-      this.setState({display: "none"});
-    };
-  }
-  removeListener() {
-    return () => {
-      const body = document.querySelector("body");
-      window.removeEventListener("mousedown", this.handleClick);
-    };
+  componentWillUnmount() {
+    window.removeEventListener("mousedown", this.handleClick);
   }
 
+  handleClick(e) {
+    if (this.node.contains(e.target)) {
+      return;
+    }
+    this.setState({display: "none"});
+  }
+  
   showDropdown(e) {
 
     e.preventDefault();
@@ -26,7 +26,7 @@ class SessionBtn extends React.Component{
       this.setState({display: "block"});
       window.addEventListener("mousedown", this.handleClick);
       window.addEventListener("mouseup", this.removeListener);
-    }else {
+    } else {
       this.setState({display: "none"});
     }
 
@@ -40,7 +40,7 @@ class SessionBtn extends React.Component{
   render() {
     const {currentUser, logout, login, guest} = this.props;
     const display = currentUser ? (
-      <div className='nav-session-dropdown'>
+      <div className='nav-session-dropdown' ref={node => {this.node = node;}}>
         <div onClick={this.showDropdown.bind(this)} className='user-menu' >
           <img src={currentUser.img} />
           <section><i className="fas fa-caret-down"></i></section>
