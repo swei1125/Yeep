@@ -25,6 +25,7 @@ class SearchBar extends React.Component {
     }
   }
   componentWillReceiveProps(newProps) {
+    this.props.clearAll();
     if (newProps.match.url !== this.props.match.url) {
       if (!newProps.singleBiz) {
         const data = {
