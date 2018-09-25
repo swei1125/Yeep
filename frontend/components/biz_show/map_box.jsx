@@ -26,7 +26,7 @@ class MapBox extends React.Component {
                 <span className='icon'>
                   <i className="material-icons">directions</i>
                 </span>
-                <a>Get Directions</a>
+                <a style={{cursor: "no-drop"}}>Get Directions</a>
               </li>
               <li>
                 <span className='icon'>
@@ -38,7 +38,7 @@ class MapBox extends React.Component {
                 <span className='icon'>
                   <i className="material-icons">phone_iphone</i>
                 </span>
-                <a>Send to your Phone</a>
+                <a style={{cursor: "no-drop"}}>Send to your Phone</a>
               </li>
               <li>
                 <span className='icon'>
