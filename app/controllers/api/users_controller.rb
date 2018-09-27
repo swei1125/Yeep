@@ -21,13 +21,12 @@ class Api::UsersController < ApplicationController
   end
 
   def update_password
-    puts params[:user][:current_password]
     @user = User.find_by_credentials(params[:user][:email], params[:user][:current_password])
 
     if @user
       if params[:user][:password] != params[:user][:confirm_password]
         render json: ["The passwords you entered did not match."], status: 422
-        return 
+        return
       end
       if @user.update(password: params[:user][:password])
         login(@user)
